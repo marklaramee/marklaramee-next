@@ -1,0 +1,9 @@
+.main {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+    min-height: 100vh;
+}
