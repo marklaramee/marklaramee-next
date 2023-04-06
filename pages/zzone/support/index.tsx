@@ -15,7 +15,16 @@ export default function ZZone() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div>For support, pkease contact me at bookmarksbrowserexplorer address using google mail.</div>
+        <div>
+          For support, please use the following:
+          <br />
+          <Image
+          alt=''
+          src='/images/position.png'
+          width='492'
+          height='43'
+        />
+        </div>
       </main>
     </>
   )

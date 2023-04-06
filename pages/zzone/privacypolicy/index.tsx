@@ -16,14 +16,7 @@ export default function ZZone() {
       </Head>
       <main className={styles.main}>
         <div>
-          For support, please use the following:
-          <br />
-          <Image
-          alt=''
-          src='/images/position.png'
-          width='492'
-          height='43'
-        />
+          We collect no information from this app. No information is collected about you.
         </div>
       </main>
     </>
