@@ -1,5 +1,5 @@
 .navTop {
-    align-items: center;;
+    align-items: center;
     color: $purple;
     display: flex;
     font-family: $anuphan;
@@ -7,14 +7,51 @@
     justify-content: flex-start;
     margin: 0;
     padding: 0 0 0 40px;
+    z-index: 100;
 
     a {
         font-size: 24px;
-        padding: 0 20px 0 0;
+        padding: 4px 8px;
         text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
 
-        &:visited,  &:hover, &:active {
+        &:hover {
             color: $purple-light;
+        }
+    }
+
+    div.navLevel1 {
+        cursor: pointer;
+        display: block;
+        overflow: visible;
+        margin: 0 20px 0 0;
+        position: relative;
+        
+        &:hover {
+            div.navLevel2 {
+                display: flex;
+            }
+        }
+    }
+
+    span.navLevel1 {
+        font-size: 24px;
+    }
+
+    div.navLevel2 {
+        background-color: $black;
+        display: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 4px 8px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: fit-content;
+
+        a {
+            font-size: 18px;
         }
     }
 }
