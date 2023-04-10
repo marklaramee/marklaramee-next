@@ -1,13 +1,18 @@
 import styles from './styles/Navigation.module.scss';
+import Link from 'next/link'
 
 const Navigation = () => {
     return (
-        <div className={styles.navTop}>
-            <a href="#">HOME</a>
+        <nav className={styles.navTop}>
+            <Link href="/">HOME</Link>
             <a href="#">APPS</a>
             <a href="#">MUSIC</a>
-            <a href="#">WORK</a>
-        </div>
+            <div className={styles.navLevel1}>
+                <span className={styles.navLevel1}>WORK</span>
+                <div className={styles.navLevel2}>
+                </div>
+            </div>
+        </nav>
     );
 };
 

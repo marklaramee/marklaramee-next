@@ -1,5 +1,5 @@
 .navTop {
-    align-items: center;;
+    align-items: center;
     color: $purple;
     display: flex;
     font-family: $anuphan;
@@ -16,5 +16,26 @@
         &:visited,  &:hover, &:active {
             color: $purple-light;
         }
+    }
+
+    div.navLevel1 {
+        cursor: pointer;
+        overflow: visible;
+        position: relative;
+        
+        &:hover {
+            div.navLevel2 {
+                display: block;
+            }
+        }
+    }
+
+    span.navLevel1 {
+        font-size: 24px;
+        padding: 0 20px 0 0;
+    }
+
+    div.navLevel2 {
+        display: none;
     }
 }
