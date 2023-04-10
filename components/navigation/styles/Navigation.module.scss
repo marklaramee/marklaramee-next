@@ -1,0 +1,20 @@
+.navTop {
+    align-items: center;;
+    color: $purple;
+    display: flex;
+    font-family: $anuphan;
+    font-weight: 700;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0 0 0 40px;
+
+    a {
+        font-size: 24px;
+        padding: 0 20px 0 0;
+        text-decoration: none;
+
+        &:visited,  &:hover, &:active {
+            color: $purple-light;
+        }
+    }
+}

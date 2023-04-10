@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Navigation from '../navigation/Navigation';
 import styles from './styles/PageTop.module.scss';
 
 export default function PageTop() {
@@ -12,8 +13,9 @@ export default function PageTop() {
           height='221'
         />
       </div>
+      <Navigation />
       <div className={styles.construction}></div>
-      <div className={styles.test}>tisdjfglasdfgj asdlfkhjasldfgkj salfkjasz </div>
+      
     </>
   )
 }
