@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import PageTop from '../components/pageTop/PageTop'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
@@ -16,15 +17,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         
-       <div className={styles.logo}>
-        <Image
-          alt='Mark Laramee'
-          src='/images/mark-laramee-logo-purple-bright_720.png'
-          width='1125'
-          height='221'
-        />
-      </div>
-      <div className={styles.construction}></div>
+       <PageTop />
       <div style={{width: '100%', height: '600px', position: 'relative'}}>
         <Image
           alt='Broken TV'
