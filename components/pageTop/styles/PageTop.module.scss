@@ -7,7 +7,12 @@
 .construction {
   background-image: url('../../../public/images/under_construction_tape_480.png');
   background-repeat: repeat-x;
-  color: $color-rebeccapurple;
   height: 38px;
   width: 100%;
+}
+
+.test {
+  color: $purple-test;
+  display: none;
+  font-family: $anuphan;
 }
