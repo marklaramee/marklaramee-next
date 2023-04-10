@@ -19,7 +19,7 @@ export default function Home() {
        <div className={styles.logo}>
         <Image
           alt='Mark Laramee'
-          src='/images/mark-laramee-logo_720.png'
+          src='/images/mark-laramee-logo-purple-bright_720.png'
           width='1125'
           height='221'
         />
