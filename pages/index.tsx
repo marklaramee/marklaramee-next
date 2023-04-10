@@ -16,18 +16,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <PageTop />
         
-       <PageTop />
-      <div style={{width: '100%', height: '600px', position: 'relative'}}>
-        <Image
-          alt='Broken TV'
-          src='/images/broken-tv-4.png'
-          fill
-        />
-      </div>
-
-      
-         
+        <div style={{width: '100%', height: '600px', position: 'relative'}}>
+          <Image
+            alt='Broken TV'
+            src='/images/broken-tv-4.png'
+            fill
+          />
+        </div>
       </main>
     </>
   )
