@@ -14,8 +14,6 @@ export default function PageTop() {
         />
       </div>
       <Navigation />
-      <div className={styles.construction}></div>
-      
     </>
   )
 }

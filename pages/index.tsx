@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <PageTop />
-        
+        <div className={styles.construction}></div>
         <div style={{width: '100%', height: '600px', position: 'relative'}}>
           <Image
             alt='Broken TV'
