@@ -7,11 +7,15 @@
     justify-content: flex-start;
     margin: 0;
     padding: 0 0 0 40px;
+    z-index: 100;
 
     a {
+        background-color: $black;
         font-size: 24px;
-        padding: 0 20px 0 0;
+        padding: 4px 8px;
         text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
 
         &:visited,  &:hover, &:active {
             color: $purple-light;
@@ -20,7 +24,9 @@
 
     div.navLevel1 {
         cursor: pointer;
+        display: block;
         overflow: visible;
+        padding: 0 20px 0 0;
         position: relative;
         
         &:hover {
@@ -37,5 +43,13 @@
 
     div.navLevel2 {
         display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: fit-content;
+
+        a {
+            font-size: 18px;
+        }
     }
 }
