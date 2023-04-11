@@ -27,7 +27,7 @@ button.reset:-moz-focusring {
 /******************/
 
 button.hamburgerButton {
-  border: 2px solid $purple-bright;
+  border: 3px solid $purple-bright;
 }
 
 .wrapper {
@@ -43,8 +43,8 @@ button.hamburgerButton {
 
 .middleBlock {
   display: block;
-  height: 2px;
-  width: 22px;
+  height: 3px;
+  width: 20px;
   background-color: $purple-bright;
   position: relative;
   transition: all 250ms;
@@ -54,8 +54,8 @@ button.hamburgerButton {
   content: '';
   position: relative;
   top: calc(var(spacing-px) * -1);
-  width: 22px;
-  height: 2px;
+  width: 20px;
+  height: 3px;
   background-color: $purple-bright;
   transition: all 250ms;
 }
@@ -65,8 +65,8 @@ button.hamburgerButton {
   position: relative;
   top: var(spacing-px);
   left: 0;
-  width: 22px;
-  height: 2px;
+  width: 20px;
+  height: 3px;
   background-color: $purple-bright;
   transition: all 250ms;
 }
@@ -77,7 +77,7 @@ button.hamburgerButton {
 
 .open .topBlock {
   transform: rotate(45deg);
-  top: 6px;
+  top: 8px;
 }
 
 .open .bottomBlock {

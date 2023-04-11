@@ -6,10 +6,14 @@ import styles from './styles/PageTop.module.scss';
 export default function PageTop() {
   const [isTopNavOpen, setIsTopNavOpen] = useState(false);
 
+  const handleClick = () => {
+      setIsTopNavOpen(!isTopNavOpen);
+  };
+
   return (
     <div className={styles.container}> 
       <div className={styles.topBar}>
-        <HamburgerIcon isOpen={isTopNavOpen}/>
+        <HamburgerIcon isOpen={isTopNavOpen} hamburgerClick={handleClick}/>
         <img
           alt='Mark Laramee'
           src='/images/mark-laramee-logo-purple-bright_720.png'
