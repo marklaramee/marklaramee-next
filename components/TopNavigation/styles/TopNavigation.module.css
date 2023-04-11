@@ -24,6 +24,7 @@
   color: #b430c5;
 }
 .navTop div.navLevel1 {
+  background-color: #000;
   cursor: pointer;
   display: block;
   overflow: visible;
@@ -55,15 +56,27 @@
 
 @media only screen and (max-width: 767px) {
   .navTop {
+    flex-direction: column;
+    gap: 8px;
     height: 0;
+    padding-left: 20px;
+    padding-top: 8px;
+  }
+  .navTop.mobileOpen {
+    height: 222px;
+  }
+  .navTop.mobileOpen div.navLevel1 {
+    transform: scale(1, 1);
+  }
+  .navTop.mobileOpen div.navLevel2 {
+    display: flex;
+    position: static;
+    width: 100%;
   }
   div.navLevel1 {
+    border: 1px solid #663399;
+    text-align: center;
     transform: scale(1, 0);
-  }
-  .mobileOpen {
-    height: 200px;
-  }
-  .mobileOpen div.navLevel1 {
-    transform: scale(1, 1);
+    width: 100%;
   }
 }/*# sourceMappingURL=TopNavigation.module.css.map */

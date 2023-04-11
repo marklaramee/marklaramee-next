@@ -35,6 +35,7 @@ $white: #fff;
     }
 
     div.navLevel1 {
+        background-color: $black;
         cursor: pointer;
         display: block;
         overflow: visible;
@@ -72,15 +73,33 @@ $white: #fff;
 
 @media only screen and (max-width: 767px)  {
     .navTop {
+        flex-direction: column;
+        gap: 8px;
         height: 0;
-    }
-    div.navLevel1 {
-        transform: scale(1, 0);
-    }
-    .mobileOpen {
-        height: 200px;
-        div.navLevel1 {
-            transform: scale(1, 1);
+        padding-left: 20px;
+        padding-top: 8px;
+
+        &.mobileOpen {
+            height: 222px;
+
+            div.navLevel1 {
+                transform: scale(1, 1);
+            }
+
+            div.navLevel2 {
+                display: flex;
+                position: static;
+                width: 100%;
+            }
         }
     }
+
+    div.navLevel1 {
+        border: 1px solid $purple;
+        text-align: center;
+        transform: scale(1, 0);
+        width: 100%;
+    }
+
+    
 }
