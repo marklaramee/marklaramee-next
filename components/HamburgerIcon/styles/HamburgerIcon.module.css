@@ -22,6 +22,9 @@ button.reset:-moz-focusring {
 /******************/
 button.hamburgerButton {
   border: 3px solid #b330c5;
+  left: 4px;
+  position: absolute;
+  top: 4px;
 }
 
 .wrapper {

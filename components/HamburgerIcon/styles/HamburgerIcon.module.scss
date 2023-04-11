@@ -28,6 +28,9 @@ button.reset:-moz-focusring {
 
 button.hamburgerButton {
   border: 3px solid $purple-bright;
+  left: 4px;
+  position: absolute;
+  top: 4px;
 }
 
 .wrapper {

@@ -13,4 +13,23 @@
 
 .topBar {
   display: block;
+  border: 1px solid green;
+}
+
+@media only screen and (max-width: 991px) {
+  .container {
+    width: 100%;
+  }
+  .topBar {
+    height: 40px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+  }
+  .logo {
+    display: inline-block;
+    height: 100%;
+    text-align: left;
+    width: auto;
+  }
 }/*# sourceMappingURL=PageTop.module.css.map */
