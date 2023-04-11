@@ -74,16 +74,46 @@ button.hamburgerButton {
   transition: all 250ms;
 }
 
-.open .middleBlock {
-  background-color: transparent;
+.open {
+  display: block;
+  gap: 0;
+
+  .middleBlock {
+    background-color: transparent;
+  }
+
+  .topBlock {
+    transform: rotate(45deg);
+    left: 1px;
+    top: 11px;
+    width: 22.5px;
+  }
+
+  .bottomBlock {
+    transform: rotate(-45deg);
+    left: 1px;
+    top: 5px;
+    width: 22.5px;
+  }
 }
 
-.open .topBlock {
-  transform: rotate(45deg);
-  top: 8px;
-}
 
-.open .bottomBlock {
-  transform: rotate(-45deg);
-  top: -6px;
+/*
+.open {
+  gap: 0;
+  
+  .middleBlock {
+    background-color: transparent;
+  }
+
+  .topBlock {
+    transform: rotate(45deg);
+    top: 8px;
+  }
+
+  .bottomBlock {
+    transform: rotate(-45deg);
+    top: -6px;
+  }
 }
+*/
