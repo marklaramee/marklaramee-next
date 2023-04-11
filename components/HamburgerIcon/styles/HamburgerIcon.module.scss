@@ -97,23 +97,10 @@ button.hamburgerButton {
   }
 }
 
-
-/*
-.open {
-  gap: 0;
-  
-  .middleBlock {
-    background-color: transparent;
-  }
-
-  .topBlock {
-    transform: rotate(45deg);
-    top: 8px;
-  }
-
-  .bottomBlock {
-    transform: rotate(-45deg);
-    top: -6px;
+@media only screen and (min-width: 768px)  {
+  button.hamburgerButton {
+    display: none;
   }
 }
-*/
+
+

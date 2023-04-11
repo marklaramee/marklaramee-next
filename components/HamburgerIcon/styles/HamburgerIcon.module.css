@@ -88,22 +88,8 @@ button.hamburgerButton {
   width: 22.5px;
 }
 
-/*
-.open {
-  gap: 0;
-
-  .middleBlock {
-    background-color: transparent;
+@media only screen and (min-width: 768px) {
+  button.hamburgerButton {
+    display: none;
   }
-
-  .topBlock {
-    transform: rotate(45deg);
-    top: 8px;
-  }
-
-  .bottomBlock {
-    transform: rotate(-45deg);
-    top: -6px;
-  }
-}
-*//*# sourceMappingURL=HamburgerIcon.module.css.map */
+}/*# sourceMappingURL=HamburgerIcon.module.css.map */
