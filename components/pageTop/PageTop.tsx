@@ -13,14 +13,14 @@ export default function PageTop() {
   return (
     <div className={styles.container}> 
       <div className={styles.topBar}>
-        <HamburgerIcon isOpen={isTopNavOpen} hamburgerClick={handleClick}/>
+        <HamburgerIcon isOpen={isTopNavOpen} hamburgerClick={handleClick} />
         <img
           alt='Mark Laramee'
           src='/images/mark-laramee-logo-purple-bright_720.png'
           className={styles.logo}
         />
       </div>
-      <TopNavigation />
+      <TopNavigation isOpen={isTopNavOpen} />
     </div>
   )
 }

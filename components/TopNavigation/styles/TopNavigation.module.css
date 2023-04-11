@@ -10,6 +10,7 @@
   justify-content: flex-start;
   margin: 0;
   padding: 0 0 0 39px;
+  transition: all 250ms;
   z-index: 100;
 }
 .navTop a {
@@ -28,6 +29,7 @@
   overflow: visible;
   margin: 0 20px 0 0;
   position: relative;
+  transition: all 250ms;
 }
 .navTop div.navLevel1:hover div.navLevel2 {
   display: flex;
@@ -49,4 +51,19 @@
 }
 .navTop div.navLevel2 a {
   font-size: 18px;
+}
+
+@media only screen and (max-width: 767px) {
+  .navTop {
+    height: 0;
+  }
+  div.navLevel1 {
+    transform: scale(1, 0);
+  }
+  .mobileOpen {
+    height: 200px;
+  }
+  .mobileOpen div.navLevel1 {
+    transform: scale(1, 1);
+  }
 }/*# sourceMappingURL=TopNavigation.module.css.map */

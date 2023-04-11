@@ -17,14 +17,20 @@
 
 @media only screen and (max-width: 767px) {
   .container {
+    background-color: black;
+    padding: 4px 0;
+    left: 0;
+    position: fixed;
+    top: 0;
     width: 100%;
   }
   .topBar {
     border: 2px solid #663399;
     height: 42px;
+    margin: 0px 8px;
     text-align: center;
     position: relative;
-    width: 100%;
+    width: calc(100% - 16px);
   }
   .logo {
     display: inline-block;

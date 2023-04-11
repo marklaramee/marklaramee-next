@@ -1,9 +1,14 @@
 import styles from './styles/TopNavigation.module.scss';
 import Link from 'next/link'
+import classnames from 'classnames';
 
-const TopNavigation = () => {
+export interface props {
+    isOpen: boolean; 
+}
+
+const TopNavigation = ({isOpen}: props) => {
     return (
-        <nav className={styles.navTop}>
+        <nav className={classnames(styles.navTop, {[styles.mobileOpen]: isOpen})}>
             <div className={styles.navLevel1}>
                 <Link href="/">HOME</Link>
             </div>
