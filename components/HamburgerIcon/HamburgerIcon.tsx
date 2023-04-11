@@ -20,9 +20,4 @@ const HamburgerIcon = ({isOpen, hamburgerClick}: props) => {
   );
 };
 
-HamburgerIcon.propTypes = {
-  isOpen: PropTypes.bool,
-  hamburgerClick: PropTypes.func.isRequired,
-}
-
 export default HamburgerIcon;
