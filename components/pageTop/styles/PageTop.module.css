@@ -1,5 +1,41 @@
+.container {
+  z-index: 100;
+}
+
 .logo {
-  height: 221px;
+  display: block;
+  height: auto;
+  max-height: 221px;
+  max-width: 1125px;
   text-align: left;
   width: 100%;
+}
+
+.topBar {
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    background-color: black;
+    padding: 4px 0;
+    left: 0;
+    position: fixed;
+    top: 6px;
+    width: 100%;
+  }
+  .topBar {
+    border: 2px solid #663399;
+    height: 42px;
+    margin: 0px 8px;
+    text-align: center;
+    position: relative;
+    width: calc(100% - 16px);
+  }
+  .logo {
+    display: inline-block;
+    height: 100%;
+    text-align: left;
+    width: auto;
+  }
 }/*# sourceMappingURL=PageTop.module.css.map */

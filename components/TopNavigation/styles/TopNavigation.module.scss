@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;700'); 
+
+/* font */
+$anuphan: "Anuphan", sans-serif;
+
+/* colors */
+$black: #000;
+$purple-light: #b430c5;
+$purple: #663399;
+$white: #fff;
+
+
 .navTop {
     align-items: center;
     color: $purple;
@@ -6,7 +18,8 @@
     font-weight: 700;
     justify-content: flex-start;
     margin: 0;
-    padding: 0 0 0 40px;
+    padding: 0 0 0 39px;
+    transition: all 250ms;
     z-index: 100;
 
     a {
@@ -22,11 +35,13 @@
     }
 
     div.navLevel1 {
+        background-color: $black;
         cursor: pointer;
         display: block;
         overflow: visible;
         margin: 0 20px 0 0;
         position: relative;
+        transition: all 250ms;
         
         &:hover {
             div.navLevel2 {
@@ -46,12 +61,43 @@
         flex-wrap: nowrap;
         padding: 4px 8px;
         position: absolute;
-        left: 0;
+        left: -8px;
         top: 100%;
         width: fit-content;
 
         a {
             font-size: 18px;
         }
+    }
+}
+
+@media only screen and (max-width: 767px)  {
+    .navTop {
+        flex-direction: column;
+        gap: 8px;
+        height: 0;
+        padding-left: 20px;
+        padding-top: 8px;
+
+        &.mobileOpen {
+            height: 222px;
+
+            div.navLevel1 {
+                transform: scale(1, 1);
+            }
+
+            div.navLevel2 {
+                display: flex;
+                position: static;
+                width: 100%;
+            }
+        }
+    }
+
+    div.navLevel1 {
+        border: 1px solid $purple;
+        text-align: center;
+        transform: scale(1, 0);
+        width: 100%;
     }
 }
