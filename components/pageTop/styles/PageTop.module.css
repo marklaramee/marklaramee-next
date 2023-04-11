@@ -1,5 +1,8 @@
 .logo {
-  height: 221px;
+  display: block;
+  height: auto;
+  max-height: 221px;
+  max-width: 1125px;
   text-align: left;
   width: 100%;
 }/*# sourceMappingURL=PageTop.module.css.map */
