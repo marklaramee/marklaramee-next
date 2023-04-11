@@ -9,4 +9,8 @@
   max-width: 1125px;
   text-align: left;
   width: 100%;
+}
+
+.topBar {
+  display: block;
 }/*# sourceMappingURL=PageTop.module.css.map */

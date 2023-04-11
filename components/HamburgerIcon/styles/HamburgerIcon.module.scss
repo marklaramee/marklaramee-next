@@ -1,0 +1,86 @@
+$spacing-px: 6px;
+$purple: #663399;
+$purple-light: #b430c5;
+$purple-bright: #b330c5;
+
+button.reset {
+  border: 0;
+  font-family: inherit; /* For all browsers */
+  font-size: 100%; /* For all browsers */
+  line-height: 1.15; /* For all browsers */
+  margin: 0; /* Firefox and Safari have margin */
+  padding: 0;
+  overflow: visible; /* Edge hides overflow */
+  text-transform: none; /* Firefox inherits text-transform */
+  -webkit-appearance: button; /* Safari otherwise prevents some styles */
+}
+
+button.reset::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button.reset:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/******************/
+
+button.hamburgerButton {
+  border: 2px solid $purple-bright;
+}
+
+.wrapper {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+}
+
+.middleBlock {
+  display: block;
+  height: 2px;
+  width: 22px;
+  background-color: $purple-bright;
+  position: relative;
+  transition: all 250ms;
+}
+
+.topBlock {
+  content: '';
+  position: relative;
+  top: calc(var(spacing-px) * -1);
+  width: 22px;
+  height: 2px;
+  background-color: $purple-bright;
+  transition: all 250ms;
+}
+
+.bottomBlock {
+  content: '';
+  position: relative;
+  top: var(spacing-px);
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background-color: $purple-bright;
+  transition: all 250ms;
+}
+
+.open .middleBlock {
+  background-color: transparent;
+}
+
+.open .topBlock {
+  transform: rotate(45deg);
+  top: 6px;
+}
+
+.open .bottomBlock {
+  transform: rotate(-45deg);
+  top: -6px;
+}
