@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
-    prependData: `@import "./styles/_variables.scss";`,
+    prependData: `@import "@/styles/_variables.scss";`,
+    additionalData: `@import ./styles/_variables.scss";`
   },
 }
 

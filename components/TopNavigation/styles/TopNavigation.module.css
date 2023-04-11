@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;700");
+/* font */
+/* colors */
+.navTop {
+  align-items: center;
+  color: #663399;
+  display: flex;
+  font-family: "Anuphan", sans-serif;
+  font-weight: 700;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0 0 0 39px;
+  z-index: 100;
+}
+.navTop a {
+  font-size: 24px;
+  padding: 4px 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.navTop a:hover {
+  color: #b430c5;
+}
+.navTop div.navLevel1 {
+  cursor: pointer;
+  display: block;
+  overflow: visible;
+  margin: 0 20px 0 0;
+  position: relative;
+}
+.navTop div.navLevel1:hover div.navLevel2 {
+  display: flex;
+}
+.navTop span.navLevel1 {
+  font-size: 24px;
+}
+.navTop div.navLevel2 {
+  background-color: #000;
+  display: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 4px 8px;
+  position: absolute;
+  left: -8px;
+  top: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.navTop div.navLevel2 a {
+  font-size: 18px;
+}/*# sourceMappingURL=TopNavigation.module.css.map */
