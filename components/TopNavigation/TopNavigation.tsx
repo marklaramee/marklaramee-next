@@ -1,7 +1,7 @@
-import styles from './styles/Navigation.module.scss';
+import styles from './styles/TopNavigation.module.scss';
 import Link from 'next/link'
 
-const Navigation = () => {
+const TopNavigation = () => {
     return (
         <nav className={styles.navTop}>
             <div className={styles.navLevel1}>
@@ -26,4 +26,4 @@ const Navigation = () => {
     );
 };
 
-export default Navigation;
+export default TopNavigation;

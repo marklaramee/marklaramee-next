@@ -1,0 +1,147 @@
+// Vitest Snapshot v1
+
+exports[`Component:HamburgerIcon > :snapshots > when isOpen = false > renders snapshot 1`] = `
+[
+  <style
+    dangerouslySetInnerHTML={
+      {
+        "__html": "._wrapper_ {
+  display: flex;
+  flex-direction: column;
+}
+
+._middleBlock_ {
+  display: block;
+  height: 2px;
+  width: 22px;
+  background-color: black;
+  position: relative;
+  transition: all 250ms;
+}
+
+._topBlock_ {
+  content: '';
+  position: relative;
+  top: calc(var(--spacing-px) * -1);
+  width: 22px;
+  height: 2px;
+  background-color: black;
+  transition: all 250ms;
+}
+
+._bottomBlock_ {
+  content: '';
+  position: relative;
+  top: var(--spacing-px);
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background-color: black;
+  transition: all 250ms;
+}
+
+._open_ ._middleBlock_ {
+  background-color: transparent;
+}
+
+._open_ ._topBlock_ {
+  transform: rotate(45deg);
+  top: 2px;
+}
+
+._open_ ._bottomBlock_ {
+  transform: rotate(-45deg);
+  top: -2px;
+}
+",
+      }
+    }
+  />,
+  <div
+    className="_wrapper_"
+  >
+    <div
+      className="_topBlock_"
+    />
+    <div
+      className="_middleBlock_"
+    />
+    <div
+      className="_bottomBlock_"
+    />
+  </div>,
+]
+`;
+
+exports[`Component:HamburgerIcon > :snapshots > when isOpen = true > renders snapshot 1`] = `
+[
+  <style
+    dangerouslySetInnerHTML={
+      {
+        "__html": "._wrapper_ {
+  display: flex;
+  flex-direction: column;
+}
+
+._middleBlock_ {
+  display: block;
+  height: 2px;
+  width: 22px;
+  background-color: black;
+  position: relative;
+  transition: all 250ms;
+}
+
+._topBlock_ {
+  content: '';
+  position: relative;
+  top: calc(var(--spacing-px) * -1);
+  width: 22px;
+  height: 2px;
+  background-color: black;
+  transition: all 250ms;
+}
+
+._bottomBlock_ {
+  content: '';
+  position: relative;
+  top: var(--spacing-px);
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background-color: black;
+  transition: all 250ms;
+}
+
+._open_ ._middleBlock_ {
+  background-color: transparent;
+}
+
+._open_ ._topBlock_ {
+  transform: rotate(45deg);
+  top: 2px;
+}
+
+._open_ ._bottomBlock_ {
+  transform: rotate(-45deg);
+  top: -2px;
+}
+",
+      }
+    }
+  />,
+  <div
+    className="_wrapper_ _open_"
+  >
+    <div
+      className="_topBlock_"
+    />
+    <div
+      className="_middleBlock_"
+    />
+    <div
+      className="_bottomBlock_"
+    />
+  </div>,
+]
+`;

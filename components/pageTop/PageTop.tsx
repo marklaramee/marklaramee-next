@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Navigation from '../navigation/Navigation';
+import TopNavigation from '../TopNavigation/TopNavigation';
 import styles from './styles/PageTop.module.scss';
 
 export default function PageTop() {
@@ -13,7 +13,7 @@ export default function PageTop() {
           height='221'
         />
       </div>
-      <Navigation />
+      <TopNavigation />
     </>
   )
 }
