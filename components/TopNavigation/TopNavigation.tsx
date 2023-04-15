@@ -27,6 +27,9 @@ const TopNavigation = ({isOpen}: props) => {
                     <a href="/content/Mark-Laramee-CV.pdf" target="_blank">Resume - Accomplishments</a>
                 </div>
             </div>
+            <div className={styles.navLevel1}>
+                <Link href="/travel">TRAVEL</Link>
+            </div>
         </nav>
     );
 };
