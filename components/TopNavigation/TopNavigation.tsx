@@ -28,7 +28,10 @@ const TopNavigation = ({isOpen}: props) => {
                 </div>
             </div>
             <div className={styles.navLevel1}>
-                <Link href="/travel">TRAVEL</Link>
+                <Link href="/travel">TravelL</Link>
+            </div>
+            <div className={styles.navLevel1}>
+                <Link href="/contact">Contact</Link>
             </div>
         </nav>
     );
