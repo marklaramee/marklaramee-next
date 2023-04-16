@@ -10,51 +10,60 @@ https://medium.com/nerd-for-tech/sending-emails-with-nextjs-and-amazon-simple-em
 */
 
 
-export default function handler(req, res) {
-  // Get data submitted in request's body.
+export default async function handler(req, res) {
+  const acceptableScore = 0.5
   const body = req.body;
   const private_key = process.env.PRIVATE_KEY;
-
-  // Optional logging to see the responses
-  // in the command line where next.js app is running.
-  console.log('body: ', body)
-
-  // Guard clause checks for first and last name,
-  // and returns early if they are not found
-  if (!body.contactName || !body.email) {
-    // Sends a HTTP bad request error code
-    return res.status(400).json({ data: 'Missing required values' })
-  }
-
-
-
   const gcaptchaBody = `secret=${private_key}&response=${body.captchaToken}`
+  const gHeaders = {
+        "Content-Type": "application/x-www-form-urlencoded",
+      }
+
+
+  var captchaRep = 'unset';
 
   try {
-    fetch("https://www.google.com/recaptcha/api/siteverify", {
+    // fetch("https://www.google.com/recaptcha/api/siteverify", {
+    //   method: 'POST',
+    //   headers: gHeaders,
+    //   body: gcaptchaBody,
+    // })
+    // .then((captchaResponse) => {
+    //   res.status(200).json(captchaResponse)
+    // })
+
+    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
       method: 'POST',
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
+      headers: gHeaders,
       body: gcaptchaBody,
-    })
+    });
+
+    const captchaData = await response.json();
+
+    if (!captchaData.success) {
+      res.status(403).json({message: 'captcha call unsuccessful'});
+    } else if (captchaData.score < acceptableScore){
+      res.status(403).json({message: 'captcha score too low'});
+    } else {
+      res.status(200).json({message: 'success'});
+    }
   } catch (err) {
-    console.log(err);
+    // console.log(err);
+    res.status(200).json({error: err});
   };
 
 
 
+/*
+{ success: false, 'error-codes': [ 'timeout-or-duplicate' ] }
 
+{
+  success: true,
+  challenge_ts: '2023-04-16T21:45:21Z',
+  hostname: 'localhost',
+  score: 0.9,
+  action: 'yourAction'
+}
+*/
 
-  // try {
-  //     fetch("https://www.google.com/recaptcha/api/siteverify", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/x-www-form-urlencoded",
-  //       },
-  //       body: `secret=your_secret_key&response=${req.body.gRecaptchaToken}`,
-  //     })
-
- 
-  res.status(200).json({ data: `${gcaptchaBody}` })
 }
