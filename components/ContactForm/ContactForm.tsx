@@ -45,7 +45,21 @@ const ContactForm = () => {
             message: event.target.message.value
         }
 
-        console.log(formData);
+        const jsonData = JSON.stringify(formData);
+        const endpoint = '/api/contact'
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonData,
+        }
+
+        const response = await fetch(endpoint, options);
+
+        const result = await response.json()
+
+        console.log(result);
     };
 
     return (
