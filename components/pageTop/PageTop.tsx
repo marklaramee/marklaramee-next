@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react';
 import TopNavigation from '../TopNavigation/TopNavigation';
 import HamburgerIcon from '@/components/HamburgerIcon/HamburgerIcon';

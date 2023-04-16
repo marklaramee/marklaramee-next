@@ -1,8 +1,41 @@
 import React from 'react'
+import {useEffect, useCallback, useState} from 'react'
 import classnames from 'classnames';
 import styles from './styles/ContactForm.module.css';
+import {
+  GoogleReCaptchaProvider,
+  useGoogleReCaptcha
+} from 'react-google-recaptcha-v3';
+
+/* 
+https://www.npmjs.com/package/react-google-recaptcha-v3
+https://www.techomoro.com/how-to-add-google-recaptcha-v3-in-a-next-js-form/
+*/
 
 const ContactForm = () => {
+    const { executeRecaptcha } = useGoogleReCaptcha();
+    const [ captchaToken, setCaptchaToken ] = useState('');
+
+    // Create an event handler so you can call the verification on button click event or form submit
+    const handleReCaptchaVerify = useCallback(async () => {
+        if (!executeRecaptcha) {
+        console.log('Execute recaptcha not yet available');
+        return;
+        }
+
+        const token = await executeRecaptcha('yourAction');
+        // Do whatever you want with the token
+        console.log(`captcha ready ${token}`)
+        setCaptchaToken(token);
+    }, [executeRecaptcha]);
+
+    // You can use useEffect to trigger the verification as soon as the component being loaded
+    useEffect(() => {
+        handleReCaptchaVerify();
+    }, [handleReCaptchaVerify]);
+
+
+
     return (
         <div className={styles.wrapper}>
             <form action='/contact-action' method='post' className={styles.contactForm}>
@@ -36,6 +69,7 @@ const ContactForm = () => {
                 <div className={styles.buttonContainer}>
                     <button type='submit' className='reset'>Contact Me</button>
                 </div>
+                <input type='hidden' name='captchaToken' value={captchaToken} />
             </form>
         </div>
     );
