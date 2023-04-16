@@ -35,7 +35,7 @@ const ContactForm = () => {
         handleReCaptchaVerify();
     }, [handleReCaptchaVerify]);
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: React.ChangeEvent<any>) => {
         event.preventDefault();
         
         const formData = {
