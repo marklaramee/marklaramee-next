@@ -42,7 +42,8 @@ const ContactForm = () => {
             contactName: event.target.contactName.value,
             email: event.target.contactEmail.value,
             subject: event.target.subject.value,
-            message: event.target.message.value
+            message: event.target.message.value,
+            captchaToken: event.target.captchaToken.value
         }
 
         const jsonData = JSON.stringify(formData);
@@ -59,6 +60,7 @@ const ContactForm = () => {
 
         const result = await response.json()
 
+        console.log(jsonData);
         console.log(result);
     };
 
