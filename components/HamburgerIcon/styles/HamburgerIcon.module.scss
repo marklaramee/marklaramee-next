@@ -1,26 +1,5 @@
 @import '../../../styles/variables.scss';
 
-// TODO: move to global
-button.reset {
-  border: 0;
-  font-family: inherit; /* For all browsers */
-  font-size: 100%; /* For all browsers */
-  line-height: 1.15; /* For all browsers */
-  margin: 0; /* Firefox and Safari have margin */
-  padding: 0;
-  overflow: visible; /* Edge hides overflow */
-  text-transform: none; /* Firefox inherits text-transform */
-  -webkit-appearance: button; /* Safari otherwise prevents some styles */
-}
-button.reset::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-button.reset:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-/* end move */
-
 button.hamburgerButton {
   border: 3px solid $purple-bright;
   left: 4px;

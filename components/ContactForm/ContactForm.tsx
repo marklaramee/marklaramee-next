@@ -1,24 +1,35 @@
 import React from 'react'
+import classnames from 'classnames';
 import styles from './styles/ContactForm.module.css';
 
 const ContactForm = () => {
     return (
+        <>
         <form action='/contact-action' method='post' className={styles.contactForm}>
-            <label htmlFor='contactName'>Your Name:
+            <label htmlFor='contactName' className={styles.textContainer}>
+                <span>Your Name:</span>
                 <input type='text' id='contactName' name='contactName' />
             </label>
-            <label htmlFor='contactEmail'>Your Email Address:
+            <label htmlFor='contactEmail' className={styles.textContainer}>
+                <span>Your Email Address:</span>
                 <input type='text' id='contactEmail' name='contactEmail' />
             </label>
-            <label htmlFor='subject'>Subject (optional):
+            <label htmlFor='subject' className={styles.textContainer}>
+                <span>Subject (optional):</span>
                 <input type='text' id='subject' name='subject' />
             </label>
-            <label htmlFor='message'>Message:
-                <input type='text' id='message' name='message' />
+            <label htmlFor='message' className={styles.textAreaContainer}>
+                <div className={styles.textAreaDiv}>Message:</div>
+                <div className='growWrap'>
+                    <textarea id='message' name='message'>
+                    </textarea>
+                </div>
             </label>
-            
-            <button type='submit'>Contact Me</button>
+            <div className={styles.buttonContainer}>
+                <button type='submit' className='reset'>Contact Me</button>
+            </div>
         </form>
+        </>
     );
 };
 
