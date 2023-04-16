@@ -6,6 +6,7 @@ https://docs.aws.amazon.com/ses/latest/dg/send-an-email-using-sdk-programmatical
 
 https://medium.com/nerd-for-tech/sending-emails-with-nextjs-and-amazon-simple-email-services-ses-8e4e10d1d397
 
+https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/ses-examples-sending-email.html
 
 */
 
