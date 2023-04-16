@@ -9,6 +9,47 @@ https://medium.com/nerd-for-tech/sending-emails-with-nextjs-and-amazon-simple-em
 
 */
 
+var AWS = require('aws-sdk');
+AWS.config.update({region: 'us-west-1'});
+
+const sendEmail = () => {
+
+  // create params
+  var params = {
+    Destination: { 
+      CcAddresses: [],
+      ToAddresses: [
+        'marklaramee@gmail.com',
+      ]
+    },
+    Message: { 
+      Body: { 
+        Text: {
+        Charset: "UTF-8",
+        Data: "test send email"
+        }
+      },
+      Subject: {
+        Charset: 'UTF-8',
+        Data: 'Test email'
+      }
+      },
+    Source: 'marklaramee@gmail.com',
+    ReplyToAddresses: [],
+  };
+
+  // Create the promise and SES service object
+  var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
+
+  sendPromise.then(
+  function(data) {
+    console.log(data.MessageId);
+  }).catch(
+    function(err) {
+    console.error(err, err.stack);
+  });
+}
+
 
 export default async function handler(req, res) {
 
@@ -34,10 +75,15 @@ export default async function handler(req, res) {
     } else if (captchaData.score < acceptableScore){
       res.status(403).json({message: 'captcha score too low'});
     } else {
+      sendEmail();
       res.status(200).json({message: 'success'});
     }
+
+
+    // Create sendEmail params 
+  
   } catch (err) {
-    res.status(200).json({error: err});
+    res.status(400).json({error: err});
   };
 
 /*
