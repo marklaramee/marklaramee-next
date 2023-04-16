@@ -72,7 +72,7 @@ export default async function handler(req, res) {
     const captchaData = await response.json();
 
     if (!captchaData.success) {
-      res.status(403).json(captchaData);
+      res.status(403).json({message: 'captcha call unsuccessful'});
     } else if (captchaData.score < acceptableScore){
       res.status(403).json({message: 'captcha score too low'});
     } else {
