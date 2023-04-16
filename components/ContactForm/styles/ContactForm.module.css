@@ -5,4 +5,7 @@
 .contactForm {
   color: #6666cc;
   font-family: "Anuphan", sans-serif;
+}
+.contactForm label {
+  display: block;
 }/*# sourceMappingURL=ContactForm.module.css.map */

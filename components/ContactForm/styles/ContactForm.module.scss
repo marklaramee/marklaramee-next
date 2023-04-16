@@ -3,4 +3,8 @@
 .contactForm {
     color: $pale-blue;
     font-family: $anuphan;
+
+    label {
+        display: block;
+    }
 }
