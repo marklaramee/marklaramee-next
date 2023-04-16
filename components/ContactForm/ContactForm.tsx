@@ -60,7 +60,7 @@ const ContactForm = () => {
 
         const result = await response.json()
 
-        console.log(jsonData);
+        console.log(formData);
         console.log(result);
     };
 
