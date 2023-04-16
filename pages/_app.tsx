@@ -1,13 +1,13 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import Image from 'next/image'
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import PageTop from '@/components/PageTop/PageTop'
 import styles from '@/styles/Home.module.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <GoogleReCaptchaProvider reCaptchaKey="6Lcjv9ASAAAAAHmpt5xFo-xXRmZ9aYQ0Gf3SM4V0">
       <Head>
         <title>Mark Laramee: Home</title>
         <meta name="description" content="Mark Laramee" />
@@ -18,6 +18,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <PageTop />
         <Component {...pageProps} />
       </main>
-    </>
+    </GoogleReCaptchaProvider>
   )
 }
