@@ -11,27 +11,16 @@ https://medium.com/nerd-for-tech/sending-emails-with-nextjs-and-amazon-simple-em
 
 
 export default async function handler(req, res) {
+
   const acceptableScore = 0.5
   const body = req.body;
   const private_key = process.env.PRIVATE_KEY;
   const gcaptchaBody = `secret=${private_key}&response=${body.captchaToken}`
   const gHeaders = {
-        "Content-Type": "application/x-www-form-urlencoded",
-      }
-
-
-  var captchaRep = 'unset';
+    'Content-Type': 'application/x-www-form-urlencoded',
+  }
 
   try {
-    // fetch("https://www.google.com/recaptcha/api/siteverify", {
-    //   method: 'POST',
-    //   headers: gHeaders,
-    //   body: gcaptchaBody,
-    // })
-    // .then((captchaResponse) => {
-    //   res.status(200).json(captchaResponse)
-    // })
-
     const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
       method: 'POST',
       headers: gHeaders,
@@ -48,11 +37,8 @@ export default async function handler(req, res) {
       res.status(200).json({message: 'success'});
     }
   } catch (err) {
-    // console.log(err);
     res.status(200).json({error: err});
   };
-
-
 
 /*
 { success: false, 'error-codes': [ 'timeout-or-duplicate' ] }
