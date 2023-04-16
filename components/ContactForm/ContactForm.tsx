@@ -10,6 +10,7 @@ import {
 /* 
 https://www.npmjs.com/package/react-google-recaptcha-v3
 https://www.techomoro.com/how-to-add-google-recaptcha-v3-in-a-next-js-form/
+https://nextjs.org/docs/guides/building-forms
 */
 
 const ContactForm = () => {
@@ -34,11 +35,22 @@ const ContactForm = () => {
         handleReCaptchaVerify();
     }, [handleReCaptchaVerify]);
 
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        
+        const formData = {
+            contactName: event.target.contactName.value,
+            email: event.target.contactEmail.value,
+            subject: event.target.subject.value,
+            message: event.target.message.value
+        }
 
+        console.log(formData);
+    };
 
     return (
         <div className={styles.wrapper}>
-            <form action='/contact-action' method='post' className={styles.contactForm}>
+            <form action='/contact-action' method='post' className={styles.contactForm} onSubmit={handleSubmit}>
                 <label htmlFor='contactName' className={styles.textContainer}>
                     <span>Your Name:</span>
                     <input type='text' id='contactName' name='contactName' required />
