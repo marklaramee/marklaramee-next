@@ -1,8 +1,6 @@
-$spacing-px: 6px;
-$purple: #663399;
-$purple-light: #b430c5;
-$purple-bright: #b330c5;
+@import '../../../styles/variables.scss';
 
+// TODO: move to global
 button.reset {
   border: 0;
   font-family: inherit; /* For all browsers */
@@ -14,17 +12,14 @@ button.reset {
   text-transform: none; /* Firefox inherits text-transform */
   -webkit-appearance: button; /* Safari otherwise prevents some styles */
 }
-
 button.reset::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
-
 button.reset:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
-
-/******************/
+/* end move */
 
 button.hamburgerButton {
   border: 3px solid $purple-bright;

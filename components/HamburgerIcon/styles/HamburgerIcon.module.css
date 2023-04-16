@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;700");
+/* font */
+/* colors */
+/* color tryouts */
 button.reset {
   border: 0;
   font-family: inherit; /* For all browsers */
@@ -19,7 +23,7 @@ button.reset:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
-/******************/
+/* end move */
 button.hamburgerButton {
   border: 3px solid #b330c5;
   left: 4px;
