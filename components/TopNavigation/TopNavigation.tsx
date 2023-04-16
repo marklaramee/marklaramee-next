@@ -28,9 +28,9 @@ const TopNavigation = ({isOpen}: props) => {
                     <a href="/content/Mark-Laramee-CV.pdf" target="_blank">Resume - Accomplishments</a>
                 </div>
             </div>
-            <div className={styles.navLevel1}>
+            {/* <div className={styles.navLevel1}>
                 <Link href="/travel">Travel</Link>
-            </div>
+            </div> */}
             <div className={styles.navLevel1}>
                 <Link href="/contact">Contact</Link>
             </div>
