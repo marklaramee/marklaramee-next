@@ -8,11 +8,19 @@ const ContactForm = () => {
             <form action='/contact-action' method='post' className={styles.contactForm}>
                 <label htmlFor='contactName' className={styles.textContainer}>
                     <span>Your Name:</span>
-                    <input type='text' id='contactName' name='contactName' />
+                    <input type='text' id='contactName' name='contactName' required />
                 </label>
                 <label htmlFor='contactEmail' className={styles.textContainer}>
                     <span>Your Email Address:</span>
-                    <input type='text' id='contactEmail' name='contactEmail' />
+                    {/* https://www.regexlib.com/Search.aspx?k=email */}
+                    <input 
+                        type='text' 
+                        id='contactEmail' 
+                        name='contactEmail' 
+                        required 
+                        pattern='^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$'
+                        title='Please use a valid email address.'
+                    />
                 </label>
                 <label htmlFor='subject' className={styles.textContainer}>
                     <span>Subject (optional):</span>
@@ -21,7 +29,7 @@ const ContactForm = () => {
                 <label htmlFor='message' className={styles.textAreaContainer}>
                     <div className={styles.textAreaDiv}>Message:</div>
                     <div className='growWrap'>
-                        <textarea id='message' name='message'>
+                        <textarea id='message' name='message' required >
                         </textarea>
                     </div>
                 </label>
