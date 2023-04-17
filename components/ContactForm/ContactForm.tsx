@@ -57,10 +57,7 @@ const ContactForm = () => {
         }
 
         const response = await fetch(endpoint, options);
-
         const result = await response.json()
-
-        console.log(formData);
         console.log(result);
     };
 

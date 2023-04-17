@@ -3,7 +3,7 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
-import PageTop from '@/components/PageTop/PageTop'
+import SiteTop from '@/components/SiteTop/SiteTop'
 import styles from '@/styles/Home.module.css'
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <PageTop />
+        <SiteTop />
         <Component {...pageProps} />
       </main>
     </GoogleReCaptchaProvider>

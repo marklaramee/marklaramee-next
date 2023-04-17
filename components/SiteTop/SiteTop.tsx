@@ -2,9 +2,9 @@ import React from 'react'
 import { useState } from 'react';
 import TopNavigation from '../TopNavigation/TopNavigation';
 import HamburgerIcon from '@/components/HamburgerIcon/HamburgerIcon';
-import styles from './styles/PageTop.module.scss';
+import styles from './styles/SiteTop.module.scss';
 
-export default function PageTop() {
+export default function SiteTop() {
   const [isTopNavOpen, setIsTopNavOpen] = useState(false);
 
   const handleClick = () => {

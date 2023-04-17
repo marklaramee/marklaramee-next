@@ -1,11 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;700");
-/* font */
-/* colors */
-/* color tryouts */
+@import '../../../styles/variables.scss';
+
 .container {
   position: relative;
   z-index: 100;
-}
+} 
 
 .logo {
   display: block;
@@ -20,7 +18,7 @@
   display: block;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px)  {
   .container {
     background-color: black;
     padding: 4px 0;
@@ -29,18 +27,20 @@
     top: 6px;
     width: 100%;
   }
+
   .topBar {
-    border: 2px solid #663399;
+    border: 2px solid $purple;
     height: 42px;
     margin: 0px 8px;
     text-align: center;
     position: relative;
     width: calc(100% - 16px);
   }
+
   .logo {
     display: inline-block;
     height: 100%;
     text-align: left;
     width: auto;
   }
-}/*# sourceMappingURL=PageTop.module.css.map */
+}
