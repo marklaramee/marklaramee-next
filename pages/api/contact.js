@@ -11,7 +11,7 @@ https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/ses-examples-s
 */
 
 var AWS = require('aws-sdk');
-AWS.config.update({region: 'us-west-1'});
+AWS.config.update({region: 'us-east-2'});
 
 const sendEmail = () => {
 
