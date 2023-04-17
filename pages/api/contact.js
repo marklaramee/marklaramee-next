@@ -15,40 +15,46 @@ AWS.config.update({region: 'us-west-1'});
 
 const sendEmail = () => {
 
-  // create params
-  var params = {
-    Destination: { 
-      CcAddresses: [],
-      ToAddresses: [
-        'marklaramee@gmail.com',
-      ]
-    },
-    Message: { 
-      Body: { 
-        Text: {
-        Charset: "UTF-8",
-        Data: "test send email"
+  try {
+
+    // create params
+    var params = {
+      Destination: { 
+        CcAddresses: [],
+        ToAddresses: [
+          'marklaramee@gmail.com',
+        ]
+      },
+      Message: { 
+        Body: { 
+          Text: {
+          Charset: "UTF-8",
+          Data: "test send email"
+          }
+        },
+        Subject: {
+          Charset: 'UTF-8',
+          Data: 'Test email'
         }
-      },
-      Subject: {
-        Charset: 'UTF-8',
-        Data: 'Test email'
-      }
-      },
-    Source: 'marklaramee@gmail.com',
-    ReplyToAddresses: [],
-  };
+        },
+      Source: 'marklaramee@gmail.com',
+      ReplyToAddresses: [],
+    };
 
-  // Create the promise and SES service object
-  var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
+    // Create the promise and SES service object
+    var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
 
-  sendPromise.then(
-  function(data) {
-    console.log(data.MessageId);
-  }).catch(
-    function(err) {
-    console.error(err, err.stack);
-  });
+    sendPromise.then(
+    function(data) {
+      return data.MessageId;
+    }).catch(
+      function(err) {
+      return err;
+    });
+  }
+  catch (err) {
+    return err;
+  }
 }
 
 
@@ -76,12 +82,9 @@ export default async function handler(req, res) {
     } else if (captchaData.score < acceptableScore){
       res.status(403).json({message: 'captcha score too low'});
     } else {
-      sendEmail();
-      res.status(200).json({message: 'success'});
+      const emailMessage = sendEmail();
+      res.status(200).json({message: emailMessage});
     }
-
-
-    // Create sendEmail params 
   
   } catch (err) {
     res.status(400).json({error: err});
