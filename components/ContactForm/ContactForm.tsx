@@ -63,7 +63,7 @@ const ContactForm = () => {
 
     return (
         <div className={styles.wrapper}>
-            <form action='/contact-action' method='post' className={styles.contactForm} onSubmit={handleSubmit}>
+            <form className={styles.contactForm} onSubmit={handleSubmit}>
                 <label htmlFor='contactName' className={styles.textContainer}>
                     <span>Your Name:</span>
                     <input type='text' id='contactName' name='contactName' required />
