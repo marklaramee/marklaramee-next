@@ -24,7 +24,7 @@ const ContactForm = () => {
         return;
         }
 
-        const token = await executeRecaptcha('yourAction');
+        const token = await executeRecaptcha('yourAction'); // TODO: fix this stub
         setCaptchaToken(token);
     }, [executeRecaptcha]);
 
@@ -35,6 +35,9 @@ const ContactForm = () => {
 
     const handleSubmit = async (event: React.ChangeEvent<any>) => {
         event.preventDefault();
+
+         const endpoint = '/api/contact'
+        const endpoint1 = '/api/sendEmail'
         
         const formData = {
             contactName: event.target.contactName.value,
@@ -43,9 +46,8 @@ const ContactForm = () => {
             message: event.target.message.value,
             captchaToken: event.target.captchaToken.value
         }
-
         const jsonData = JSON.stringify(formData);
-        const endpoint = '/api/contact'
+
         const options = {
             method: 'POST',
             headers: {
@@ -54,7 +56,7 @@ const ContactForm = () => {
             body: jsonData,
         }
 
-        const response = await fetch(endpoint, options);
+        const response = await fetch(endpoint1, options);
         const result = await response.json()
         console.log(result);
     };
