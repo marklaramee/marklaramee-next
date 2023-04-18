@@ -8,10 +8,15 @@ https://medium.com/nerd-for-tech/sending-emails-with-nextjs-and-amazon-simple-em
 
 https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/ses-examples-sending-email.html
 
+https://docs.aws.amazon.com/cli/latest/topic/config-vars.html#sourcing-credentials-from-external-processes
+
+email forwarding event
+https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity-using-notifications-email.html
+
 */
 
 var AWS = require('aws-sdk');
-AWS.config.update({region: 'us-east-2'});
+AWS.config.update({region: 'us-west-1'});
 
 const sendEmail = () => {
 
