@@ -91,13 +91,14 @@ export default async function handler(req, res) {
     } else if (captchaData.score < acceptableScore){
       res.status(403).json({message: 'captcha score too low'});
     } else {
-      const emailMessage = sendEmail();
+      const emailMessage = await sendEmail();
       res.status(200).json({message: emailMessage});
     }
-  
+    res.status(200).json({message: "stop 1"});
   } catch (err) {
     res.status(400).json({error: err});
   };
+  res.status(200).json({message: "stop 2"});
 
 /*
 { success: false, 'error-codes': [ 'timeout-or-duplicate' ] }
