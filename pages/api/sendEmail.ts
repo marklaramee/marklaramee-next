@@ -42,15 +42,23 @@ const sendEmailChat = async () => {
     return response.MessageId;
 }
 
-const sendEmailDoc = async () => {
-    // Create the promise and SES service object
-    return AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
-}
+// const sendEmailDoc = async () => {
+//     // Create the promise and SES service object
+//     return AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
+// }
 
 const sendEmail = async () => {
   try {
-    let mailId =  await sendEmailChat()
-    return mailId;
+    // chat version
+    // const ses = new SES({
+    //     region: 'us-west-1', // Change to the appropriate AWS region
+    // });
+    // const response = await ses.sendEmail(params).promise();
+    // return response.MessageId;
+
+
+    // 
+
   } catch (err: any)  {
     return "error";
     // console.error(err, err.stack);
@@ -61,8 +69,20 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-    sendEmail().then(value => {
-        res.status(200).json({ name: value })
+    // sendEmail().then(value => {
+    //     res.status(200).json({ name: value })
+    // });
+
+    // Handle promise's fulfilled/rejected states
+
+    // Create the promise and SES service object
+    var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
+    sendPromise.then(
+    function(data: any) {
+        console.log(data.MessageId);
+    }).catch(
+        function(err: any) {
+        console.error(err, err.stack);
     });
-    
+        
 }
