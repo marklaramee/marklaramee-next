@@ -18,36 +18,40 @@ https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity-using-notific
 var AWS = require('aws-sdk');
 AWS.config.update({region: 'us-west-1'});
 
+const emailAddress = 'marklaramee@gmail.com';
+
 const sendEmail = () => {
 
   try {
 
     // create params
     var params = {
-      Destination: { 
-        CcAddresses: [],
-        ToAddresses: [
-          'marklaramee@gmail.com',
-        ]
+  Destination: { /* required */
+    CcAddresses: [emailAddress],
+    ToAddresses: [emailAddress]
+  },
+  Message: { 
+    Body: { 
+      Html: {
+       Charset: "UTF-8",
+       Data: "HTML_FORMAT_BODY"
       },
-      Message: { 
-        Body: { 
-          Text: {
-          Charset: "UTF-8",
-          Data: "test send email"
-          }
-        },
-        Subject: {
-          Charset: 'UTF-8',
-          Data: 'Test email'
-        }
-        },
-      Source: 'marklaramee@gmail.com',
-      ReplyToAddresses: [],
-    };
+      Text: {
+       Charset: "UTF-8",
+       Data: "TEXT_FORMAT_BODY"
+      }
+     },
+     Subject: {
+      Charset: 'UTF-8',
+      Data: 'Test email'
+     }
+    },
+  Source: emailAddress, /* required */
+  ReplyToAddresses: [emailAddress],
+};
 
     // Create the promise and SES service object
-    var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
+var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
 
     sendPromise.then(
     function(data) {
