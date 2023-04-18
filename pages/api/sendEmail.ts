@@ -50,9 +50,11 @@ export default async function handler(
     sendPromise.then(
     function(data: any) {
         console.log(data.MessageId);
+        res.status(200).json({ name: 'good' })
     }).catch(
         function(err: any) {
         console.error(err, err.stack);
+        res.status(200).json({ name: 'bad' })
     });
         
 }

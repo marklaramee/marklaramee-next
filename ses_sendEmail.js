@@ -38,9 +38,7 @@ var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).prom
 sendPromise.then(
   function(data) {
     console.log(data.MessageId);
-    res.status(200).json({ name: 'good' })
   }).catch(
     function(err) {
     console.error(err, err.stack);
-    res.status(200).json({ name: 'bad' })
   });
