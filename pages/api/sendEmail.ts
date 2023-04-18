@@ -16,66 +16,36 @@ AWS.config.update({region: 'us-west-1'});
 
 const emailAddress = 'marklaramee@gmail.com';
 
-const params = {
-    Destination: {
-      ToAddresses: ['recipient@example.com'], // Replace with the recipient email address
-    },
-    Message: {
-      Body: {
-        Text: {
-          Data: 'Hello, world!', // Replace with the email body
-        },
+var params = {
+  Destination: { /* required */
+    CcAddresses: [emailAddress],
+    ToAddresses: [emailAddress]
+  },
+  Message: { 
+    Body: { 
+      Html: {
+       Charset: "UTF-8",
+       Data: "HTML_FORMAT_BODY"
       },
-      Subject: {
-        Data: 'Test Email', // Replace with the email subject
-      },
+      Text: {
+       Charset: "UTF-8",
+       Data: "TEXT_FORMAT_BODY"
+      }
+     },
+     Subject: {
+      Charset: 'UTF-8',
+      Data: 'Test email'
+     }
     },
-    Source: 'sender@example.com', // Replace with the sender email address
-  };
-
-
-const sendEmailChat = async () => {
-    const ses = new SES({
-        region: 'us-west-1', // Change to the appropriate AWS region
-    });
-    const response = await ses.sendEmail(params).promise();
-    return response.MessageId;
-}
-
-// const sendEmailDoc = async () => {
-//     // Create the promise and SES service object
-//     return AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
-// }
-
-const sendEmail = async () => {
-  try {
-    // chat version
-    // const ses = new SES({
-    //     region: 'us-west-1', // Change to the appropriate AWS region
-    // });
-    // const response = await ses.sendEmail(params).promise();
-    // return response.MessageId;
-
-
-    // 
-
-  } catch (err: any)  {
-    return "error";
-    // console.error(err, err.stack);
-  }
+  Source: emailAddress, /* required */
+  ReplyToAddresses: [emailAddress],
 };
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-    // sendEmail().then(value => {
-    //     res.status(200).json({ name: value })
-    // });
 
-    // Handle promise's fulfilled/rejected states
-
-    // Create the promise and SES service object
     var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
     sendPromise.then(
     function(data: any) {
