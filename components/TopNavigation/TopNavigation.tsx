@@ -5,13 +5,14 @@ import classnames from 'classnames';
 
 export interface props {
     isOpen: boolean; 
+    navLinkClick: () => void;
 }
 
-const TopNavigation = ({isOpen}: props) => {
+const TopNavigation = ({isOpen, navLinkClick}: props) => {
     return (
         <nav className={classnames(styles.navTop, {[styles.mobileOpen]: isOpen})}>
             <div className={styles.navLevel1}>
-                <Link href="/">HOME</Link>
+                <Link href="/" onClick={navLinkClick}>HOME</Link>
             </div>
             {/* <div className={styles.navLevel1}>
                 <a href="#">APPS</a>
@@ -22,17 +23,17 @@ const TopNavigation = ({isOpen}: props) => {
             <div className={styles.navLevel1}>
                 <span className={styles.navLevel1}>WORK</span>
                 <div className={styles.navLevel2}>
-                    <a href="https://www.linkedin.com/in/marklaramee" target="_blank">Linked In</a>
-                    <a href="https://github.com/marklaramee" target="_blank">Github</a>
-                    <a href="/content/Mark-Laramee-Resume.pdf" target="_blank">Resume - Skills</a>
-                    <a href="/content/Mark-Laramee-CV.pdf" target="_blank">Resume - Accomplishments</a>
+                    <a href="https://www.linkedin.com/in/marklaramee" target="_blank" onClick={navLinkClick}>Linked In</a>
+                    <a href="https://github.com/marklaramee" target="_blank" onClick={navLinkClick}>Github</a>
+                    <a href="/content/Mark-Laramee-Resume.pdf" target="_blank" onClick={navLinkClick}>Resume - Skills</a>
+                    <a href="/content/Mark-Laramee-CV.pdf" target="_blank" onClick={navLinkClick}>Resume - Accomplishments</a>
                 </div>
             </div>
             {/* <div className={styles.navLevel1}>
                 <Link href="/travel">Travel</Link>
             </div> */}
             <div className={styles.navLevel1}>
-                <Link href="/contact">Contact</Link>
+                <Link href="/contact" onClick={navLinkClick}>Contact</Link>
             </div>
         </nav>
     );

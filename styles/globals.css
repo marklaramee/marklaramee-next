@@ -126,3 +126,11 @@ button.reset::-moz-focus-inner {
 button.reset:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
+
+
+@media only screen and (max-width: 767px)  {
+    main {
+        padding-top: 60px;
+    }
+}
+
