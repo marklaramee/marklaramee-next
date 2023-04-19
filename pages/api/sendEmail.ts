@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 var AWS = require('aws-sdk');
 AWS.config.update({region: 'us-west-1'});
 
-console.log("BBBBBBBB");
+console.log("CCCCCCC");
 var credentials = new AWS.SharedIniFileCredentials({profile: 'work-account'});
 AWS.config.credentials = credentials;
 console.log(credentials);
@@ -14,36 +14,42 @@ type Data = {
   name: string
 }
 
-// Create sendEmail params 
-var params = {
-  Destination: { /* required */
-    CcAddresses: [emailAddress],
-    ToAddresses: [emailAddress]
-  },
-  Message: { 
-    Body: { 
-      Html: {
-       Charset: "UTF-8",
-       Data: "HTML_FORMAT_BODY2"
-      },
-      Text: {
-       Charset: "UTF-8",
-       Data: "TEXT_FORMAT_BODY2"
-      }
-     },
-     Subject: {
-      Charset: 'UTF-8',
-      Data: 'Test email'
-     }
-    },
-  Source: emailAddress, /* required */
-  ReplyToAddresses: [emailAddress],
-};
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+
+    // get form vars
+    const toName = req.body.contactName;
+    const toEmail = req.body.contactEmail;
+    const message = req.body.message;
+
+    // Create sendEmail params 
+    var params = {
+      Destination: { /* required */
+        CcAddresses: [emailAddress],
+        ToAddresses: [emailAddress]
+      },
+      Message: { 
+        Body: { 
+          Html: {
+          Charset: "UTF-8",
+          Data: `<p>${toName} sent an email from marklaramee.com</p><p>message</p>`
+          },
+          Text: {
+          Charset: "UTF-8",
+          Data: `${toName} sent an email from marklaramee.com\n\nmessage`
+          }
+        },
+        Subject: {
+          Charset: 'UTF-8',
+          Data: 'Email from contact form at marklaramee.com'
+        }
+        },
+      Source: emailAddress, /* required */
+      ReplyToAddresses: [emailAddress],
+    };
+
 
     // // Create the promise and SES service object
     var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
