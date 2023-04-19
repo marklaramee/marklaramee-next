@@ -1,7 +1,6 @@
 import React from 'react'
 import {useEffect, useCallback, useState} from 'react'
 import {
-  GoogleReCaptchaProvider,
   useGoogleReCaptcha
 } from 'react-google-recaptcha-v3';
 
@@ -19,18 +18,17 @@ const ContactForm = () => {
     const [ captchaToken, setCaptchaToken ] = useState('');
     const [ formStatus, setFormStatus ] = useState(FormStatus.unsent)
 
-    // Create an event handler so you can call the verification on button click event or form submit
     const handleReCaptchaVerify = useCallback(async () => {
         if (!executeRecaptcha) {
-        // console.log('Execute recaptcha not yet available');
+        // recaptcha not yet available
         return;
         }
 
-        const token = await executeRecaptcha('yourAction'); // TODO: fix this stub
+        const token = await executeRecaptcha('yourAction'); // TODO: fix this stub?
         setCaptchaToken(token);
     }, [executeRecaptcha]);
 
-    // You can use useEffect to trigger the verification as soon as the component being loaded
+    // trigger the verification as soon as the component is loaded
     useEffect(() => {
         handleReCaptchaVerify();
     }, [handleReCaptchaVerify]);
@@ -38,9 +36,7 @@ const ContactForm = () => {
     const handleSubmit = async (event: React.ChangeEvent<any>) => {
         event.preventDefault();
 
-         const endpoint = '/api/contact'
-        const endpoint1 = '/api/sendEmail'
-        
+        const endpoint = '/api/contact'
         const formData = {
             contactName: event.target.contactName.value,
             email: event.target.contactEmail.value,
@@ -58,18 +54,10 @@ const ContactForm = () => {
             body: jsonData,
         }
 
-        const response = await fetch(endpoint1, options);
-        const resultJson = await response.json()
+        const response = await fetch(endpoint, options);
+        const resultJson = await response.json();
+        console.log(resultJson.message)
         setFormStatus(resultJson.result);
-        // switch (resultJson.result) {
-        //     case FormStatus.fail:
-        //         console.log("show user error");
-        //     case FormStatus.bot:
-        //         console.log("show bot result");
-        //     case FormStatus.success:
-        //         console.log("show success");
-        // }
-        
     };
 
     return (
