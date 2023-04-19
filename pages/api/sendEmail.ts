@@ -16,10 +16,11 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+    console.log("DDDDDDDD");
     console.log(req.body);
     // get form vars
     const fromName = req.body.contactName;
-    const fromEmail = req.body.contactEmail;
+    const fromEmail = req.body.email;
     const message = req.body.message;
 
     // Create sendEmail params 
