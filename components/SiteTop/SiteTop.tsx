@@ -21,7 +21,7 @@ export default function SiteTop() {
           className={styles.logo}
         />
       </div>
-      <TopNavigation isOpen={isTopNavOpen} />
+      <TopNavigation isOpen={isTopNavOpen} navLinkClick={handleClick} />
     </div>
   )
 }
