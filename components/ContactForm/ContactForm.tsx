@@ -59,8 +59,16 @@ const ContactForm = () => {
         }
 
         const response = await fetch(endpoint1, options);
-        const result = await response.json()
-        console.log(result);
+        const resultJson = await response.json()
+        switch (resultJson.result) {
+            case ResponseResult.fail:
+                console.log("show user error");
+            case ResponseResult.pass:
+                console.log("show bot result");
+            case ResponseResult.success:
+                console.log("show success");
+        }
+        
     };
 
     return (
