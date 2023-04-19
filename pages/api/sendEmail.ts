@@ -16,7 +16,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-
+    console.log(req.body);
     // get form vars
     const fromName = req.body.contactName;
     const fromEmail = req.body.contactEmail;
