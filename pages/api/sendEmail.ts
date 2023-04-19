@@ -16,7 +16,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-    console.log("FFFFFFFFFFFF");
+    console.log("GGGGGGGG");
 
     // setup captcha
     const acceptableScore = 0.5
@@ -71,7 +71,7 @@ export default async function handler(
     if (!captchaData.success) {
       res.status(403).json({message: 'captcha call unsuccessful'});
     } else if (captchaData.score < acceptableScore){
-      res.status(403).json({message: 'captcha score too low'});
+      res.status(403).json({message: `captcha score too low: ${captchaData.score}`});
     } else {
       // const emailMessage = await sendEmail(); TODO: delete or move?
       // Create the promise and SES service object
