@@ -1,10 +1,18 @@
-/** @type {import('next').NextConfig} */
+const path = require('path');
+
+/*
+TODO: not working
+https://github.com/vercel/next.js/discussions/12771
+*/
+
 const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
-    prependData: `@import "@/styles/_variables.scss";`,
-    additionalData: `@import ./styles/_variables.scss";`
+    includePaths: [path.join(__dirname, 'styles')],
   },
 }
 
 module.exports = nextConfig
+
+
+

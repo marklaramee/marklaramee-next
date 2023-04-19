@@ -1,3 +1,4 @@
+import React from 'react'
 import styles from './styles/HamburgerIcon.module.css';
 import classnames from 'classnames';
 import PropTypes from "prop-types";
