@@ -3,6 +3,11 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 var AWS = require('aws-sdk');
 AWS.config.update({region: 'us-west-1'});
 
+console.log("BBBBBBBB");
+var credentials = new AWS.SharedIniFileCredentials({profile: 'work-account'});
+AWS.config.credentials = credentials;
+console.log(credentials);
+
 const emailAddress = 'marklaramee@gmail.com';
 
 type Data = {
@@ -19,11 +24,11 @@ var params = {
     Body: { 
       Html: {
        Charset: "UTF-8",
-       Data: "HTML_FORMAT_BODY"
+       Data: "HTML_FORMAT_BODY2"
       },
       Text: {
        Charset: "UTF-8",
-       Data: "TEXT_FORMAT_BODY"
+       Data: "TEXT_FORMAT_BODY2"
       }
      },
      Subject: {
