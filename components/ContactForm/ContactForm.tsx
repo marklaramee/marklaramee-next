@@ -1,11 +1,13 @@
 import React from 'react'
 import {useEffect, useCallback, useState} from 'react'
-import classnames from 'classnames';
-import styles from './styles/ContactForm.module.css';
 import {
   GoogleReCaptchaProvider,
   useGoogleReCaptcha
 } from 'react-google-recaptcha-v3';
+
+import classnames from 'classnames';
+import styles from './styles/ContactForm.module.css';
+import { ResponseResult } from '../../utils/FormResponse';
 
 /* 
 https://www.npmjs.com/package/react-google-recaptcha-v3
@@ -42,7 +44,7 @@ const ContactForm = () => {
         const formData = {
             contactName: event.target.contactName.value,
             email: event.target.contactEmail.value,
-            subject: event.target.subject.value,
+            subject: event.target.subject.value, 
             message: event.target.message.value,
             captchaToken: event.target.captchaToken.value
         }

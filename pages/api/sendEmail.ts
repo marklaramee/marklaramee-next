@@ -1,5 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { ResponseResult } from '../../utils/FormResponse';
 var AWS = require('aws-sdk');
 AWS.config.update({region: 'us-west-1'});
 
@@ -9,7 +10,8 @@ AWS.config.credentials = credentials;
 const emailAddress = 'marklaramee@gmail.com';
 
 type Data = {
-  message: any
+  message: any,
+  result: ResponseResult
 }
 
 export default async function handler(
@@ -19,7 +21,7 @@ export default async function handler(
     console.log("GGGGGGGG");
 
     // setup captcha
-    const acceptableScore = 0.1
+    const acceptableScore = 0.1 // TODO: replace with 0.5 after testing
     const private_key = process.env.PRIVATE_KEY;
     const gcaptchaBody = `secret=${private_key}&response=${req.body.captchaToken}`
     const gHeaders = {
@@ -56,8 +58,6 @@ export default async function handler(
       Source: emailAddress, /* required */
       ReplyToAddresses: [emailAddress],
     };
-
-
     
     try {
     const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
@@ -69,9 +69,9 @@ export default async function handler(
     const captchaData = await response.json();
 
     if (!captchaData.success) {
-      res.status(403).json({message: 'captcha call unsuccessful'});
+      res.status(403).json({message: '', result: ResponseResult.pass});
     } else if (captchaData.score < acceptableScore){
-      res.status(403).json({message: `captcha score too low: ${captchaData.score}`});
+      res.status(403).json({message: ``, result: ResponseResult.pass});
     } else {
       // const emailMessage = await sendEmail(); TODO: delete or move?
       // Create the promise and SES service object
@@ -80,15 +80,14 @@ export default async function handler(
       // Handle promise's fulfilled/rejected states
       sendPromise.then(function(data: any) {
           console.log(data.MessageId);
-          res.status(200).json({ message: `good - captcha score ${captchaData.score}` })
+          res.status(200).json({ message: `email sent - captcha score ${captchaData.score}`, result: ResponseResult.success})
       }).catch(function(err: any) {
           console.error(err, err.stack);
-          res.status(200).json({ message: 'bad' })
+          res.status(200).json({ message: err, result: ResponseResult.fail })
       });
-      
     }
   } catch (err: any) {
-    res.status(400).json({message: err});
+    res.status(400).json({message: err, result: ResponseResult.fail});
   };
 
 
