@@ -41,16 +41,16 @@ export default async function handler(
 ) {
 
     // // Create the promise and SES service object
-    // var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
+    var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
 
-    // // Handle promise's fulfilled/rejected states
-    // sendPromise.then(function(data: any) {
-    //     console.log(data.MessageId);
-    //     res.status(200).json({ name: 'good' })
-    // }).catch(function(err: any) {
-    //     console.error(err, err.stack);
-    //     res.status(200).json({ name: 'bad' })
-    // });
+    // Handle promise's fulfilled/rejected states
+    sendPromise.then(function(data: any) {
+        console.log(data.MessageId);
+        res.status(200).json({ name: 'good' })
+    }).catch(function(err: any) {
+        console.error(err, err.stack);
+        res.status(200).json({ name: 'bad' })
+    });
 
-   res.status(200).json({ name: 'John Doe' })
+   // res.status(200).json({ name: 'John Doe' })
 }
