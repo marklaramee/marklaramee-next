@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { ResponseResult } from '../../utils/FormResponse';
+import { FormStatus } from '../../utils/FormResponse';
 var AWS = require('aws-sdk');
 AWS.config.update({region: 'us-west-1'});
 
@@ -11,7 +11,7 @@ const emailAddress = 'marklaramee@gmail.com';
 
 type Data = {
   message: any,
-  result: ResponseResult
+  result: FormStatus
 }
 
 export default async function handler(
@@ -69,9 +69,9 @@ export default async function handler(
     const captchaData = await response.json();
 
     if (!captchaData.success) {
-      res.status(403).json({message: '', result: ResponseResult.pass});
+      res.status(403).json({message: '', result: FormStatus.fail});
     } else if (captchaData.score < acceptableScore){
-      res.status(403).json({message: ``, result: ResponseResult.pass});
+      res.status(403).json({message: ``, result: FormStatus.bot});
     } else {
       // const emailMessage = await sendEmail(); TODO: delete or move?
       // Create the promise and SES service object
@@ -80,14 +80,14 @@ export default async function handler(
       // Handle promise's fulfilled/rejected states
       sendPromise.then(function(data: any) {
           console.log(data.MessageId);
-          res.status(200).json({ message: `email sent - captcha score ${captchaData.score}`, result: ResponseResult.success})
+          res.status(200).json({ message: `email sent - captcha score ${captchaData.score}`, result: FormStatus.success})
       }).catch(function(err: any) {
           console.error(err, err.stack);
-          res.status(200).json({ message: err, result: ResponseResult.fail })
+          res.status(200).json({ message: err, result: FormStatus.fail })
       });
     }
   } catch (err: any) {
-    res.status(400).json({message: err, result: ResponseResult.fail});
+    res.status(400).json({message: err, result: FormStatus.fail});
   };
 
 

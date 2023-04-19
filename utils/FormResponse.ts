@@ -1,5 +1,6 @@
-export enum ResponseResult {
-  fail,
-  pass, // pass is actually a bot
-  success
+export enum FormStatus {
+    unsent,
+    fail,
+    bot,
+    success
 }
