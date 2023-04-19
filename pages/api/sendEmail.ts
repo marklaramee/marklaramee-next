@@ -3,10 +3,8 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 var AWS = require('aws-sdk');
 AWS.config.update({region: 'us-west-1'});
 
-console.log("CCCCCCC");
 var credentials = new AWS.SharedIniFileCredentials({profile: 'work-account'});
 AWS.config.credentials = credentials;
-console.log(credentials);
 
 const emailAddress = 'marklaramee@gmail.com';
 
@@ -20,8 +18,8 @@ export default async function handler(
 ) {
 
     // get form vars
-    const toName = req.body.contactName;
-    const toEmail = req.body.contactEmail;
+    const fromName = req.body.contactName;
+    const fromEmail = req.body.contactEmail;
     const message = req.body.message;
 
     // Create sendEmail params 
@@ -34,11 +32,11 @@ export default async function handler(
         Body: { 
           Html: {
           Charset: "UTF-8",
-          Data: `<p>${toName} sent an email from marklaramee.com</p><p>message</p>`
+          Data: `<p>${fromName} ${fromEmail} sent an email from marklaramee.com</p><p>${message}</p>`
           },
           Text: {
           Charset: "UTF-8",
-          Data: `${toName} sent an email from marklaramee.com\n\nmessage`
+          Data: `${fromName} ${fromEmail} sent an email from marklaramee.com\n\n${message}`
           }
         },
         Subject: {
