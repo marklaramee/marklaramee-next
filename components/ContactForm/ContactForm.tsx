@@ -17,7 +17,7 @@ https://nextjs.org/docs/guides/building-forms
 const ContactForm = () => {
     const { executeRecaptcha } = useGoogleReCaptcha();
     const [ captchaToken, setCaptchaToken ] = useState('');
-    const [ formStatus, setFormStatus ] = useState(FormStatus.success)
+    const [ formStatus, setFormStatus ] = useState(FormStatus.unsent)
 
     // Create an event handler so you can call the verification on button click event or form submit
     const handleReCaptchaVerify = useCallback(async () => {
@@ -60,14 +60,15 @@ const ContactForm = () => {
 
         const response = await fetch(endpoint1, options);
         const resultJson = await response.json()
-        switch (resultJson.result) {
-            case FormStatus.fail:
-                console.log("show user error");
-            case FormStatus.bot:
-                console.log("show bot result");
-            case FormStatus.success:
-                console.log("show success");
-        }
+        setFormStatus(resultJson.result);
+        // switch (resultJson.result) {
+        //     case FormStatus.fail:
+        //         console.log("show user error");
+        //     case FormStatus.bot:
+        //         console.log("show bot result");
+        //     case FormStatus.success:
+        //         console.log("show success");
+        // }
         
     };
 
