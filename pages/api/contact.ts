@@ -18,8 +18,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-    console.log("GGGGGGGG");
-
     // setup captcha
     const acceptableScore = 0.1 // TODO: replace with 0.5 after testing
     const private_key = process.env.PRIVATE_KEY;
@@ -73,7 +71,6 @@ export default async function handler(
     } else if (captchaData.score < acceptableScore){
       res.status(403).json({message: ``, result: FormStatus.bot});
     } else {
-      // const emailMessage = await sendEmail(); TODO: delete or move?
       // Create the promise and SES service object
       var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
 
@@ -89,9 +86,4 @@ export default async function handler(
   } catch (err: any) {
     res.status(400).json({message: err, result: FormStatus.fail});
   };
-
-
-    
-
-   // res.status(200).json({ name: 'John Doe' })
 }
