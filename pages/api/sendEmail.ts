@@ -9,15 +9,23 @@ AWS.config.credentials = credentials;
 const emailAddress = 'marklaramee@gmail.com';
 
 type Data = {
-  name: string
+  message: any
 }
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-    console.log("DDDDDDDD");
-    console.log(req.body);
+    console.log("FFFFFFFFFFFF");
+
+    // setup captcha
+    const acceptableScore = 0.5
+    const private_key = process.env.PRIVATE_KEY;
+    const gcaptchaBody = `secret=${private_key}&response=${req.body.captchaToken}`
+    const gHeaders = {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    }
+
     // get form vars
     const fromName = req.body.contactName;
     const fromEmail = req.body.email;
@@ -50,17 +58,42 @@ export default async function handler(
     };
 
 
-    // // Create the promise and SES service object
-    var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
-
-    // Handle promise's fulfilled/rejected states
-    sendPromise.then(function(data: any) {
-        console.log(data.MessageId);
-        res.status(200).json({ name: 'good' })
-    }).catch(function(err: any) {
-        console.error(err, err.stack);
-        res.status(200).json({ name: 'bad' })
+    
+    try {
+    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: gHeaders,
+      body: gcaptchaBody,
     });
+
+    const captchaData = await response.json();
+
+    if (!captchaData.success) {
+      res.status(403).json({message: 'captcha call unsuccessful'});
+    } else if (captchaData.score < acceptableScore){
+      res.status(403).json({message: 'captcha score too low'});
+    } else {
+      // const emailMessage = await sendEmail(); TODO: delete or move?
+      // Create the promise and SES service object
+      var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
+
+      // Handle promise's fulfilled/rejected states
+      sendPromise.then(function(data: any) {
+          console.log(data.MessageId);
+          res.status(200).json({ message: 'good' })
+      }).catch(function(err: any) {
+          console.error(err, err.stack);
+          res.status(200).json({ message: 'bad' })
+      });
+      
+    }
+    res.status(200).json({message: "stop 1"});
+  } catch (err: any) {
+    res.status(400).json({message: err});
+  };
+
+
+    
 
    // res.status(200).json({ name: 'John Doe' })
 }
