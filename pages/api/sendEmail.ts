@@ -19,7 +19,7 @@ export default async function handler(
     console.log("GGGGGGGG");
 
     // setup captcha
-    const acceptableScore = 0.5
+    const acceptableScore = 0.1
     const private_key = process.env.PRIVATE_KEY;
     const gcaptchaBody = `secret=${private_key}&response=${req.body.captchaToken}`
     const gHeaders = {
@@ -80,14 +80,13 @@ export default async function handler(
       // Handle promise's fulfilled/rejected states
       sendPromise.then(function(data: any) {
           console.log(data.MessageId);
-          res.status(200).json({ message: 'good' })
+          res.status(200).json({ message: `good - captcha score ${captchaData.score}` })
       }).catch(function(err: any) {
           console.error(err, err.stack);
           res.status(200).json({ message: 'bad' })
       });
       
     }
-    res.status(200).json({message: "stop 1"});
   } catch (err: any) {
     res.status(400).json({message: err});
   };
