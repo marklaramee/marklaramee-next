@@ -15,16 +15,26 @@ export interface props {
 
 const AudioPlayer = ({url }: props) => {
 
+
+
   // hooks
   // const [audio] = useState(new Audio(url));
   const [isPlaying, setIsPlaying] = useState(false);
   const toggle = () => setIsPlaying(!isPlaying);
+  // const audioRef = useRef<HTMLAudioElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  // RefObject<HTMLAudioElement>
-  // LegacyRef<HTMLAudioElement>
+  // console.log(audioRef);
 
-  console.log(audioRef);
+  useEffect(() => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.play();
+      } else {
+        audioRef.current.pause();
+      }
+    }
+  }, [isPlaying, audioRef]);
 
   // useEffect(() => {
   //     playing ? audio.play() : audio.pause();
