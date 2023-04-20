@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;700");
+@import url("https://fonts.googleapis.com/css2?family=Marvel:wght@400;700");
 /* font */
 /* colors */
 /* color tryouts */
+.headline {
+  color: #4040bf;
+  font-family: "Anuphan", sans-serif;
+}
+
 button.hamburgerButton {
   border: 3px solid #b330c5;
   left: 4px;

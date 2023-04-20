@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;700");
+@import url("https://fonts.googleapis.com/css2?family=Marvel:wght@400;700");
+/* font */
+/* colors */
+/* color tryouts */
+.headline {
+  color: #4040bf;
+  font-family: "Anuphan", sans-serif;
+}
+
+.playerOuter {
+  align-items: flex-start;
+  border: 2px double #b2b2fd;
+  border-radius: 24px;
+  display: flex;
+  gap: 24px;
+  justify-content: flex-start;
+  padding: 16px 24px;
+}
+
+.albumCover {
+  border-radius: 24px;
+}
+
+.albumTitle {
+  color: #b2b2fd;
+  font-size: 40px;
+  font-family: "Marvel", sans-serif;
+  margin: 0;
+  padding: 0 0 12px 0;
+}
+
+.playButton {
+  background-color: white;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-left: 100px solid red;
+  border-bottom: 50px solid transparent;
+}/*# sourceMappingURL=MusicItem.module.css.map */

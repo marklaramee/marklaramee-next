@@ -8,9 +8,13 @@
   font-family: "Anuphan", sans-serif;
 }
 
-.zheader {
-  color: #4040bf;
-  font-family: "Anuphan", sans-serif;
-  text-align: center;
+.musicOuter {
+  margin: 0 auto;
   max-width: 1100px;
-}/*# sourceMappingURL=ZZone.module.css.map */
+  padding: 24px 0 0 0;
+  width: 100%;
+}
+
+.musicContainer {
+  margin: 24px 0;
+}/*# sourceMappingURL=Music.module.css.map */

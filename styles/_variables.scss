@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;700'); 
+@import url('https://fonts.googleapis.com/css2?family=Marvel:wght@400;700'); 
 
 /* font */
 $anuphan: "Anuphan", sans-serif;
+$marvel: "Marvel", sans-serif;
 
 /* colors */
 $black: #000;
@@ -30,3 +32,8 @@ $faint-blue: #b2b2fd;
 
 $brick-red: #993333;
 $burnt-orange: #be6003;
+
+.headline {
+    color: $blue;
+    font-family: $anuphan;
+}
