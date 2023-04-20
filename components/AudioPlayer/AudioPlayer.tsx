@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import classnames from 'classnames';
-import styles from './styles/AudioPlayer.module.scss'
+import styles from './styles/AudioPlayer.module.css'
 
 // https://blog.logrocket.com/building-audio-player-react/#configuring-progress-bar-volume-slider
 // https://stackoverflow.com/questions/47686345/playing-sound-in-react-js
@@ -35,7 +35,9 @@ const AudioPlayer = ({url }: props) => {
     <div>
       {/* <button  className={classnames(styles.reset, styles.playButton)>{playing ? "Pause" : "Play"}</button> */}
       {/* <button onClick={toggle} className={classnames(styles.reset, styles.playButton)} /> */}
-      <button onClick={toggle} className={styles.playButton} />
+      <button onClick={toggle} className={classnames(styles.reset, styles.playButton)}>
+        <div className={styles.triangleRight} />
+      </button>
     </div>
   );
 };
