@@ -1,11 +1,14 @@
 import React from 'react';
-import styles from './styles/Music.module.css'
+import classnames from 'classnames';
 import MusicGroup from '@/components/MusicGroup/MusicGroup';
+import styles from './styles/Music.module.css'
+
+
 
 const Music = () => {
     return (
         <div className={styles.musicOuter}>
-            <h1 className={styles.headline}>Music</h1>
+            <h1 className={classnames(styles.headline, styles.musicTitle)}>Music</h1>
             <div className={styles.musicContainer}>
                 <MusicGroup />
             </div>

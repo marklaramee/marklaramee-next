@@ -6,7 +6,7 @@ import styles from './styles/MusicGroup.module.scss'
 const MusicGroup = () => {
     return (
         <>
-        <h2 className={styles.headline}>The Latest</h2>
+        {/* <h2 className={styles.headline}>The Latest</h2> */}
         <MusicItem />
         </>
     );

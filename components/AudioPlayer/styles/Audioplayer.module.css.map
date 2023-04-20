@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../styles/_variables.scss","Audioplayer.module.css","Audioplayer.module.scss"],"names":[],"mappings":"AAAQ,gFAAA;AACA,2EAAA;AAER,SAAA;AAIA,WAAA;AASA,kBAAA;AAmBA;EACI,cAVG;EAWH,iCAhCK;EAiCL,gBAAA;AC7BJ;;ACNA;EACI,uBAAA;EACA,kBAAA;EACA,YAAA;EACA,WAAA;ADSJ;;ACNA;EACI,QAAA;EACA,SAAA;EACA,kCAAA;EACA,4BAAA;EACA,qCAAA;ADSJ","file":"Audioplayer.module.css"}

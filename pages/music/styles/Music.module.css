@@ -5,7 +5,8 @@
 /* color tryouts */
 .headline {
   color: #4040bf;
-  font-family: "Anuphan", sans-serif;
+  font-family: "Marvel", sans-serif;
+  font-weight: 700;
 }
 
 .musicOuter {
@@ -17,4 +18,8 @@
 
 .musicContainer {
   margin: 24px 0;
+}
+
+.musicTitle {
+  font-size: 48px;
 }/*# sourceMappingURL=Music.module.css.map */
