@@ -8,6 +8,14 @@
     height: 64px;
     position: relative;  
     width: 64px; 
+
+    &.isPlaying {
+        border: 2px solid $brick-red;
+
+        .triangleRight {
+            border-left: 35px solid $brick-red;
+        }
+    }
 }
 
 .triangleRight {

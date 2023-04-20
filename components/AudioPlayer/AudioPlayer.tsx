@@ -15,8 +15,8 @@ export interface props {
 
 const AudioPlayer = ({url }: props) => {
   // const [audio] = useState(new Audio(url));
-  const [playing, setPlaying] = useState(false);
-  const toggle = () => setPlaying(!playing);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const toggle = () => setIsPlaying(!isPlaying);
 
   // useEffect(() => {
   //     playing ? audio.play() : audio.pause();
@@ -35,9 +35,9 @@ const AudioPlayer = ({url }: props) => {
     <div>
       {/* <button  className={classnames(styles.reset, styles.playButton)>{playing ? "Pause" : "Play"}</button> */}
       {/* <button onClick={toggle} className={classnames(styles.reset, styles.playButton)} /> */}
-      <button onClick={toggle} className={classnames(styles.reset, styles.playButton)}>
+      <button onClick={toggle} className={classnames(styles.reset, styles.playButton, {[styles.isPlaying]: isPlaying})}>
         <div className={styles.triangleRight} />
-        <audio src={url} controls />
+        <audio src={url}  />
       </button>
     </div>
   );
