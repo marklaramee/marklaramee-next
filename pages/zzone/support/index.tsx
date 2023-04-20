@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import ContactForm from '@/components/ContactForm/ContactForm';
-import styles from '../ZZone.module.css'
+import styles from '../styles/ZZone.module.css'
 
 export default function ZZone() {
   return (
@@ -12,9 +12,8 @@ export default function ZZone() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <ContactForm />
-      </main>
+      <h1 className={styles.zheader}>Z-Zone Support</h1>
+      <ContactForm />
     </>
   )
 }
