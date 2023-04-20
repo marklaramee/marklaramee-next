@@ -37,6 +37,7 @@ const AudioPlayer = ({url }: props) => {
       {/* <button onClick={toggle} className={classnames(styles.reset, styles.playButton)} /> */}
       <button onClick={toggle} className={classnames(styles.reset, styles.playButton)}>
         <div className={styles.triangleRight} />
+        <audio src={url} controls />
       </button>
     </div>
   );
