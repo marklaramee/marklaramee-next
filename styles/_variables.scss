@@ -10,13 +10,18 @@ $black: #000;
 $purple-light: #b430c5;
 $purple-bright: #b330c5;
 $purple: #663399;
+$purple-faint: #fad7ff;
 $white: #fff;
 
 
 
 /* color tryouts */
+
+// buttons
 $yellow: #f1e601;
-$dark-yellow: #898305;
+$yellow-dark: #898305;
+$yellow-faint: #fbfad4; // bg color
+$orange-burnt: #be6003;
 
 $aqua: #339999;
 
@@ -25,13 +30,13 @@ $pea-green: #669933;
 $kelley-green: #339966;
 
 $blue: #4040bf;
-$pale-blue: #b2b2fd;
-$deep-blue: #333399;
-$faint-blue: #b2b2fd;
+$blue-pale: #b2b2fd; // type color
+$blue-deep: #333399;
+$blue-faint: #d1d1f9; //bg color
 
 
 $brick-red: #993333;
-$burnt-orange: #be6003;
+
 
 .headline {
     color: $blue;

@@ -10,16 +10,21 @@
 }
 
 .playButton {
-  background-color: white;
+  background-color: #fbfad4;
+  border: 2px solid #be6003;
   border-radius: 50%;
   height: 64px;
+  position: relative;
   width: 64px;
 }
 
 .triangleRight {
-  width: 0;
+  border-top: 20px solid transparent;
+  border-left: 35px solid #be6003;
+  border-bottom: 20px solid transparent;
+  position: absolute;
   height: 0;
-  border-top: 24px solid transparent;
-  border-left: 42px solid red;
-  border-bottom: 24px solid transparent;
+  left: 17px;
+  top: 9px;
+  width: 0;
 }/*# sourceMappingURL=Audioplayer.module.css.map */

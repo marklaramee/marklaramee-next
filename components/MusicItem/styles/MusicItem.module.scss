@@ -2,7 +2,7 @@
 
 .playerOuter {
     align-items: flex-start;
-    border: 2px double $pale-blue; 
+    border: 2px double $blue-pale; 
     border-radius: 24px;
     display: flex;
     gap: 24px;
@@ -15,7 +15,7 @@
 }
 
 .albumTitle {
-    color: $faint-blue;
+    color: $blue-pale;
     font-size: 40px;
     font-family: $marvel;
     margin: 0;
@@ -23,7 +23,7 @@
 }
 
 .artist {
-    color: $faint-blue;
+    color: $blue-pale;
     font-size: 24px;
     font-family: $marvel;
     margin: 0;
