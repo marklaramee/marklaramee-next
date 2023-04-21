@@ -36,6 +36,10 @@ const AudioPlayer = ({url }: props) => {
     }
   }, [isPlaying, audioRef]);
 
+  const updateAudioTime = (newTime: string) => {
+    console.log(newTime);
+  }
+
   // useEffect(() => {
   //     playing ? audio.play() : audio.pause();
   //   },
@@ -57,7 +61,7 @@ const AudioPlayer = ({url }: props) => {
         <div className={styles.triangleRight} />
         <audio src={url} ref={audioRef} />
       </button>
-      <ProgressBar />
+      <ProgressBar updateParent={updateAudioTime} />
     </div>
   );
 };

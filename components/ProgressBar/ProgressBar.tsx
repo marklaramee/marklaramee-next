@@ -2,13 +2,18 @@ import React, { useState, useEffect, useRef, MutableRefObject } from "react";
 import classnames from 'classnames';
 import styles from './styles/ProgressBar.module.css'
 
-const ProgressBar = () => {
+export interface props {
+    updateParent: (newValue: string) => void;
+}
+
+const ProgressBar = ({updateParent}: props) => {
     const progressBarRef = useRef<HTMLInputElement>(null)
     // const audioRef = useRef<HTMLInputElement>(null);
 
     const handleProgressChange = () => {
         if (!!progressBarRef.current) {
-            console.log(progressBarRef.current.value);
+            // console.log(progressBarRef.current.value);
+            updateParent(progressBarRef.current.value)
         }
     };
 
