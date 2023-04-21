@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, MutableRefObject } from "react";
 import classnames from 'classnames';
-import styles from './styles/ProgressBar.module.css'
+import styles from './styles/EditableProgressBar.module.css'
 
 export interface props {
     updateParent: (newValue: string) => void;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import classnames from 'classnames';
 import styles from './styles/AudioPlayer.module.css'
-import ProgressBar from '../ProgressBar/ProgressBar';
+import EditableProgressBar from '../EditableProgressBar/EditableProgressBar';
 
 // https://blog.logrocket.com/building-audio-player-react/#configuring-progress-bar-volume-slider
 // https://stackoverflow.com/questions/47686345/playing-sound-in-react-js
@@ -61,7 +61,7 @@ const AudioPlayer = ({url }: props) => {
         <div className={styles.triangleRight} />
         <audio src={url} ref={audioRef} />
       </button>
-      <ProgressBar updateParent={updateAudioTime} />
+      <EditableProgressBar updateParent={updateAudioTime} />
     </div>
   );
 };
