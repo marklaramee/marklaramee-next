@@ -11,7 +11,9 @@
     background-color: $button-background;
     border: 2px solid $button-inactive;
     border-radius: 50%;
+    flex-shrink: 1;
     height: 64px;
+    min-width: 64px; 
     position: relative;  
     width: 64px; 
 

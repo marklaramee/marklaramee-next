@@ -4,17 +4,21 @@
     align-items: center;
     color: $blue-faint;
     display: flex;
+    flex-shrink: 2;
     font-family: $anuphan;
     gap: 16px;
     justify-content: flex-start;
+    max-width: 500px; 
+    width: 100%;
 }
 
 .range {
   --range-progress: 0; // TODO: delete?
   -webkit-appearance: none; 
-  width: 400px; 
   background: $blue-faint; 
   border-radius: 6px;
+  max-width: 400px; 
+  width: 100%;
 }
 
 .range::-webkit-slider-thumb {
