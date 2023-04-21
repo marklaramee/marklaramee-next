@@ -9,6 +9,13 @@
   font-weight: 700;
 }
 
+.audioContainer {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
 .playButton {
   background-color: #fbfad4;
   border: 2px solid #be6003;

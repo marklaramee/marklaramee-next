@@ -8,8 +8,8 @@ const MusicPlayer = () => {
         <div className={styles.playerOuter}>
             <Image 
             src='/music/Steppin-Back-Cover.png'
-            width='200' 
-            height='200' 
+            width='300' 
+            height='300' 
             alt='steppin back cover art' 
             className={styles.albumCover}
             />

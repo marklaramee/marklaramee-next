@@ -1,0 +1,24 @@
+@import '../../../styles/variables.scss';
+
+
+.progressBarContainer {
+    align-items: center;
+    color: $blue-faint;
+    display: flex;
+    font-family: $anuphan;
+    gap: 16px;
+    justify-content: flex-start;
+}
+
+.range {
+  --range-progress: 0;
+  /* ... */
+}
+
+.range::before {
+  /* ... */
+  background: #f50;
+  width: var(--range-progress);
+  /* ... */
+}
+

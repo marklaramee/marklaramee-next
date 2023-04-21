@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useRef, LegacyRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import classnames from 'classnames';
 import styles from './styles/AudioPlayer.module.css'
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 // https://blog.logrocket.com/building-audio-player-react/#configuring-progress-bar-volume-slider
 // https://stackoverflow.com/questions/47686345/playing-sound-in-react-js
@@ -21,7 +22,6 @@ const AudioPlayer = ({url }: props) => {
   // const [audio] = useState(new Audio(url));
   const [isPlaying, setIsPlaying] = useState(false);
   const toggle = () => setIsPlaying(!isPlaying);
-  // const audioRef = useRef<HTMLAudioElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   // console.log(audioRef);
@@ -50,13 +50,14 @@ const AudioPlayer = ({url }: props) => {
   // }, [audio]);
 
   return (
-    <div>
+    <div className={styles.audioContainer}>
       {/* <button  className={classnames(styles.reset, styles.playButton)>{playing ? "Pause" : "Play"}</button> */}
       {/* <button onClick={toggle} className={classnames(styles.reset, styles.playButton)} /> */}
       <button onClick={toggle} className={classnames(styles.reset, styles.playButton, {[styles.isPlaying]: isPlaying})}>
         <div className={styles.triangleRight} />
         <audio src={url} ref={audioRef} />
       </button>
+      <ProgressBar />
     </div>
   );
 };

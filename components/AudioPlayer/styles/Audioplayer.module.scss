@@ -1,6 +1,13 @@
 @import '../../../styles/variables.scss';
 
 
+.audioContainer {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+}
+
 .playButton {
     background-color:$yellow-faint;
     border: 2px solid $orange-burnt;
@@ -28,3 +35,4 @@
     top: 9px;
     width: 0;
 }
+
