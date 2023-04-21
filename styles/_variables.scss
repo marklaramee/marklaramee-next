@@ -1,32 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;700'); 
+@import url('https://fonts.googleapis.com/css2?family=Marvel:wght@400;700'); 
 
 /* font */
 $anuphan: "Anuphan", sans-serif;
+$marvel: "Marvel", sans-serif;
 
 /* colors */
 $black: #000;
 $purple-light: #b430c5;
 $purple-bright: #b330c5;
 $purple: #663399;
+$purple-faint: #fad7ff;
 $white: #fff;
 
 
 
 /* color tryouts */
+
+// buttons
 $yellow: #f1e601;
-$dark-yellow: #898305;
+$yellow-dark: #898305;
+$yellow-faint: #fbfad4; // bg color
+$orange-burnt: #be6003; // button text/border
+$brick-red: #993333; // button text/border active
 
 $aqua: #339999;
 
 $green: #669933;
 $pea-green: #669933;
 $kelley-green: #339966;
+$dark-kelley-green: #226745;
+$green-pale: #e6fad1;
 
 $blue: #4040bf;
-$pale-blue: #b2b2fd;
-$deep-blue: #333399;
-$faint-blue: #b2b2fd;
+$blue-pale: #b2b2fd; // type color
+$blue-deep: #333399;
+$blue-faint: #d1d1f9; //bg color
+
+$button-inactive: $pea-green;
+$button-active: $dark-kelley-green;
+$button-background: $green-pale;
+$button-foreground: $kelley-green;
 
 
-$brick-red: #993333;
-$burnt-orange: #be6003;
+
+
+
+.headline {
+    color: $blue;
+    font-family: $marvel;
+    font-weight: 700;
+}

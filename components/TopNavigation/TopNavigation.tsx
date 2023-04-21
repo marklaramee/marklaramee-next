@@ -16,10 +16,10 @@ const TopNavigation = ({isOpen, navLinkClick}: props) => {
             </div>
             {/* <div className={styles.navLevel1}>
                 <a href="#">APPS</a>
-            </div>
+            </div>*/}
             <div className={styles.navLevel1}>
-                <a href="#">MUSIC</a>
-            </div> */}
+                <Link href="/music" onClick={navLinkClick}>Music</Link>
+            </div> 
             <div className={styles.navLevel1}>
                 <span className={styles.navLevel1}>WORK</span>
                 <div className={styles.navLevel2}>

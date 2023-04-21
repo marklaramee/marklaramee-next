@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;700");
+@import url("https://fonts.googleapis.com/css2?family=Marvel:wght@400;700");
+/* font */
+/* colors */
+/* color tryouts */
+.headline {
+  color: #4040bf;
+  font-family: "Marvel", sans-serif;
+  font-weight: 700;
+}
+
+.musicOuter {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 24px 0 0 0;
+  width: 100%;
+}
+
+.musicContainer {
+  margin: 24px 0;
+}
+
+.musicTitle {
+  font-size: 48px;
+}/*# sourceMappingURL=Music.module.css.map */

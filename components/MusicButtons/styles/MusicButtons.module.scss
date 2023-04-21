@@ -1,0 +1,33 @@
+@import '../../../styles/variables.scss';
+
+.buttonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start; 
+    width: 100%;
+}
+
+.musicButton {
+    align-items: center;
+    background-color: $purple-faint;
+    border: 1px solid $purple;
+    border-radius: 16px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 12px;
+    height: 40px;
+    justify-content: flex-start;
+    padding: 0 0 0 6px;
+    width: 160px;
+
+    .buttonImage {
+        display: block;
+        height: 32px;
+        width: 32px;
+    }
+
+    .buttonTitle {
+        display: block;
+    }
+}

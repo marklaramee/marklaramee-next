@@ -1,0 +1,36 @@
+@import '../../../styles/variables.scss';
+
+.audioContainer {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+}
+
+.playButton {
+    background-color: $button-background;
+    border: 2px solid $button-inactive;
+    border-radius: 50%;
+    height: 64px;
+    position: relative;  
+    width: 64px; 
+
+    &.isPlaying {
+        border: 2px solid $button-active;
+
+        .triangleRight {
+            border-left: 35px solid $button-active;
+        }
+    }
+}
+
+.triangleRight {
+    border-top: 20px solid transparent;
+    border-left: 35px solid $button-inactive;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    height: 0;
+    left: 17px;
+    top: 9px;
+    width: 0;
+}

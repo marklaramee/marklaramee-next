@@ -1,0 +1,39 @@
+@import '../../../styles/variables.scss';
+
+.playerOuter {
+    align-items: flex-start;
+    border: 2px double $blue-pale; 
+    border-radius: 24px;
+    display: flex;
+    gap: 24px;
+    justify-content: flex-start;
+    padding: 16px 24px;
+}
+
+.albumCover {
+    border-radius: 24px;
+}
+
+.titleContainer {
+    padding: 0 0 6px 0;
+}
+
+.playerContainer {
+    padding: 0 0 32px 0;
+}
+
+.albumTitle {
+    color: $blue-pale;
+    font-size: 40px;
+    font-family: $marvel;
+    margin: 0;
+    padding: 0;
+}
+
+.artist {
+    color: $blue-pale;
+    font-size: 24px;
+    font-family: $marvel;
+    margin: 0;
+    padding: 0 0 12px 0;
+}
