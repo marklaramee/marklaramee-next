@@ -12,7 +12,6 @@ const ProgressBar = ({updateParent}: props) => {
 
     const handleProgressChange = () => {
         if (!!progressBarRef.current) {
-            // console.log(progressBarRef.current.value);
             updateParent(progressBarRef.current.value)
         }
     };

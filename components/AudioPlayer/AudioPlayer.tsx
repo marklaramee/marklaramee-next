@@ -38,6 +38,9 @@ const AudioPlayer = ({url }: props) => {
 
   const updateAudioTime = (newTime: string) => {
     console.log(newTime);
+    if (audioRef.current) {
+      audioRef.current.currentTime = parseInt(newTime);
+    }
   }
 
   // useEffect(() => {
