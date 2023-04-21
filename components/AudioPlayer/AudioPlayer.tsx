@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import classnames from 'classnames';
+import { getPercentage } from '../../utils/UtilityFunctions';
 import styles from './styles/AudioPlayer.module.css'
 import EditableProgressBar from '../EditableProgressBar/EditableProgressBar';
 
@@ -16,6 +17,9 @@ export interface props {
 
 const AudioPlayer = ({url }: props) => {
 
+
+  // TODO: use dynamic prop value
+  const songSeconds = 312;
 
 
   // hooks
@@ -39,7 +43,8 @@ const AudioPlayer = ({url }: props) => {
   const updateAudioTime = (newTime: string) => {
     console.log(newTime);
     if (audioRef.current) {
-      audioRef.current.currentTime = parseInt(newTime);
+      const percentage = parseInt(newTime);
+      audioRef.current.currentTime = getPercentage(percentage, songSeconds);
     }
   }
 
