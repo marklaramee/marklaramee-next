@@ -70,7 +70,8 @@
         padding-top: 8px;
 
         &.mobileOpen {
-            height: 280px;
+            height: auto;
+            padding-bottom: 12px;
 
             div.navLevel1 {
                 transform: scale(1, 1);
