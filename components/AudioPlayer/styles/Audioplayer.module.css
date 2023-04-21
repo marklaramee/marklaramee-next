@@ -20,7 +20,9 @@
   background-color: #e6fad1;
   border: 2px solid #669933;
   border-radius: 50%;
+  flex-shrink: 1;
   height: 64px;
+  min-width: 64px;
   position: relative;
   width: 64px;
 }
@@ -40,4 +42,10 @@
   left: 17px;
   top: 9px;
   width: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .audioContainer {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=Audioplayer.module.css.map */

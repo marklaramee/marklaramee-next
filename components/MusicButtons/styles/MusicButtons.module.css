@@ -37,4 +37,10 @@
 }
 .musicButton .buttonTitle {
   display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  .buttonsContainer {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=MusicButtons.module.css.map */
