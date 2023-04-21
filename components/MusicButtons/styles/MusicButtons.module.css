@@ -12,27 +12,28 @@
 .buttonsContainer {
   display: flex;
   flex-wrap: wrap;
+  gap: 12px;
   justify-content: flex-start;
   width: 100%;
 }
 
 .musicButton {
   align-items: center;
-  background-color: white;
+  background-color: #fad7ff;
   border: 1px solid #663399;
   border-radius: 16px;
   box-sizing: border-box;
   display: flex;
   gap: 12px;
-  height: 88px;
+  height: 40px;
   justify-content: flex-start;
   padding: 0 0 0 6px;
-  width: 25%;
+  width: 160px;
 }
 .musicButton .buttonImage {
   display: block;
-  height: 64px;
-  width: 64px;
+  height: 32px;
+  width: 32px;
 }
 .musicButton .buttonTitle {
   display: block;
