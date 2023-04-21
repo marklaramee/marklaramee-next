@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../../styles/_variables.scss","MusicGroup.module.css"],"names":[],"mappings":"AAAQ,gFAAA;AACA,2EAAA;AAER,SAAA;AAIA,WAAA;AAUA,kBAAA;AAwBA;EACI,cAVG;EAWH,iCAtCK;EAuCL,gBAAA;ACnCJ","file":"MusicGroup.module.css"}
+{"version":3,"sources":["../../../styles/_variables.scss","MusicGroup.module.css"],"names":[],"mappings":"AAAQ,gFAAA;AACA,2EAAA;AAER,SAAA;AAIA,WAAA;AAUA,kBAAA;AA6BA;EACI,cAdG;EAeH,iCA3CK;EA4CL,gBAAA;ACxCJ","file":"MusicGroup.module.css"}
