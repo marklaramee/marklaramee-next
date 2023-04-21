@@ -20,11 +20,13 @@ const AudioPlayer = ({url }: props) => {
 
   // TODO: use dynamic prop value
   const songSeconds = 312;
+  
 
 
   // hooks
   // const [audio] = useState(new Audio(url));
   const [isPlaying, setIsPlaying] = useState(false);
+  const [currentSeconds, setCurrentSeconds] = useState(76);
   const toggle = () => setIsPlaying(!isPlaying);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -69,7 +71,7 @@ const AudioPlayer = ({url }: props) => {
         <div className={styles.triangleRight} />
         <audio src={url} ref={audioRef} />
       </button>
-      <EditableProgressBar updateParent={updateAudioTime} />
+      <EditableProgressBar currentSeconds={currentSeconds} songSeconds={songSeconds} updateParent={updateAudioTime} />
     </div>
   );
 };

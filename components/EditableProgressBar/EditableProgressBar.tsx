@@ -1,14 +1,24 @@
 import React, { useState, useEffect, useRef, MutableRefObject } from "react";
-import classnames from 'classnames';
+import moment from 'moment';
 import styles from './styles/EditableProgressBar.module.css'
 
 export interface props {
+    currentSeconds: number,
+    songSeconds: number, // TODO: if I use this for other components, use an enum and change var name
     updateParent: (newValue: string) => void;
 }
 
-const ProgressBar = ({updateParent}: props) => {
-    const progressBarRef = useRef<HTMLInputElement>(null)
+const ProgressBar = ({currentSeconds, songSeconds, updateParent}: props) => {
+    const progressBarRef = useRef<HTMLInputElement>(null);
+    const [currentTime, setCurrentTime] = useState('00:00');
     // const audioRef = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+       var newCurrent =  moment().startOf('day')
+        .seconds(currentSeconds)
+        .format('mm:ss');
+        setCurrentTime(newCurrent);
+    }, [currentSeconds]);
 
     const handleProgressChange = () => {
         if (!!progressBarRef.current) {
@@ -18,7 +28,7 @@ const ProgressBar = ({updateParent}: props) => {
 
     return (
         <div className={styles.progressBarContainer}>
-            <span className="time current">00:00</span>
+            <span className="time current">{currentTime}</span>
             <input type="range" className={styles.range} ref={progressBarRef} onChange={handleProgressChange} />
             <span className="time">03:34</span>
         </div>
