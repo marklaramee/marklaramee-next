@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image'
 import AudioPlayer from '../AudioPlayer/AudioPlayer';
+import MusicButtons from '../MusicButtons/MusicButtons';
 import styles from './styles/MusicItem.module.scss'
 
 const MusicPlayer = () => {
@@ -18,6 +19,7 @@ const MusicPlayer = () => {
                 <h3 className={styles.artist}>Mark Laramee feat. Susy Borlido</h3>
                 {/* <button className={classnames(styles.reset, styles.playButton)} /> */}
                 <AudioPlayer url="/music/Mark%20Laramee%20-%20Steppin%20Back.mp3" />
+                <MusicButtons />
             </div>
         </div>
     );
