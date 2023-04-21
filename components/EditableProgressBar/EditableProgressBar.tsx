@@ -13,7 +13,6 @@ const ProgressBar = ({currentSeconds, songSeconds, updateParent}: props) => {
     const progressBarRef = useRef<HTMLInputElement>(null);
     const [currentTime, setCurrentTime] = useState('00:00');
     const [currentPosition, setCurrentPosition] = useState(0);
-    // const audioRef = useRef<HTMLInputElement>(null);
     
     const finalTime = moment().startOf('day').seconds(songSeconds).format('mm:ss');
 
@@ -22,7 +21,6 @@ const ProgressBar = ({currentSeconds, songSeconds, updateParent}: props) => {
         .seconds(currentSeconds)
         .format('mm:ss');
         setCurrentTime(newCurrentTime);
-
 
         var newCurrentPosition = getPercentageOf(currentSeconds, songSeconds)
         setCurrentPosition(newCurrentPosition);

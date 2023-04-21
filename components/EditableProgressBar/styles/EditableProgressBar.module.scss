@@ -1,6 +1,5 @@
 @import '../../../styles/variables.scss';
 
-
 .progressBarContainer {
     align-items: center;
     color: $blue-faint;
@@ -11,53 +10,36 @@
 }
 
 .range {
-  --range-progress: 0;
+  --range-progress: 0; // TODO: delete?
   -webkit-appearance: none; 
   width: 400px; 
   background: $blue-faint; 
   border-radius: 6px;
-
-  
 }
 
 .range::-webkit-slider-thumb {
   -webkit-appearance: none;
-  border: 1px solid $button-active;
-  height: 16px;
-  width: 30px;
-  border-radius: 6px;
   background: $button-foreground;
-  cursor: pointer;
-  margin-top: 0; 
+  border: 1px solid $button-active;
+  border-radius: 6px;
   box-shadow: 1px 1px 1px $button-active, 0px 0px 1px $button-active;
-
-  // left: -200px;
-  // position: relative;
-  // top: 0;
+  cursor: pointer;
+  height: 16px;
+  margin-top: 0; 
+  width: 30px;
 }
 
-// .range:focus {
-//   outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-// }
-
+// TODO: Edge?
 .range::-ms-track {
-  width: 100%;
-  cursor: pointer;
-
-  /* Hides the slider so custom styles can be added */
   background: transparent; 
   border-color: transparent;
   color: transparent;
+  cursor: pointer;
+  width: 100%;
 }
 
-// .range::before {
-//   background: #f50;
-//   width: var(0);
-  
-// }
 
-
-/*
+/* full list of vendor prefixed values
 input[type=range] {
   -webkit-appearance: none;
   margin: 18px 0;

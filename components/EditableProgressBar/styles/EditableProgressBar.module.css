@@ -28,26 +28,25 @@
 
 .range::-webkit-slider-thumb {
   -webkit-appearance: none;
-  border: 1px solid #226745;
-  height: 16px;
-  width: 30px;
-  border-radius: 6px;
   background: #339966;
-  cursor: pointer;
-  margin-top: 0;
+  border: 1px solid #226745;
+  border-radius: 6px;
   box-shadow: 1px 1px 1px #226745, 0px 0px 1px #226745;
+  cursor: pointer;
+  height: 16px;
+  margin-top: 0;
+  width: 30px;
 }
 
 .range::-ms-track {
-  width: 100%;
-  cursor: pointer;
-  /* Hides the slider so custom styles can be added */
   background: transparent;
   border-color: transparent;
   color: transparent;
+  cursor: pointer;
+  width: 100%;
 }
 
-/*
+/* full list of vendor prefixed values
 input[type=range] {
   -webkit-appearance: none;
   margin: 18px 0;
