@@ -12,7 +12,6 @@ export interface props {
     url: string; 
 }
 
-
 const AudioPlayer = ({url }: props) => {
   // TODO: use dynamic prop value
   const songSeconds = 312;

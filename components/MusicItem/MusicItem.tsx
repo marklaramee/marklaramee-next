@@ -4,7 +4,7 @@ import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import MusicButtons from '../MusicButtons/MusicButtons';
 import styles from './styles/MusicItem.module.scss'
 
-const MusicPlayer = () => {
+const MusicItem = () => {
     return (
         <div className={styles.playerOuter}>
             <Image 
@@ -27,4 +27,4 @@ const MusicPlayer = () => {
         </div>
     );
 }
-export default MusicPlayer;
+export default MusicItem;
