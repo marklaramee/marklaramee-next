@@ -12,6 +12,8 @@ const ProgressBar = ({currentSeconds, songSeconds, updateParent}: props) => {
     const progressBarRef = useRef<HTMLInputElement>(null);
     const [currentTime, setCurrentTime] = useState('00:00');
     // const audioRef = useRef<HTMLInputElement>(null);
+    
+    const finalTime = moment().startOf('day').seconds(songSeconds).format('mm:ss');
 
     useEffect(() => {
        var newCurrent =  moment().startOf('day')
@@ -30,7 +32,7 @@ const ProgressBar = ({currentSeconds, songSeconds, updateParent}: props) => {
         <div className={styles.progressBarContainer}>
             <span className="time current">{currentTime}</span>
             <input type="range" className={styles.range} ref={progressBarRef} onChange={handleProgressChange} />
-            <span className="time">03:34</span>
+            <span className="time">{finalTime}</span>
         </div>
     );
 };
