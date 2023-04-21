@@ -17,23 +17,23 @@
 }
 
 .playButton {
-  background-color: #fbfad4;
-  border: 2px solid #be6003;
+  background-color: #e6fad1;
+  border: 2px solid #669933;
   border-radius: 50%;
   height: 64px;
   position: relative;
   width: 64px;
 }
 .playButton.isPlaying {
-  border: 2px solid #993333;
+  border: 2px solid #226745;
 }
 .playButton.isPlaying .triangleRight {
-  border-left: 35px solid #993333;
+  border-left: 35px solid #226745;
 }
 
 .triangleRight {
   border-top: 20px solid transparent;
-  border-left: 35px solid #be6003;
+  border-left: 35px solid #669933;
   border-bottom: 20px solid transparent;
   position: absolute;
   height: 0;

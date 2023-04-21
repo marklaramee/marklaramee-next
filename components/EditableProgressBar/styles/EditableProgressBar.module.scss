@@ -12,10 +12,9 @@
 
 .range {
   --range-progress: 0;
-  /* ... */
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 400px; /* Specific width is required for Firefox. */
-  background: $blue-faint; /* Otherwise white in Chrome */
+  -webkit-appearance: none; 
+  width: 400px; 
+  background: $blue-faint; 
   border-radius: 6px;
 
   
@@ -27,10 +26,10 @@
   height: 16px;
   width: 30px;
   border-radius: 6px;
-  background: $button-active;
+  background: $button-foreground;
   cursor: pointer;
-  margin-top: 0; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  margin-top: 0; 
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
 // .range:focus {
@@ -47,10 +46,9 @@
   color: transparent;
 }
 
-.range::before {
-  /* ... */
-  background: #f50;
-  width: var(--range-progress);
+// .range::before {
+//   background: #f50;
+//   width: var(--range-progress);
   
-}
+// }
 

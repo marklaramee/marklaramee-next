@@ -9,25 +9,25 @@
 }
 
 .playButton {
-    background-color:$yellow-faint;
-    border: 2px solid $orange-burnt;
+    background-color: $button-background;
+    border: 2px solid $button-inactive;
     border-radius: 50%;
     height: 64px;
     position: relative;  
     width: 64px; 
 
     &.isPlaying {
-        border: 2px solid $brick-red;
+        border: 2px solid $button-active;
 
         .triangleRight {
-            border-left: 35px solid $brick-red;
+            border-left: 35px solid $button-active;
         }
     }
 }
 
 .triangleRight {
     border-top: 20px solid transparent;
-    border-left: 35px solid $orange-burnt;
+    border-left: 35px solid $button-inactive;
     border-bottom: 20px solid transparent;
     position: absolute;
     height: 0;

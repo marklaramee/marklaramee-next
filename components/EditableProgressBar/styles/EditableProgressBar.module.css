@@ -20,23 +20,22 @@
 
 .range {
   --range-progress: 0;
-  /* ... */
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 400px; /* Specific width is required for Firefox. */
-  background: #d1d1f9; /* Otherwise white in Chrome */
+  -webkit-appearance: none;
+  width: 400px;
+  background: #d1d1f9;
   border-radius: 6px;
 }
 
 .range::-webkit-slider-thumb {
   -webkit-appearance: none;
-  border: 1px solid #339966;
+  border: 1px solid #226745;
   height: 16px;
   width: 30px;
   border-radius: 6px;
   background: #339966;
   cursor: pointer;
-  margin-top: 0; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  margin-top: 0;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
 .range::-ms-track {
@@ -46,10 +45,4 @@
   background: transparent;
   border-color: transparent;
   color: transparent;
-}
-
-.range::before {
-  /* ... */
-  background: #f50;
-  width: var(--range-progress);
 }/*# sourceMappingURL=EditableProgressBar.module.css.map */
