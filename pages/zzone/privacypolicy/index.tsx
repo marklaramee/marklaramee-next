@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '../ZZone.module.css'
+import styles from '../styles/ZZone.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
