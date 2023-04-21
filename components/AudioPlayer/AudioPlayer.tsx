@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import classnames from 'classnames';
 import { getPercentage } from '../../utils/UtilityFunctions';
-import styles from './styles/AudioPlayer.module.css'
+import styles from './styles/Audioplayer.module.css'
 import EditableProgressBar from '../EditableProgressBar/EditableProgressBar';
 
 // https://blog.logrocket.com/building-audio-player-react/#configuring-progress-bar-volume-slider
