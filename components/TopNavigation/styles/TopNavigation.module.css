@@ -71,7 +71,8 @@
     padding-top: 8px;
   }
   .navTop.mobileOpen {
-    height: 280px;
+    height: auto;
+    padding-bottom: 12px;
   }
   .navTop.mobileOpen div.navLevel1 {
     transform: scale(1, 1);
