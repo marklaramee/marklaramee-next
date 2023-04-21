@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, MutableRefObject } from "react";
 import moment from 'moment';
+import { getPercentageOf } from '../../utils/UtilityFunctions';
 import styles from './styles/EditableProgressBar.module.css'
 
 export interface props {
@@ -11,16 +12,22 @@ export interface props {
 const ProgressBar = ({currentSeconds, songSeconds, updateParent}: props) => {
     const progressBarRef = useRef<HTMLInputElement>(null);
     const [currentTime, setCurrentTime] = useState('00:00');
+    const [currentPosition, setCurrentPosition] = useState(0);
     // const audioRef = useRef<HTMLInputElement>(null);
     
     const finalTime = moment().startOf('day').seconds(songSeconds).format('mm:ss');
 
     useEffect(() => {
-       var newCurrent =  moment().startOf('day')
+       var newCurrentTime =  moment().startOf('day')
         .seconds(currentSeconds)
         .format('mm:ss');
-        setCurrentTime(newCurrent);
-    }, [currentSeconds]);
+        setCurrentTime(newCurrentTime);
+
+
+        var newCurrentPosition = getPercentageOf(currentSeconds, songSeconds)
+        setCurrentPosition(newCurrentPosition);
+
+    }, [currentSeconds, songSeconds]);
 
     const handleProgressChange = () => {
         if (!!progressBarRef.current) {
@@ -31,7 +38,7 @@ const ProgressBar = ({currentSeconds, songSeconds, updateParent}: props) => {
     return (
         <div className={styles.progressBarContainer}>
             <span className="time current">{currentTime}</span>
-            <input type="range" className={styles.range} ref={progressBarRef} onChange={handleProgressChange} />
+            <input type="range" className={styles.range} ref={progressBarRef} onChange={handleProgressChange}  value={currentPosition}/>
             <span className="time">{finalTime}</span>
         </div>
     );
