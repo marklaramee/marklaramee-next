@@ -15,10 +15,13 @@ const MusicPlayer = () => {
             className={styles.albumCover}
             />
             <div>
-                <h3 className={styles.albumTitle}>Steppin Back</h3>
-                <h3 className={styles.artist}>Mark Laramee feat. Susy Borlido</h3>
-                {/* <button className={classnames(styles.reset, styles.playButton)} /> */}
-                <AudioPlayer url="/music/Mark%20Laramee%20-%20Steppin%20Back.mp3" />
+                <div className={styles.titleContainer} >
+                    <h3 className={styles.albumTitle}>Steppin Back</h3>
+                    <h3 className={styles.artist}>Mark Laramee feat. Susy Borlido</h3>
+                </div>
+                <div className={styles.playerContainer} >
+                    <AudioPlayer url="/music/Mark%20Laramee%20-%20Steppin%20Back.mp3" />
+                </div>
                 <MusicButtons />
             </div>
         </div>
