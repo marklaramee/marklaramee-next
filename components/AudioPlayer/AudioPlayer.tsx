@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import classnames from 'classnames';
 import { getPercentage } from '../../utils/UtilityFunctions';
 import styles from './styles/AudioPlayer.module.css'
@@ -26,24 +26,36 @@ const AudioPlayer = ({url }: props) => {
   // hooks
   // const [audio] = useState(new Audio(url));
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentSeconds, setCurrentSeconds] = useState(76);
+  const [currentSeconds, setCurrentSeconds] = useState(0);
   const toggle = () => setIsPlaying(!isPlaying);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const playAnimationRef = useRef(0);
+
+  
 
   // console.log(audioRef);
+
+  // const repeat = useCallback(() => {
+  //   console.log('run');
+
+  //   playAnimationRef.current = requestAnimationFrame(repeat);
+  //   console.log(playAnimationRef.current);
+  // }, [playAnimationRef]);
 
   useEffect(() => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.play();
+        // playAnimationRef.current = requestAnimationFrame(repeat);
       } else {
         audioRef.current.pause();
+        // cancelAnimationFrame(playAnimationRef.current);
       }
     }
   }, [isPlaying, audioRef]);
 
   const updateAudioTime = (newTime: string) => {
-    console.log(newTime);
+    // console.log(newTime);
     if (audioRef.current) {
       const percentage = parseInt(newTime);
       audioRef.current.currentTime = getPercentage(percentage, songSeconds);
@@ -63,13 +75,19 @@ const AudioPlayer = ({url }: props) => {
   //   };
   // }, [audio]);
 
+  const timeUpdate = (event: any) => {
+        const seconds = Math.floor(event.target.currentTime);
+        // const currentTime = str_pad_left(minutes,'0',2) + ':' + str_pad_left(seconds,'0',2);
+        // setCurrentTime(currentTime);
+        console.log(seconds);
+        setCurrentSeconds(seconds);
+    }
+
   return (
     <div className={styles.audioContainer}>
-      {/* <button  className={classnames(styles.reset, styles.playButton)>{playing ? "Pause" : "Play"}</button> */}
-      {/* <button onClick={toggle} className={classnames(styles.reset, styles.playButton)} /> */}
       <button onClick={toggle} className={classnames(styles.reset, styles.playButton, {[styles.isPlaying]: isPlaying})}>
         <div className={styles.triangleRight} />
-        <audio src={url} ref={audioRef} />
+        <audio src={url} ref={audioRef} onTimeUpdate={timeUpdate} />
       </button>
       <EditableProgressBar currentSeconds={currentSeconds} songSeconds={songSeconds} updateParent={updateAudioTime} />
     </div>
