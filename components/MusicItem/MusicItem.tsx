@@ -14,7 +14,7 @@ const MusicItem = () => {
             alt='steppin back cover art' 
             className={styles.albumCover}
             />
-            <div>
+            <div className={styles.playerContent}>
                 <div className={styles.titleContainer} >
                     <h3 className={styles.albumTitle}>Steppin Back</h3>
                     <h3 className={styles.artist}>Mark Laramee feat. Susy Borlido</h3>

@@ -40,4 +40,10 @@
   left: 17px;
   top: 9px;
   width: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .audioContainer {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=Audioplayer.module.css.map */
