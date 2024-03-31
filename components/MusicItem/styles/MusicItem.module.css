@@ -28,6 +28,7 @@
 }
 
 .playerContainer {
+  display: none;
   padding: 0 0 32px 0;
 }
 
