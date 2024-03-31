@@ -43,6 +43,20 @@ export const dtsData: MusicData = {
     genre: 'Bass House',
 }
 
+// TODO: 
+// const iteFile: SongData = {
+//     seconds: 0,
+//     file: '', // TODO:
+// }
+
+// const iteLinks: MusicLinks = {
+//     spotify: 'https://open.spotify.com/track/60INkHhievAsIZhqTnei6M?si=6836f40c6a284ef9',
+//     beatport: 'https://www.beatport.com/artist/mark-laramee/1187913/tracks',
+//     bandcamp: 'https://marklaramee.bandcamp.com/track/drop-the-sky',
+//     amazon: 'https://www.amazon.com/Drop-Sky-Mark-Laramee/dp/B0CVSK3PCX',
+//     apple: 'https://music.apple.com/us/album/drop-the-sky/1731694856?i=1731694857',
+// }
+
 export const songsData: MusicData[] = [
     dtsData,
     steppinBackData,
