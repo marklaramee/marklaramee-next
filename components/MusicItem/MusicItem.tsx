@@ -13,19 +13,19 @@ const MusicItem = ({song}: MusicProps) => {
     return (
         <div className={styles.playerOuter}>
             <Image 
-            src='/music/Steppin-Back-Cover.png'
+            src={song.cover}
             width='300' 
             height='300' 
-            alt='steppin back cover art' 
+            alt={song.title}
             className={styles.albumCover}
             />
             <div className={styles.playerContent}>
                 <div className={styles.titleContainer} >
-                    <h3 className={styles.albumTitle}>Steppin Back</h3>
-                    <h3 className={styles.artist}>Mark Laramee feat. Susy Borlido</h3>
+                    <h3 className={styles.albumTitle}>{song.title}</h3>
+                    <h3 className={styles.artist}>{song.artist}</h3>
                 </div>
                 <div className={styles.playerContainer} >
-                    <AudioPlayer url="/music/Mark%20Laramee%20-%20Steppin%20Back.mp3" />
+                    <AudioPlayer url={song.file} />
                 </div>
                 <MusicButtons />
             </div>
