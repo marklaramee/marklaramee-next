@@ -1,4 +1,8 @@
 
+export interface SongData {
+    file: string;
+    seconds: number;
+}
 
 export interface MusicLinks {
     amazon?: string;
@@ -15,6 +19,6 @@ export interface MusicData {
     cover: string;
     title: string;
     artist: string;
-    file: string;
+    song: SongData;
     links: MusicLinks;
 }

@@ -25,7 +25,7 @@ const MusicItem = ({song}: MusicProps) => {
                     <h3 className={styles.artist}>{song.artist}</h3>
                 </div>
                 <div className={styles.playerContainer} >
-                    <AudioPlayer url={song.file} />
+                    <AudioPlayer songData={song.song} />
                 </div>
                 <MusicButtons links={song.links} />
             </div>

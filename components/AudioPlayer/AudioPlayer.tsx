@@ -3,18 +3,18 @@ import classnames from 'classnames';
 import { getPercentage } from '../../utils/UtilityFunctions';
 import styles from './styles/Audioplayer.module.css'
 import EditableProgressBar from '../EditableProgressBar/EditableProgressBar';
+import { SongData } from "@/model/music";
 
 // https://blog.logrocket.com/building-audio-player-react/#configuring-progress-bar-volume-slider
 // https://stackoverflow.com/questions/47686345/playing-sound-in-react-js
 // https://hearnow.com/preview/g1Df19HaF7g1e3OhdM0n0g%3D%3D?cid=17417
 
-export interface props {
-    url: string; 
+export interface AudioProps {
+    songData: SongData; 
 }
 
-const AudioPlayer = ({url }: props) => {
+const AudioPlayer = ({songData}: AudioProps) => {
   // TODO: use dynamic prop value
-  const songSeconds = 312;
   
   // hooks
   const [isPlaying, setIsPlaying] = useState(false);
@@ -36,7 +36,7 @@ const AudioPlayer = ({url }: props) => {
   const updateAudioTime = (newTime: string) => {
     if (audioRef.current) {
       const percentage = parseInt(newTime);
-      audioRef.current.currentTime = getPercentage(percentage, songSeconds);
+      audioRef.current.currentTime = getPercentage(percentage, songData.seconds);
     }
   }
 
@@ -49,9 +49,9 @@ const AudioPlayer = ({url }: props) => {
     <div className={styles.audioContainer}>
       <button onClick={toggle} className={classnames(styles.reset, styles.playButton, {[styles.isPlaying]: isPlaying})}>
         <div className={styles.triangleRight} />
-        <audio src={url} ref={audioRef} onTimeUpdate={timeUpdate} />
+        <audio src={songData.file} ref={audioRef} onTimeUpdate={timeUpdate} />
       </button>
-      <EditableProgressBar currentSeconds={currentSeconds} songSeconds={songSeconds} updateParent={updateAudioTime} />
+      <EditableProgressBar currentSeconds={currentSeconds} songSeconds={songData.seconds} updateParent={updateAudioTime} />
     </div>
   );
 };
