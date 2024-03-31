@@ -1,8 +1,13 @@
 
 import React from "react";
 import styles from './styles/MusicButtons.module.css'
+import { MusicLinks } from "@/model/music";
 
-const MusicButtons = () => {
+interface ButtonProps {
+    links: MusicLinks
+}
+
+const MusicButtons = ({links}: ButtonProps) => {
     return (
         <div className={styles.buttonsContainer}>  
             <a href="https://open.spotify.com/track/1KbGcZorYv8w6RoT4KxG1B?si=2b7ee73a6f3f4b21" className={styles.musicButton} target='_blank'> 
