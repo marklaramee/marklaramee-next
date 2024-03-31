@@ -9,12 +9,11 @@ import { songsData } from '@/data/musicData';
 const MusicGroup = () => {
     return (
         <>
-            <div className={styles.musicGroup}>
-                <MusicItem song={songsData[0]} key={songsData[0].cover}/>
-            </div>
-            <div className={styles.musicGroup}>
-                <MusicItem song={songsData[1]} key={songsData[1].cover} />
-            </div>
+            {songsData.map((song) => (
+                <div className={styles.musicGroup} key={song.cover}>
+                    <MusicItem song={song}/>
+                </div>
+            ))}
         </>
     );
 };
