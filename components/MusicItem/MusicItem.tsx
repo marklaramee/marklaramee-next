@@ -2,9 +2,14 @@ import React from 'react';
 import Image from 'next/image'
 import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import MusicButtons from '../MusicButtons/MusicButtons';
-import styles from './styles/MusicItem.module.scss'
+import styles from './styles/MusicItem.module.scss';
+import { MusicData } from '@/model/music';
 
-const MusicItem = () => {
+interface MusicProps {
+    song: MusicData;
+}
+
+const MusicItem = ({song}: MusicProps) => {
     return (
         <div className={styles.playerOuter}>
             <Image 
