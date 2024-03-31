@@ -21,4 +21,5 @@ export interface MusicData {
     artist: string;
     song: SongData;
     links: MusicLinks;
+    genre: string;
 }

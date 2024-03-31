@@ -23,6 +23,7 @@ const MusicItem = ({song}: MusicProps) => {
                 <div className={styles.titleContainer} >
                     <h3 className={styles.albumTitle}>{song.title}</h3>
                     <h3 className={styles.artist}>{song.artist}</h3>
+                    <div className={styles.artist}>{song.genre}</div>
                 </div>
                 <div className={styles.playerContainer} >
                     <AudioPlayer songData={song.song} />

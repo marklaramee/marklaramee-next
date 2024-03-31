@@ -19,6 +19,7 @@ export const steppinBackData: MusicData = {
     artist: 'Mark Laramee feat. Susy Borlido',
     song: steppinFile,
     links: steppinLinks,
+    genre: 'Electronica / Rock',
 }
 
 const dtsFile: SongData = {
@@ -39,6 +40,7 @@ export const dtsData: MusicData = {
     artist: 'Mark Laramee',
     song: dtsFile,
     links: dtsLinks,
+    genre: 'Bass House',
 }
 
 export const songsData: MusicData[] = [
