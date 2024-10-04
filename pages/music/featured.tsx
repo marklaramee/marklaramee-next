@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import MusicGroup from '@/components/MusicGroup/MusicGroup';
 import styles from './styles/Music.module.css';
+import { songsData } from '@/data/musicData';
 
 const Featured = () => {
     return (

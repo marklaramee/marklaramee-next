@@ -11,6 +11,7 @@ const Music = () => {
             <h1 className={classnames(styles.headline, styles.musicTitle)}>Newest Release</h1>
             <div className={styles.musicContainer}>
                 <MusicItem song={songsData[0]} key={songsData[0].cover}/>
+                <MusicGroup></MusicGroup>
             </div>
         </div>
     );
