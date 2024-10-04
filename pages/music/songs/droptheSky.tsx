@@ -3,7 +3,7 @@ import Song from '@/components/Song/Song';
 
 const dropTheSky = () => {
     return (
-        <Song handle={'dropTheSky'}></Song>
+        <Song handle={'droptheSky'}></Song>
     );
 }
 export default dropTheSky;

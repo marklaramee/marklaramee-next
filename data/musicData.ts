@@ -50,7 +50,7 @@ export const dtsData: MusicData = {
     stream: dtsStream,
     buy: dtsBuy,
     genre: 'Bass House',
-    handle: 'dropTheSky',
+    handle: 'droptheSky',
 }
 
 

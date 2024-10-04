@@ -49,10 +49,12 @@
   display: block;
 }
 
+.bandcamp {
+  padding-top: 4px;
+}
+
 @media only screen and (max-width: 767px) {
   .buttonsContainer {
     justify-content: center;
   }
-}
-
-/*# sourceMappingURL=MusicButtons.module.css.map */
+}/*# sourceMappingURL=MusicButtons.module.css.map */

@@ -37,8 +37,8 @@ const MusicButtons = ({links}: ButtonProps) => {
             }
             {links.bandcamp &&
                 <a href={links.bandcamp} className={styles.musicButton} target='_blank'> 
-                    <span className={styles.buttonImage}>  
-                        <img src='/images/spacer.gif' />
+                    <span className={styles.bandcamp}>  
+                        <img src='/music/bc-logotype-light-32.png' />
                     </span> 
                     <span className={styles.buttonTitle}> Bandcamp </span> 
                 </a>      
