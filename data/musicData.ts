@@ -96,7 +96,7 @@ const freakyBuy: MusicLinks = {
 export const freakyData: MusicData = {
     cover: '/music/get-freaky-cover.webp',
     title: 'Get Freaky (Mark Laramee remix)',
-    artist: 'Donald Glaude',
+    artist: 'Donald Glaude / Mark Laramee',
     song: null,
     stream: freakyStream,
     buy: freakyBuy,

@@ -69,3 +69,28 @@
     max-width: 500px;
 }
 
+@media only screen and (max-width: 767px) {
+  .albumCover {
+    height: 80%;
+    width: 80%;
+  }
+  .container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .linksContainer {
+    text-align: left;
+  }
+
+  .albumTitle {
+    line-height: 66px;
+    padding: 24px 0;
+  }
+
+  .artist {
+    line-height: 42px;
+    padding-bottom: 24px;
+  }
+}
+

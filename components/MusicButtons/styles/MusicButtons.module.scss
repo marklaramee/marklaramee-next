@@ -55,6 +55,10 @@
 
 @media only screen and (max-width: 767px)  {
     .buttonsContainer {
-        justify-content: center;
+        display: block;
+    }
+
+    .musicButton {
+        margin-bottom: 14px;
     }
 }
