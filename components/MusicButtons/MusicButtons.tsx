@@ -25,7 +25,12 @@ const MusicButtons = ({links}: ButtonProps) => {
             {links.beatport &&
                 <a href={links.beatport} className={styles.musicButton} target='_blank'> 
                     <span className={styles.buttonImage}>  
-                        <img src='/images/spacer.gif' />
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 1036 1200">
+                            <path  d="M817.7,763.3c0,120-95.8,217-217,217c-120,0-215.8-94.6-215.8-217c0-57.6,21.8-108.5,56.4-146.7L294.6,763.3
+                            l-77-77l165.5-163.7c22.4-22.4,33.9-51.5,33.9-83.6V233.6h108.5V439c0,63-22.4,116.4-66.1,160l-4.9,4.8
+                            c38.2-35.2,90.3-56.4,146.1-56.4C723.8,547.5,817.7,645.1,817.7,763.3z M719.5,763.3c0-64.3-53.3-116.4-118.8-116.4
+                            c-66.1,0-117.6,54.6-117.6,116.4c0,63.6,52.1,117.6,117.6,117.6C668.6,880.9,719.5,825.8,719.5,763.3z"/>
+                        </svg>
                     </span> 
                     <span className={styles.buttonTitle}> Beatport </span> 
                 </a>      
@@ -84,6 +89,25 @@ const MusicButtons = ({links}: ButtonProps) => {
                         </svg>  
                     </span> 
                     <span className={styles.buttonTitle}>Deezer</span> 
+                </a>  
+            } 
+            {links.soundcloud &&   
+                <a href={links.deezer} className={styles.musicButton} target='_blank'> 
+                    <span className={styles.buttonImage}>  
+                        <svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
+	 viewBox="0 0 291.319 291.319">
+                            <g>
+                                <path d="M72.83,218.485h18.207V103.832c-6.828,1.93-12.982,5.435-18.207,10.041
+                                    C72.83,113.874,72.83,218.485,72.83,218.485z M36.415,140.921v77.436l1.174,0.127h17.033v-77.682H37.589
+                                    C37.589,140.803,36.415,140.921,36.415,140.921z M0,179.63c0,14.102,7.338,26.328,18.207,33.147V146.52
+                                    C7.338,153.329,0,165.556,0,179.63z M109.245,218.485h18.207v-109.6c-5.444-3.396-11.607-5.635-18.207-6.5V218.485z
+                                    M253.73,140.803h-10.242c0.519-3.168,0.847-6.382,0.847-9.705c0-32.182-25.245-58.264-56.388-58.264
+                                    c-16.896,0-31.954,7.775-42.287,19.955v125.695h108.07c20.747,0,37.589-17.388,37.589-38.855
+                                    C291.319,158.182,274.477,140.803,253.73,140.803z"/>
+                            </g>
+                        </svg>
+                    </span> 
+                    <span className={styles.buttonTitle}>Soundclud</span> 
                 </a>  
             }       
         </div>

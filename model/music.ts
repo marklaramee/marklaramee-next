@@ -13,6 +13,7 @@ export interface MusicLinks {
     pandora?: string;
     spotify?: string;
     youtube?: string;
+    soundcloud?: string;
 }
 
 export interface MusicData {
@@ -20,7 +21,8 @@ export interface MusicData {
     title: string;
     artist: string;
     song: SongData | null;
-    links: MusicLinks | null;
+    stream: MusicLinks | null;
+    buy: MusicLinks | null;
     genre: string;
     handle: string;
 }

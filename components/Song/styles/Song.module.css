@@ -24,12 +24,13 @@
 }
 
 .content {
-  padding: 0 0 0 24px;
+  padding: 0 0 0 48px;
 }
 
 .headline {
   color: #4040bf;
   font-family: "Marvel", sans-serif;
+  font-size: 36px;
   font-weight: 700;
 }
 
@@ -50,7 +51,7 @@
 
 .albumTitle {
   color: #b2b2fd;
-  font-size: 40px;
+  font-size: 72px;
   font-family: "Marvel", sans-serif;
   margin: 0;
   padding: 0;
@@ -58,8 +59,15 @@
 
 .artist {
   color: #b2b2fd;
-  font-size: 24px;
+  font-size: 48px;
   font-family: "Marvel", sans-serif;
   margin: 0;
   padding: 0 0 12px 0;
+}
+
+.linksContainer {
+  padding: 0 0 24px 0;
+}
+.linksContainer .headline {
+  padding-bottom: 14px;
 }/*# sourceMappingURL=Song.module.css.map */
