@@ -20,7 +20,7 @@ export const steppinBackData: MusicData = {
     song: steppinFile,
     links: steppinLinks,
     genre: 'Electronica / Rock',
-    page: 'steppinBack',
+    handle: 'steppinBack',
 }
 
 const dtsFile: SongData = {
@@ -42,7 +42,7 @@ export const dtsData: MusicData = {
     song: dtsFile,
     links: dtsLinks,
     genre: 'Bass House',
-    page: 'dropTheSky',
+    handle: 'dropTheSky',
 }
 
 // TODO: 
@@ -66,7 +66,7 @@ export const freakyData: MusicData = {
     song: null,
     links: null,
     genre: 'Bass House',
-    page: 'getFreaky',
+    handle: 'getFreaky',
 }
 
 export const wavesData: MusicData = {
@@ -76,7 +76,7 @@ export const wavesData: MusicData = {
     song: null,
     links: null,
     genre: 'Bass House',
-    page: 'impossibleWaves',
+    handle: 'impossibleWaves',
 }
 
 export const gitmbData: MusicData = {
@@ -86,7 +86,7 @@ export const gitmbData: MusicData = {
     song: null,
     links: null,
     genre: 'Bass House',
-    page: 'gitmb',
+    handle: 'gitmb',
 }
 
 export const energyData: MusicData = {
@@ -96,7 +96,7 @@ export const energyData: MusicData = {
     song: null,
     links: null,
     genre: 'Bass House',
-    page: 'energy',
+    handle: 'energy',
 }
 
 

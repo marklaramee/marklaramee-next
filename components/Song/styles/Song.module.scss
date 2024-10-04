@@ -1,2 +1,9 @@
 @import '../../../styles/variables.scss';
 
+.container {
+    color: white;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 24px;
+    width: 100%;
+}

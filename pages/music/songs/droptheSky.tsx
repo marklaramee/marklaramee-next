@@ -1,4 +1,4 @@
-import styles from './styles/Song.module.scss'
+import styles from './styles/songs.module.scss'
 import Song from '@/components/Song/Song';
 
 const dropTheSky = () => {
