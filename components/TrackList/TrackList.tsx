@@ -16,7 +16,6 @@ const TrackList = ({songs}: TrackListProps) => {
                     <Link 
                         href={`/music/songs/${song.handle}`} 
                         className={styles.songLink}
-                        target='_blank'
                     >{song.title}</Link>
                 </div>
             ))}
