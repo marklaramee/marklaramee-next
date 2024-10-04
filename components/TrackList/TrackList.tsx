@@ -8,7 +8,6 @@ interface TrackListProps {
     songs: MusicData[];
 }
 
-
 const TrackList = ({songs}: TrackListProps) => {
     return (
         <>
