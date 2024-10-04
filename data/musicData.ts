@@ -60,7 +60,7 @@ export const dtsData: MusicData = {
 // }
 
 export const freakyData: MusicData = {
-    cover: '',
+    cover: '/music/get-freaky-cover.webp',
     title: 'Get Freaky (Mark Laramee remix)',
     artist: 'Donald Glaude',
     song: null,
@@ -70,7 +70,7 @@ export const freakyData: MusicData = {
 }
 
 export const wavesData: MusicData = {
-    cover: '',
+    cover: '/music/impossible-waves-ENR-cover-500x500.jpg',
     title: 'Impossible Waves',
     artist: 'Mark Laramee',
     song: null,
@@ -80,7 +80,7 @@ export const wavesData: MusicData = {
 }
 
 export const gitmbData: MusicData = {
-    cover: '',
+    cover: '/music/GITMB-cover.png',
     title: 'GITMB',
     artist: 'Mark Laramee / SmashLC',
     song: null,

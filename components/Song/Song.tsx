@@ -15,7 +15,12 @@ const Song = ({handle}: SongProps) => {
     }
 
     return (
-        <div className={styles.container}>{songData.title}</div>
+        <div className={styles.container}>
+            <img src={songData.cover} alt={`${songData.title} cover art`}/>
+            <div className={styles.content}>
+                <h1 className={styles.albumTitle}>{songData.title}</h1>
+            </div>
+        </div>
     );
 };
 
