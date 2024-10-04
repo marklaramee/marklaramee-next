@@ -28,7 +28,7 @@ const MusicItem = ({song}: MusicProps) => {
                 <div className={styles.playerContainer} >
                     <AudioPlayer songData={song.song} />
                 </div>
-                <MusicButtons links={song.links} />
+                <MusicButtons links={song?.buy} />
             </div>
         </div>
     );

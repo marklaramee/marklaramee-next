@@ -19,7 +19,6 @@
 
 .musicButton {
   align-items: center;
-  background-color: #fad7ff;
   border: 1px solid #663399;
   border-radius: 16px;
   box-sizing: border-box;
@@ -34,6 +33,17 @@
   display: block;
   height: 32px;
   width: 32px;
+}
+.musicButton .buttonImage img {
+  max-height: 30px;
+  max-width: 30px;
+}
+.musicButton .buttonImage svg {
+  fill: white;
+  max-height: 30px;
+  max-width: 30px;
+  stroke: black; /* Red stroke (outline) */
+  stroke-width: 1px; /* Stroke thickness */
 }
 .musicButton .buttonTitle {
   display: block;

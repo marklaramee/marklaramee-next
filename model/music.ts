@@ -13,13 +13,16 @@ export interface MusicLinks {
     pandora?: string;
     spotify?: string;
     youtube?: string;
+    soundcloud?: string;
 }
 
 export interface MusicData {
     cover: string;
     title: string;
     artist: string;
-    song: SongData;
-    links: MusicLinks;
+    song: SongData | null;
+    stream: MusicLinks | null;
+    buy: MusicLinks | null;
     genre: string;
+    handle: string;
 }

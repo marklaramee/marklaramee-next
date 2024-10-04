@@ -4,8 +4,6 @@ import MusicItem from '@/components/MusicItem/MusicItem';
 import styles from './styles/MusicGroup.module.scss'
 import { songsData } from '@/data/musicData';
 
-
-
 const MusicGroup = () => {
     return (
         <>

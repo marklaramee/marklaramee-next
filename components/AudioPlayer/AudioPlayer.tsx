@@ -10,7 +10,7 @@ import { SongData } from "@/model/music";
 // https://hearnow.com/preview/g1Df19HaF7g1e3OhdM0n0g%3D%3D?cid=17417
 
 export interface AudioProps {
-    songData: SongData; 
+    songData: SongData | null; 
 }
 
 const AudioPlayer = ({songData}: AudioProps) => {
@@ -32,6 +32,10 @@ const AudioPlayer = ({songData}: AudioProps) => {
       }
     }
   }, [isPlaying, audioRef]);
+
+  if (!songData) {
+    return null;
+  }
 
   const updateAudioTime = (newTime: string) => {
     if (audioRef.current) {

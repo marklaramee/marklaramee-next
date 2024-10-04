@@ -9,25 +9,6 @@
   font-weight: 700;
 }
 
-.musicOuter {
-  margin: 0 auto;
-  max-width: 1100px;
-  padding: 24px;
-  width: 100%;
-}
-
-.musicContainer {
-  margin: 24px 0;
-}
-
-.musicTitle {
-  font-size: 48px;
-}
-
-.musicList {
-  padding-bottom: 36px;
-}
-
 .songLink {
   color: #b2b2fd;
   display: block;
@@ -35,4 +16,4 @@
   font-family: "Marvel", sans-serif;
   margin: 0;
   padding: 0 0 14px 0;
-}/*# sourceMappingURL=Music.module.css.map */
+}/*# sourceMappingURL=TrackList.module.css.map */
