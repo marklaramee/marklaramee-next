@@ -155,8 +155,8 @@ export const energyData: MusicData = {
 export const songsData: MusicData[] = [
     wavesData,
     freakyData,
-    gitmbData,
     dtsData,
     steppinBackData,
+    gitmbData,
     // energyData,
 ];
