@@ -12,8 +12,12 @@ const TrackList = ({songs}: TrackListProps) => {
     return (
         <>
             {songsData.map((song) => (
-                <div className={styles.musicGroup} key={song.cover}>
-                    <Link href={`/music/songs/${song.handle}`} key={song.title} className={styles.songLink}>{song.title}</Link>
+                <div className={styles.musicGroup} key={song.title}>
+                    <Link 
+                        href={`/music/songs/${song.handle}`} 
+                        className={styles.songLink}
+                        target='_blank'
+                    >{song.title}</Link>
                 </div>
             ))}
         </>

@@ -22,4 +22,17 @@
 
 .musicTitle {
   font-size: 48px;
+}
+
+.musicList {
+  padding-bottom: 36px;
+}
+
+.songLink {
+  color: #b2b2fd;
+  display: block;
+  font-size: 30px;
+  font-family: "Marvel", sans-serif;
+  margin: 0;
+  padding: 0 0 14px 0;
 }/*# sourceMappingURL=Music.module.css.map */

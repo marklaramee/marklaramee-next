@@ -92,7 +92,7 @@ const MusicButtons = ({links}: ButtonProps) => {
                 </a>  
             } 
             {links.soundcloud &&   
-                <a href={links.deezer} className={styles.musicButton} target='_blank'> 
+                <a href={links.soundcloud} className={styles.musicButton} target='_blank'> 
                     <span className={styles.buttonImage}>  
                         <svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
 	 viewBox="0 0 291.319 291.319">
@@ -107,7 +107,7 @@ const MusicButtons = ({links}: ButtonProps) => {
                             </g>
                         </svg>
                     </span> 
-                    <span className={styles.buttonTitle}>Soundclud</span> 
+                    <span className={styles.buttonTitle}>Soundcloud</span> 
                 </a>  
             }       
         </div>
