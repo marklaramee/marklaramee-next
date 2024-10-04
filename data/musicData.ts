@@ -20,6 +20,7 @@ export const steppinBackData: MusicData = {
     song: steppinFile,
     links: steppinLinks,
     genre: 'Electronica / Rock',
+    page: 'steppinBack',
 }
 
 const dtsFile: SongData = {
@@ -41,6 +42,7 @@ export const dtsData: MusicData = {
     song: dtsFile,
     links: dtsLinks,
     genre: 'Bass House',
+    page: 'dropTheSky',
 }
 
 // TODO: 
@@ -57,7 +59,52 @@ export const dtsData: MusicData = {
 //     apple: 'https://music.apple.com/us/album/drop-the-sky/1731694856?i=1731694857',
 // }
 
+export const freakyData: MusicData = {
+    cover: '',
+    title: 'Get Freaky (Mark Laramee remix)',
+    artist: 'Donald Glaude',
+    song: null,
+    links: null,
+    genre: 'Bass House',
+    page: 'getFreaky',
+}
+
+export const wavesData: MusicData = {
+    cover: '',
+    title: 'Impossible Waves',
+    artist: 'Mark Laramee',
+    song: null,
+    links: null,
+    genre: 'Bass House',
+    page: 'impossibleWaves',
+}
+
+export const gitmbData: MusicData = {
+    cover: '',
+    title: 'GITMB',
+    artist: 'Mark Laramee / SmashLC',
+    song: null,
+    links: null,
+    genre: 'Bass House',
+    page: 'gitmb',
+}
+
+export const energyData: MusicData = {
+    cover: '',
+    title: 'Energy',
+    artist: 'Mark Laramee feat. Honey V',
+    song: null,
+    links: null,
+    genre: 'Bass House',
+    page: 'energy',
+}
+
+
 export const songsData: MusicData[] = [
+    wavesData,
+    freakyData,
+    gitmbData,
     dtsData,
     steppinBackData,
+    energyData,
 ];

@@ -4,10 +4,13 @@ import styles from './styles/MusicButtons.module.css'
 import { MusicLinks } from "@/model/music";
 
 interface ButtonProps {
-    links: MusicLinks
+    links: MusicLinks | null | undefined
 }
 
 const MusicButtons = ({links}: ButtonProps) => {
+    if (!links) {
+        return null;
+    }
     return (
         <div className={styles.buttonsContainer}>  
             {links.spotify &&

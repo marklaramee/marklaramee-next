@@ -19,7 +19,8 @@ export interface MusicData {
     cover: string;
     title: string;
     artist: string;
-    song: SongData;
-    links: MusicLinks;
+    song: SongData | null;
+    links: MusicLinks | null;
     genre: string;
+    page: string;
 }
