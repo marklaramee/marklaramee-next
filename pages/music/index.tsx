@@ -20,7 +20,7 @@ const Music = () => {
                     <div className={styles.musicGroup}>
                         <a 
                             href='https://open.spotify.com/artist/7jl58koqWoQwoOLNI7yY24?si=syjXp7iXSj-NPR4f02Vk9g' 
-                            key={'ct9'} 
+                            key={'helivator'} 
                             className={styles.songLink}
                             target='_blank'
                         >Helivator</a>
