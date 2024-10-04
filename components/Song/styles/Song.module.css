@@ -70,4 +70,9 @@
 }
 .linksContainer .headline {
   padding-bottom: 14px;
+}
+
+.albumCover {
+  max-height: 500px;
+  max-width: 500px;
 }/*# sourceMappingURL=Song.module.css.map */
