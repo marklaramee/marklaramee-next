@@ -86,7 +86,7 @@ export const dtsData: MusicData = {
 const freakyStream: MusicLinks = {
     spotify: 'https://open.spotify.com/track/03o74eEqYWkN4nRa9VilAQ?si=1a713eb496124fef',
     youtube: 'https://www.youtube.com/watch?v=RCi-dpta0Hs',
-    soundcloud: 'https://soundcloud.com/lams/get-freaky-donald-glaude-mark-laramee-remix',
+    soundcloud: 'https://soundcloud.com/earlynightrecords/donald-glaude-get-freaky-mark-laramee-remix',
 }
 
 const freakyBuy: MusicLinks = {
@@ -107,7 +107,7 @@ export const freakyData: MusicData = {
 const wavesStream: MusicLinks = {
     spotify: 'https://open.spotify.com/track/4LzoAENSUguWOFAjqJDMfu?si=83eb429d57d74468',
     youtube: 'https://www.youtube.com/watch?v=yKVm2Xscu-c',
-    soundcloud: 'https://soundcloud.com/lams/impossible-waves-mark-1',
+    soundcloud: 'https://soundcloud.com/earlynightrecords/mark-laramee-impossible-waves-jet-extended-version',
 }
 
 const wavesBuy: MusicLinks = {
