@@ -38,15 +38,17 @@ const Song = ({handle}: SongProps) => {
                     </div>
                 }
                 {songData.handle == 'getFreaky' &&
-                    <div className={classnames(styles.linksContainer, styles.tempLinks)}>
-
+                    <div>
+                        <div className={styles.tempLinks}>
                             <a target="_blank" href="https://www.youtube.com/watch?v=JWLM_XJQdsM">Youtube</a>
- 
                             <a target="_blank" href="https://www.facebook.com/profile.php?id=61566399887772">Facebook</a>
-
                             <a target="_blank" href="https://www.instagram.com/marklarameemusic/">Instagram</a>
+                        </div>
+                         <div className={styles.tempLinks}>
+                            <a target="_blank" href="https://www.instagram.com/earlynightrecords/">Early Night Records</a>
+                        </div>
                     </div>
-                    }
+                }
             </div>
         </div>
     );
