@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames';
 import Link from 'next/link'
 import styles from './styles/Song.module.scss'
 import { songsData } from '@/data/musicData';
@@ -36,6 +37,16 @@ const Song = ({handle}: SongProps) => {
                         <MusicButtons links={songData.buy} />
                     </div>
                 }
+                {songData.handle == 'getFreaky' &&
+                    <div className={classnames(styles.linksContainer, styles.tempLinks)}>
+
+                            <a target="_blank" href="https://www.youtube.com/watch?v=JWLM_XJQdsM">Youtube</a>
+ 
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=61566399887772">Facebook</a>
+
+                            <a target="_blank" href="https://www.instagram.com/marklarameemusic/">Instagram</a>
+                    </div>
+                    }
             </div>
         </div>
     );
