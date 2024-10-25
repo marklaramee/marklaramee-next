@@ -41,8 +41,20 @@ const Song = ({handle}: SongProps) => {
                     <div>
                         <div className={styles.tempLinks}>
                             <a target="_blank" href="https://www.youtube.com/watch?v=JWLM_XJQdsM">Youtube</a>
-                            <a target="_blank" href="https://www.facebook.com/profile.php?id=61566399887772">Facebook</a>
-                            <a target="_blank" href="https://www.instagram.com/marklarameemusic/">Instagram</a>
+                            <a target="_blank" href="https://www.facebook.com/reel/577702098155426">Facebook</a>
+                            <a target="_blank" href="https://www.instagram.com/p/DBXbpULS28a/">Instagram</a>
+                        </div>
+                         <div className={styles.tempLinks}>
+                            <a target="_blank" href="https://www.instagram.com/earlynightrecords/">Early Night Records</a>
+                        </div>
+                    </div>
+                }
+                {songData.handle == 'impossibleWaves' &&
+                    <div>
+                        <div className={styles.tempLinks}>
+                            <a target="_blank" href="https://www.youtube.com/watch?v=xwAL5NMzI-Q">Youtube</a>
+                            <a target="_blank" href="https://www.facebook.com/reel/27273284052320043">Facebook</a>
+                            <a target="_blank" href="https://www.instagram.com/p/DBj5Cu_y4r0/">Instagram</a>
                         </div>
                          <div className={styles.tempLinks}>
                             <a target="_blank" href="https://www.instagram.com/earlynightrecords/">Early Night Records</a>
