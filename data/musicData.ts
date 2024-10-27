@@ -61,7 +61,7 @@ export const dtsData: MusicData = {
 
 const freakyStream: MusicLinks = {
     spotify: 'https://open.spotify.com/track/03o74eEqYWkN4nRa9VilAQ?si=1a713eb496124fef',
-    youtube: 'https://www.youtube.com/watch?v=RCi-dpta0Hs',
+    youtube: 'https://www.youtube.com/watch?v=JWLM_XJQdsM',
     soundcloud: 'https://soundcloud.com/earlynightrecords/donald-glaude-get-freaky-mark-laramee-remix',
 }
 
@@ -70,7 +70,6 @@ const freakyBuy: MusicLinks = {
 }
 
 const freakySocials: MusicLinks = {
-    youtube: 'https://www.youtube.com/watch?v=JWLM_XJQdsM',
     facebook: 'https://www.facebook.com/reel/577702098155426',
     insta: 'https://www.instagram.com/p/DBXbpULS28a/',
     tiktok: 'https://www.tiktok.com/t/ZP88q91rn/',
@@ -90,7 +89,7 @@ export const freakyData: MusicData = {
 
 const wavesStream: MusicLinks = {
     spotify: 'https://open.spotify.com/track/4LzoAENSUguWOFAjqJDMfu?si=83eb429d57d74468',
-    youtube: 'https://www.youtube.com/watch?v=yKVm2Xscu-c',
+    youtube: 'https://www.youtube.com/watch?v=xwAL5NMzI-Q',
     soundcloud: 'https://soundcloud.com/earlynightrecords/mark-laramee-impossible-waves-jet-extended-version',
 }
 
@@ -102,7 +101,6 @@ const wavesSocials: MusicLinks = {
     facebook: 'https://www.facebook.com/reel/27273284052320043',
     insta: 'https://www.instagram.com/p/DBj5Cu_y4r0/',
     tiktok: 'https://www.tiktok.com/t/ZP88qMQ9A/',
-    youtube: 'https://www.youtube.com/watch?v=xwAL5NMzI-Q',
 }
 
 export const wavesData: MusicData = {
