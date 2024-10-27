@@ -10,7 +10,7 @@ import { SongData } from "@/model/music";
 // https://hearnow.com/preview/g1Df19HaF7g1e3OhdM0n0g%3D%3D?cid=17417
 
 export interface AudioProps {
-    songData: SongData | null; 
+    songData: SongData | undefined; 
 }
 
 const AudioPlayer = ({songData}: AudioProps) => {
