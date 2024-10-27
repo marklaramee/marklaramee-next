@@ -78,6 +78,32 @@
   }
 }
 
+.labelContainer {
+  font-size: 24px;
+  padding-bottom: 20px;
+
+  .announcement {
+    color: $aqua;
+    padding-bottom: 4px;
+  }
+}
+
+
+.labelLink {
+  align-items: center;;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 30px;
+  justify-content: flex-start;
+
+  .labelIconLeft {
+    max-height: 30px;
+    max-width: 30px;;
+  }
+}
+
+
+
 @media only screen and (max-width: 767px) {
   .albumCover {
     height: 80%;
