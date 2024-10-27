@@ -37,6 +37,12 @@ const Song = ({handle}: SongProps) => {
                         <MusicButtons links={songData.buy} />
                     </div>
                 }
+                {hasLinks(songData.socials) &&
+                    <div className={styles.linksContainer}>
+                        <h3 className={styles.headline}>Socials</h3>
+                        <MusicButtons links={songData.socials} />
+                    </div>
+                }
             </div>
         </div>
     );
