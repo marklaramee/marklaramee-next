@@ -25,6 +25,19 @@ const Song = ({handle}: SongProps) => {
                     <h1 className={styles.albumTitle}>{songData.title}</h1>
                     <h2 className={styles.artist}>{songData.artist}</h2>
                 </div>
+                {songData.label && 
+                    <div className={styles.labelContainer}>
+                        <div className={styles.announcement}>Out now on </div>
+                        <a className={styles.labelLink} target='_blank' href={songData.label.link}>
+                            <img 
+                                className={styles.labelIconLeft} 
+                                alt={`${songData.label.name} logo`}
+                                src={songData.label.logo}
+                            />
+                            {songData.label.name}
+                        </a>
+                    </div>
+                }
                 {hasLinks(songData.stream) &&
                     <div className={styles.linksContainer}>
                         <h3 className={styles.headline}>Stream</h3>
@@ -37,30 +50,10 @@ const Song = ({handle}: SongProps) => {
                         <MusicButtons links={songData.buy} />
                     </div>
                 }
-                {songData.handle == 'getFreaky' &&
-                    <div>
-                        <div className={styles.tempLinks}>
-                            <a target="_blank" href="https://www.youtube.com/watch?v=JWLM_XJQdsM">Youtube</a>
-                            <a target="_blank" href="https://www.facebook.com/reel/577702098155426">Facebook</a>
-                            <a target="_blank" href="https://www.instagram.com/p/DBXbpULS28a/">Instagram</a>
-                            <a target="_blank" href="https://www.tiktok.com/t/ZP88q91rn/">TikTok</a>
-                        </div>
-                         <div className={styles.tempLinks}>
-                            <a target="_blank" href="https://www.instagram.com/earlynightrecords/">Early Night Records</a>
-                        </div>
-                    </div>
-                }
-                {songData.handle == 'impossibleWaves' &&
-                    <div>
-                        <div className={styles.tempLinks}>
-                            <a target="_blank" href="https://www.youtube.com/watch?v=xwAL5NMzI-Q">Youtube</a>
-                            <a target="_blank" href="https://www.facebook.com/reel/27273284052320043">Facebook</a>
-                            <a target="_blank" href="https://www.instagram.com/p/DBj5Cu_y4r0/">Instagram</a>
-                            <a target="_blank" href="https://www.tiktok.com/t/ZP88qMQ9A/">TikTok</a>
-                        </div>
-                         <div className={styles.tempLinks}>
-                            <a target="_blank" href="https://www.instagram.com/earlynightrecords/">Early Night Records</a>
-                        </div>
+                {hasLinks(songData.socials) &&
+                    <div className={styles.linksContainer}>
+                        <h3 className={styles.headline}>Socials</h3>
+                        <MusicButtons links={songData.socials} />
                     </div>
                 }
             </div>

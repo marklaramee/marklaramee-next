@@ -86,6 +86,27 @@
   padding: 0 48px 12px 0;
 }
 
+.labelContainer {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+.labelContainer .announcement {
+  color: #339999;
+  padding-bottom: 4px;
+}
+
+.labelLink {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 30px;
+  justify-content: flex-start;
+}
+.labelLink .labelIconLeft {
+  max-height: 30px;
+  max-width: 30px;
+}
+
 @media only screen and (max-width: 767px) {
   .albumCover {
     height: 80%;
