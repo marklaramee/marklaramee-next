@@ -30,7 +30,7 @@ const MusicButtons = ({links}: ButtonProps) => {
                 </a>   
             } 
             {links.tiktok &&
-                <a href={links.insta} className={styles.musicButton} target='_blank'> 
+                <a href={links.tiktok} className={styles.musicButton} target='_blank'> 
                     <span className={styles.buttonImage}>  
                         <img src='/images/icons/tiktok2.webp' alt='tiktok' /> 
                     </span> 
