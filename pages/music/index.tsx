@@ -3,6 +3,8 @@ import classnames from 'classnames';
 import styles from './styles/Music.module.css';
 import TrackList from '@/components/TrackList/TrackList';
 import { songsData } from '@/data/musicData';
+import { mySocials } from '@/data/socialsData';
+import MusicButtons from '@/components/MusicButtons/MusicButtons';
 
 const Music = () => {
     return (
@@ -12,6 +14,11 @@ const Music = () => {
                 <div className={styles.musicContainer}>
                     <TrackList songs={songsData}></TrackList>
                 </div>
+            </div>
+
+            <div className={styles.musicList}>
+                <MusicButtons links={mySocials}>
+                </MusicButtons>
             </div>
 
             <div className={styles.musicList}>

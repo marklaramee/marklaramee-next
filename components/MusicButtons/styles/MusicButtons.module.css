@@ -46,6 +46,7 @@
   stroke-width: 1px; /* Stroke thickness */
 }
 .musicButton .buttonTitle {
+  color: white;
   display: block;
 }
 
@@ -70,6 +71,4 @@
   .musicButton {
     margin-bottom: 14px;
   }
-}
-
-/*# sourceMappingURL=MusicButtons.module.css.map */
+}/*# sourceMappingURL=MusicButtons.module.css.map */
