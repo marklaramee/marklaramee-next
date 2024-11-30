@@ -147,6 +147,6 @@ export const songsData: MusicData[] = [
     freakyData,
     dtsData,
     steppinBackData,
-    gitmbData,
+    // gitmbData,
     // energyData,
 ];

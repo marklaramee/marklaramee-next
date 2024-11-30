@@ -16,7 +16,7 @@ const Music = () => {
                 </div>
             </div>
 
-            <div className={styles.musicList}>
+            <div className={classnames(styles.musicList, styles.socialBar)}>
                 <MusicButtons links={mySocials}>
                 </MusicButtons>
             </div>
