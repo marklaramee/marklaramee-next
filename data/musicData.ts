@@ -6,6 +6,12 @@ const earlyNightRecords: RecordLabel = {
     logo: '/images/icons/ENR100x100.png',
 }
 
+const phunkJunk: RecordLabel = {
+    name: 'Phunk Junk Records',
+    link: 'https://www.instagram.com/phunkjunkmusicgroup/',
+    logo: '/music/phunk-junk-30x30.png',
+}
+
 const steppinStream: MusicLinks = {
     deezer: 'https://www.deezer.com/us/album/428806997',
     pandora: 'https://www.pandora.com/artist/mark-laramee/steppin-back-feat-susy-borlido/ALv5n9fP6PJKXdJ',
@@ -163,13 +169,14 @@ const energySocials: MusicLinks = {
 
 export const energyData: MusicData = {
     cover: '/music/Come-Get-Your-Energy-500x500.png',
-    title: 'Energy',
+    title: 'Come Get Your Energy',
     artist: 'Mark Laramee feat. Honey V',
     stream: energyStream,
     buy: energyBuy,
     genre: 'Bass House',
     handle: 'energy',
     socials: energySocials,
+    label: phunkJunk,
 }
 
 
