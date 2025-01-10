@@ -5,18 +5,18 @@ export interface SongData {
 }
 
 export interface MusicLinks {
-    amazon?: string;
-    apple?: string;
-    bandcamp?: string;
+    amazon?: string; 
+    apple?: string; 
+    bandcamp?: string; 
     beatport?: string;
-    deezer?: string;
-    pandora?: string;
-    spotify?: string;
-    youtube?: string;
-    soundcloud?: string;
-    facebook?: string;
-    tiktok?: string;
-    insta?: string;
+    deezer?: string; 
+    pandora?: string; 
+    spotify?: string; 
+    youtube?: string; 
+    soundcloud?: string; 
+    facebook?: string; 
+    tiktok?: string; 
+    insta?: string; 
 }
 
 export interface RecordLabel {

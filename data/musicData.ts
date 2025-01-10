@@ -6,6 +6,12 @@ const earlyNightRecords: RecordLabel = {
     logo: '/images/icons/ENR100x100.png',
 }
 
+const phunkJunk: RecordLabel = {
+    name: 'Phunk Junk Records',
+    link: 'https://www.instagram.com/phunkjunkmusicgroup/',
+    logo: '/music/phunk-junk-30x30.png',
+}
+
 const steppinStream: MusicLinks = {
     deezer: 'https://www.deezer.com/us/album/428806997',
     pandora: 'https://www.pandora.com/artist/mark-laramee/steppin-back-feat-susy-borlido/ALv5n9fP6PJKXdJ',
@@ -13,6 +19,7 @@ const steppinStream: MusicLinks = {
 }
 const steppinBuy: MusicLinks = {
     amazon: 'https://music.amazon.fr/albums/B0C21LDN27',
+    apple: 'https://music.apple.com/us/album/steppin-back-feat-susy-borlido-single/1681630191',
     bandcamp: 'https://marklaramee.bandcamp.com/track/steppin-back',
 }
 
@@ -37,6 +44,8 @@ const dtsFile: SongData = {
     file: '/music/DropTheSky-MarkLaramee.mp3',
 }
 const dtsStream: MusicLinks = {
+    deezer: 'https://deezer.page.link/kJVnnVGdeJNoXxB6A',
+    pandora: 'https://www.pandora.com/artist/mark-laramee/drop-the-sky/AL5ZPZldZZzZdPk',
     spotify: 'https://open.spotify.com/track/60INkHhievAsIZhqTnei6M?si=6836f40c6a284ef9',
 }
 
@@ -44,7 +53,7 @@ const dtsBuy: MusicLinks = {
     beatport: 'https://www.beatport.com/artist/mark-laramee/1187913/tracks',
     bandcamp: 'https://marklaramee.bandcamp.com/track/drop-the-sky',
     amazon: 'https://www.amazon.com/Drop-Sky-Mark-Laramee/dp/B0CVSK3PCX',
-    apple: 'https://music.apple.com/us/album/drop-the-sky/1731694856?i=1731694857',
+    apple: 'https://music.apple.com/us/album/drop-the-sky-single/1731694856',
 }
 
 export const dtsData: MusicData = {
@@ -60,12 +69,16 @@ export const dtsData: MusicData = {
 }
 
 const freakyStream: MusicLinks = {
+    deezer: 'https://deezer.page.link/AFh9SQ4PdRZ467bf8',
+    pandora: 'https://www.pandora.com/artist/mark-laramee-and-donald-glaude/get-freaky-remixes/get-freaky-mark-laramee-remix/TRXzZPJZ3dd53Z4',
     spotify: 'https://open.spotify.com/track/03o74eEqYWkN4nRa9VilAQ?si=1a713eb496124fef',
     youtube: 'https://www.youtube.com/watch?v=JWLM_XJQdsM',
     soundcloud: 'https://soundcloud.com/earlynightrecords/donald-glaude-get-freaky-mark-laramee-remix',
 }
 
 const freakyBuy: MusicLinks = {
+    amazon: 'https://music.amazon.com/albums/B0DFVCMNTJ',
+    apple: 'https://music.apple.com/us/album/get-freaky-remixes-single/1765943656',
     beatport: 'https://www.beatport.com/release/get-freaky-remixes/4714803',
 }
 
@@ -88,12 +101,16 @@ export const freakyData: MusicData = {
 }
 
 const wavesStream: MusicLinks = {
+    deezer: 'https://www.deezer.com/us/album/644926731',
+    pandora: 'https://www.pandora.com/artist/mark-laramee/impossible-waves/ALXkdPbhxZ3vPt4',
     spotify: 'https://open.spotify.com/track/4LzoAENSUguWOFAjqJDMfu?si=83eb429d57d74468',
     youtube: 'https://www.youtube.com/watch?v=xwAL5NMzI-Q',
     soundcloud: 'https://soundcloud.com/earlynightrecords/mark-laramee-impossible-waves-jet-extended-version',
 }
 
 const wavesBuy: MusicLinks = {
+    amazon: 'https://music.amazon.com/albums/B0DHCRW8WP',
+    apple: 'https://music.apple.com/us/album/impossible-waves-single/1769168309',
     beatport: 'https://www.beatport.com/release/impossible-waves/4739349',
 }
 
@@ -130,23 +147,44 @@ export const gitmbData: MusicData = {
     socials: null,
 }
 
+const energyStream: MusicLinks = {
+    deezer: 'https://deezer.page.link/uKcpHLknaddwRTsu5',
+    pandora: 'https://www.pandora.com/artist/mark-laramee-and-honey-5/come-get-your-energy/ALVdvgP4j9txKt4',
+    spotify: 'https://open.spotify.com/track/70VsV19HD91S3blHJd2CAP?si=ffb3d644acb14302',
+    youtube: 'https://youtu.be/kOFftCKzWDQ',
+    // soundcloud: '',
+}
+
+const energyBuy: MusicLinks = {
+    amazon: 'https://music.amazon.com/albums/B0DPLFPJC6',
+    apple: 'https://music.apple.com/us/album/come-get-your-energy-single/1783364058',
+    beatport: 'https://www.beatport.com/release/come-get-your-energy/4847696',
+}
+
+const energySocials: MusicLinks = {
+    facebook: 'https://www.facebook.com/reel/1982227682246304',
+    insta: 'https://www.instagram.com/p/DEqAj6PyeRO/',
+    tiktok: 'https://www.tiktok.com/@mark.laramee.musi/video/7458362145646923039',
+}
+
 export const energyData: MusicData = {
-    cover: '',
-    title: 'Energy',
+    cover: '/music/Come-Get-Your-Energy-500x500.png',
+    title: 'Come Get Your Energy',
     artist: 'Mark Laramee feat. Honey V',
-    stream: null,
-    buy: null,
+    stream: energyStream,
+    buy: energyBuy,
     genre: 'Bass House',
     handle: 'energy',
-    socials: null,
+    socials: energySocials,
+    label: phunkJunk,
 }
 
 
 export const songsData: MusicData[] = [
+    energyData,
     wavesData,
     freakyData,
     dtsData,
     steppinBackData,
-    // gitmbData,
-    // energyData,
+    gitmbData,
 ];
