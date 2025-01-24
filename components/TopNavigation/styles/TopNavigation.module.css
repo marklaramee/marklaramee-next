@@ -9,6 +9,12 @@
   font-weight: 700;
 }
 
+.navOuter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .navTop {
   align-items: center;
   color: #663399;
@@ -17,8 +23,9 @@
   font-weight: 700;
   justify-content: flex-start;
   margin: 0;
-  padding: 0 0 0 39px;
+  padding: 0 0 0 20px;
   transition: all 250ms;
+  width: 1100px;
   z-index: 100;
 }
 .navTop a {
@@ -55,6 +62,7 @@
   position: absolute;
   left: -8px;
   top: 100%;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .navTop div.navLevel2 a {
@@ -87,6 +95,4 @@
     transform: scale(1, 0);
     width: 100%;
   }
-}
-
-/*# sourceMappingURL=TopNavigation.module.css.map */
+}/*# sourceMappingURL=TopNavigation.module.css.map */
