@@ -9,52 +9,54 @@ import MusicButtons from '@/components/MusicButtons/MusicButtons';
 const Music = () => {
     return (
         <div className={styles.musicOuter}>
-            <div className={styles.musicList}>
-                <h1 className={classnames(styles.headline, styles.musicTitle)}>EDM and Electronica</h1>
-                <div className={styles.musicContainer}>
-                    <TrackList songs={songsData}></TrackList>
-                </div>
-            </div>
-
-            <div className={styles.musicList}>
-                <h1 className={classnames(styles.headline, styles.musicTitle)}>Rock</h1>
-                <div className={styles.musicContainer}>
-                    <div className={styles.musicGroup}>
-                        <a 
-                            href='https://open.spotify.com/artist/7jl58koqWoQwoOLNI7yY24?si=syjXp7iXSj-NPR4f02Vk9g' 
-                            key={'helivator'} 
-                            className={styles.songLink}
-                            target='_blank'
-                        >Helivator</a>
-                        <a 
-                            href='https://open.spotify.com/artist/2Jx8LfapKixC8qS5Rh8ikI?si=DgPjOxNnQ-6l3mtYMp0j4Q' 
-                            key={'ct9'} 
-                            className={styles.songLink}
-                            target='_blank'
-                        >Cutthroats 9</a>
+            <div className={styles.musicInner}>
+                <div className={styles.musicList}>
+                    <h1 className={classnames(styles.headline, styles.musicTitle)}>EDM and Electronica</h1>
+                    <div className={styles.musicContainer}>
+                        <TrackList songs={songsData}></TrackList>
                     </div>
                 </div>
-            </div>
 
-            <div className={styles.musicList}>
-                <h1 className={classnames(styles.headline, styles.musicTitle)}>Industrial</h1>
-                <div className={styles.musicContainer}>
-                    <div className={styles.musicGroup}>
-                        <a 
-                            href='https://missingfoundation.bandcamp.com/album/go-into-exile-2' 
-                            key={'mf'} 
-                            className={styles.songLink}
-                            target='_blank'
-                        >
-                            Missing Foundation
-                        </a>
+                <div className={styles.musicList}>
+                    <h1 className={classnames(styles.headline, styles.musicTitle)}>Rock</h1>
+                    <div className={styles.musicContainer}>
+                        <div className={styles.musicGroup}>
+                            <a 
+                                href='https://open.spotify.com/artist/7jl58koqWoQwoOLNI7yY24?si=syjXp7iXSj-NPR4f02Vk9g' 
+                                key={'helivator'} 
+                                className={styles.songLink}
+                                target='_blank'
+                            >Helivator</a>
+                            <a 
+                                href='https://open.spotify.com/artist/2Jx8LfapKixC8qS5Rh8ikI?si=DgPjOxNnQ-6l3mtYMp0j4Q' 
+                                key={'ct9'} 
+                                className={styles.songLink}
+                                target='_blank'
+                            >Cutthroats 9</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div className={classnames(styles.musicList, styles.socialBar)}>
-                <MusicButtons links={mySocials}>
-                </MusicButtons>
+                <div className={styles.musicList}>
+                    <h1 className={classnames(styles.headline, styles.musicTitle)}>Industrial</h1>
+                    <div className={styles.musicContainer}>
+                        <div className={styles.musicGroup}>
+                            <a 
+                                href='https://missingfoundation.bandcamp.com/album/go-into-exile-2' 
+                                key={'mf'} 
+                                className={styles.songLink}
+                                target='_blank'
+                            >
+                                Missing Foundation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={classnames(styles.musicList, styles.socialBar)}>
+                    <MusicButtons links={mySocials}>
+                    </MusicButtons>
+                </div>
             </div>
         </div>
     );

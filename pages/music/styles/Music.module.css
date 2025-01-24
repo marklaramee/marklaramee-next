@@ -10,9 +10,15 @@
 }
 
 .musicOuter {
-  margin: 0 0 0 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.musicInner {
+  margin: 0 auto;
   max-width: 1100px;
   padding: 24px;
+  text-align: left;
   width: 100%;
 }
 

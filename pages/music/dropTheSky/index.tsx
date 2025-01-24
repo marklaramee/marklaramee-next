@@ -8,10 +8,12 @@ import { songsData } from '@/data/musicData';
 const Music = () => {
     return (
         <div className={styles.musicOuter}>
-            <h1 className={classnames(styles.headline, styles.musicTitle)}>Newest Release</h1>
-            <div className={styles.musicContainer}>
-                <MusicItem song={songsData[0]} key={songsData[0].cover}/>
-                <MusicGroup></MusicGroup>
+            <div className={styles.musicInner}>
+                <h1 className={classnames(styles.headline, styles.musicTitle)}>Newest Release</h1>
+                <div className={styles.musicContainer}>
+                    <MusicItem song={songsData[0]} key={songsData[0].cover}/>
+                    <MusicGroup></MusicGroup>
+                </div>
             </div>
         </div>
     );
