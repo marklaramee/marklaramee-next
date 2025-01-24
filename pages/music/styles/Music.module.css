@@ -17,7 +17,7 @@
 }
 
 .musicContainer {
-  margin: 24px 0;
+  margin: 8px 0 24px 0;
 }
 
 .musicTitle {
@@ -25,7 +25,7 @@
 }
 
 .musicList {
-  padding-bottom: 36px;
+  padding-bottom: 14px;
 }
 
 .songLink {
