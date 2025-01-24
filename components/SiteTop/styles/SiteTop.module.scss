@@ -14,13 +14,28 @@
   width: 100%;
 }
 
+.desktopLogo {
+  display: block;
+  height: auto;
+  max-height: 221px;
+  max-width: 1100px;
+  text-align: left;
+  width: 100%;
+}
+
 .topBar {
   display: block;
 }
 
 .desktopLogoContainer {
-    background-color: lime;
-  }
+  display: flex;
+  justify-content: center;
+}
+
+.desktopLogoInner {
+  text-align: left;
+  width: 1100px;
+}
 
 @media only screen and (max-width: 767px)  {
   .desktopLogoContainer {

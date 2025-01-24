@@ -22,7 +22,13 @@ export default function SiteTop() {
         />
       </div>
       <div className={styles.desktopLogoContainer}>
-        desktop logo comntyain
+        <div className={styles.desktopLogoInner}>
+          <img
+            alt='Mark Laramee'
+            src='/images/mark-laramee-logo-purple-bright_720.png'
+            className={styles.desktopLogo}
+          />
+        </div>
       </div>
       <TopNavigation isOpen={isTopNavOpen} navLinkClick={handleClick} />
     </div>
