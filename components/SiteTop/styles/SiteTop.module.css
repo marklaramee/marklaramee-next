@@ -15,7 +15,7 @@
 }
 
 .logo {
-  display: block;
+  display: none;
   height: auto;
   max-height: 221px;
   max-width: 1125px;
@@ -27,7 +27,17 @@
   display: block;
 }
 
+.desktopLogoContainer {
+  background-color: lime;
+}
+
 @media only screen and (max-width: 767px) {
+  .desktopLogoContainer {
+    display: none;
+  }
+  .logo {
+    display: block;
+  }
   .container {
     background-color: black;
     padding: 4px 0;
@@ -50,6 +60,4 @@
     text-align: left;
     width: auto;
   }
-}
-
-/*# sourceMappingURL=SiteTop.module.css.map */
+}/*# sourceMappingURL=SiteTop.module.css.map */

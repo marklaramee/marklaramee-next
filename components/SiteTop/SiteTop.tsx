@@ -21,6 +21,9 @@ export default function SiteTop() {
           className={styles.logo}
         />
       </div>
+      <div className={styles.desktopLogoContainer}>
+        desktop logo comntyain
+      </div>
       <TopNavigation isOpen={isTopNavOpen} navLinkClick={handleClick} />
     </div>
   )
