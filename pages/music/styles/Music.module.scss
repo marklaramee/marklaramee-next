@@ -8,6 +8,11 @@
 }
 
 .musicContainer {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 60px;
+    justify-content: flex-start;
     margin: 8px 0 24px 0;
 }
 
