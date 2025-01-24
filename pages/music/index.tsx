@@ -16,11 +16,6 @@ const Music = () => {
                 </div>
             </div>
 
-            <div className={classnames(styles.musicList, styles.socialBar)}>
-                <MusicButtons links={mySocials}>
-                </MusicButtons>
-            </div>
-
             <div className={styles.musicList}>
                 <h1 className={classnames(styles.headline, styles.musicTitle)}>Rock</h1>
                 <div className={styles.musicContainer}>
@@ -39,6 +34,27 @@ const Music = () => {
                         >Cutthroats 9</a>
                     </div>
                 </div>
+            </div>
+
+            <div className={styles.musicList}>
+                <h1 className={classnames(styles.headline, styles.musicTitle)}>Industrial</h1>
+                <div className={styles.musicContainer}>
+                    <div className={styles.musicGroup}>
+                        <a 
+                            href='https://missingfoundation.bandcamp.com/album/go-into-exile-2' 
+                            key={'mf'} 
+                            className={styles.songLink}
+                            target='_blank'
+                        >
+                            Missing Foundation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div className={classnames(styles.musicList, styles.socialBar)}>
+                <MusicButtons links={mySocials}>
+                </MusicButtons>
             </div>
         </div>
     );
