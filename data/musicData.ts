@@ -12,6 +12,12 @@ const phunkJunk: RecordLabel = {
     logo: '/music/phunk-junk-30x30.png',
 }
 
+const deepTech: RecordLabel = {
+    name: 'Deep Tech Recordings',
+    link: 'www.linktr.ee/deeptechrecordings',
+    logo: '/music/deep-tech-logo.webp',
+}
+
 const steppinStream: MusicLinks = {
     deezer: 'https://www.deezer.com/us/album/428806997',
     pandora: 'https://www.pandora.com/artist/mark-laramee/steppin-back-feat-susy-borlido/ALv5n9fP6PJKXdJ',
@@ -179,8 +185,40 @@ export const energyData: MusicData = {
     label: phunkJunk,
 }
 
+const animalBuy: MusicLinks = {
+    // amazon: 'https://music.amazon.com/albums/B0DPLFPJC6',
+    // apple: 'https://music.apple.com/us/album/come-get-your-energy-single/1783364058',
+    beatport: 'https://www.beatport.com/release/midnight-animal/5559910',
+}
+
+const animalSocials: MusicLinks = {
+    // facebook: 'https://www.facebook.com/reel/1982227682246304',
+    // insta: 'https://www.instagram.com/p/DEqAj6PyeRO/',
+    // tiktok: 'https://www.tiktok.com/@mark.laramee.musi/video/7458362145646923039',
+}
+
+const animalStream: MusicLinks = {
+    // deezer: 'https://deezer.page.link/uKcpHLknaddwRTsu5',
+    // pandora: 'https://www.pandora.com/artist/mark-laramee-and-honey-5/come-get-your-energy/ALVdvgP4j9txKt4',
+    // spotify: 'https://open.spotify.com/track/70VsV19HD91S3blHJd2CAP?si=ffb3d644acb14302',
+    // youtube: 'https://youtu.be/kOFftCKzWDQ',
+    // // soundcloud: '',
+}
+
+export const animalData: MusicData = {
+    cover: '/music/midnight-animal.jpg',
+    title: 'Midnight Animal',
+    artist: 'Mark Laramee x Skandar',
+    stream: animalStream,
+    buy: animalBuy,
+    genre: 'Bass House',
+    handle: 'midnightAnimal',
+    socials: animalSocials,
+    label: deepTech,
+}
 
 export const songsData: MusicData[] = [
+    animalData,
     energyData,
     wavesData,
     freakyData,

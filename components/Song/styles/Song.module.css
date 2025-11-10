@@ -12,6 +12,12 @@
 }
 
 /* todo move type declarations to vars */
+.songOuter {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   align-items: flex-start;
   color: white;
@@ -127,6 +133,4 @@
     line-height: 42px;
     padding-bottom: 24px;
   }
-}
-
-/*# sourceMappingURL=Song.module.css.map */
+}/*# sourceMappingURL=Song.module.css.map */
