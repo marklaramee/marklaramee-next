@@ -3,6 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Marvel:wght@400;700");
 /* todo move type declarations to vars */
 
+.songOuter {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+
 .container {
     align-items: flex-start;
     color: white;
