@@ -1,6 +1,4 @@
 import React from 'react'
-import classnames from 'classnames';
-import Link from 'next/link'
 import styles from './styles/Song.module.scss'
 import { songsData } from '@/data/musicData';
 import MusicButtons from '../MusicButtons/MusicButtons';
