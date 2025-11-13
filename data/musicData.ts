@@ -14,7 +14,7 @@ const phunkJunk: RecordLabel = {
 
 const deepTech: RecordLabel = {
     name: 'Deep Tech Recordings',
-    link: 'www.linktr.ee/deeptechrecordings',
+    link: 'http://www.linktr.ee/deeptechrecordings',
     logo: '/music/deep-tech-logo.webp',
 }
 
