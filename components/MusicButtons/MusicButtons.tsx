@@ -143,7 +143,7 @@ const MusicButtons = ({links}: ButtonProps) => {
                 </a> 
             }
             {links.youtubeMusic && 
-                <a href={links.youtube}  className={classnames(styles.musicButton, styles.lottaText)} target='_blank'> 
+                <a href={links.youtubeMusic}  className={classnames(styles.musicButton, styles.lottaText)} target='_blank'> 
                     <span className={styles.buttonImage}>  
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" pointerEvents="bounding-box">
                             <title>you tube</title>

@@ -45,8 +45,8 @@
   fill: white;
   max-height: 30px;
   max-width: 30px;
-  stroke: black; /* Red stroke (outline) */
-  stroke-width: 1px; /* Stroke thickness */
+  stroke: black;
+  stroke-width: 1px;
 }
 .musicButton .buttonTitle {
   color: white;
