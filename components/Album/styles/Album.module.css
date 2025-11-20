@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;700");
+@import url("https://fonts.googleapis.com/css2?family=Marvel:wght@400;700");
+/* font */
+/* colors */
+/* color tryouts */
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;700");
+@import url("https://fonts.googleapis.com/css2?family=Marvel:wght@400;700");
+.headline {
+  color: #4040bf;
+  font-family: "Marvel", sans-serif;
+  font-weight: 700;
+}
+
+/* todo move type declarations to vars */
+.songOuter {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  align-items: flex-start;
+  color: white;
+  display: flex;
+  margin: 0 0 0 20px;
+  max-width: 1100px;
+  justify-content: flex-start;
+  padding: 24px;
+  width: 100%;
+}
+
+.content {
+  padding: 0 0 0 48px;
+}
+
+.headline {
+  color: #4e4ee5;
+  font-family: "Marvel", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.musicOuter {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 24px;
+  width: 100%;
+}
+
+.musicContainer {
+  margin: 24px 0;
+}
+
+.musicTitle {
+  font-size: 48px;
+}
+
+.albumTitle {
+  color: #b2b2fd;
+  font-size: 72px;
+  font-family: "Marvel", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.artist {
+  color: #b2b2fd;
+  font-size: 48px;
+  font-family: "Marvel", sans-serif;
+  margin: 0;
+  padding: 0 0 12px 0;
+}
+
+.linksContainer {
+  padding: 0 0 24px 0;
+}
+.linksContainer .headline {
+  padding-bottom: 14px;
+}
+
+.albumCover {
+  max-height: 500px;
+  max-width: 500px;
+}
+
+.tempLinks {
+  padding-top: 24px;
+}
+.tempLinks a {
+  display: inline-block;
+  font-size: 24px;
+  padding: 0 48px 12px 0;
+}
+
+.labelContainer {
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+.labelContainer .announcement {
+  color: #339999;
+  padding-bottom: 4px;
+}
+
+.labelLink {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 30px;
+  justify-content: flex-start;
+}
+.labelLink .labelIconLeft {
+  max-height: 30px;
+  max-width: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .albumCover {
+    height: 80%;
+    width: 80%;
+  }
+  .container {
+    align-items: center;
+    flex-direction: column;
+  }
+  .linksContainer {
+    text-align: left;
+  }
+  .albumTitle {
+    line-height: 66px;
+    padding: 24px 0;
+  }
+  .artist {
+    line-height: 42px;
+    padding-bottom: 24px;
+  }
+}
+
+/*# sourceMappingURL=Album.module.css.map */

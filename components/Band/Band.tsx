@@ -1,6 +1,6 @@
 import React from 'react'
 import { bandsData } from '@/data/bandData';
-import Song from '../Song/Song';
+import Album from '../Album/Album';
 
 interface SongProps {
     handle: string
@@ -8,19 +8,17 @@ interface SongProps {
 
 const Band = ({handle}: SongProps) => {
     console.log('mldebug heere BAND');
+    const bandData = bandsData.find(datum => datum.handle == handle);
+
+    if (!bandData) {
+        return null; // TODO: 404
+    }
+
     return (
-        <div> a band</div>);
-    // const bandData = bandsData.find(datum => datum.handle == handle);
-
-    // if (!bandData) {
-    //     return null; // TODO: 404
-    // }
-
-    // return (
-    //     bandData.music.map((product) => (
-    //         <Song handle={product.handle} key={product.handle} />
-    //     ))
-    // );
+        bandData.music.map((product) => (
+            <Album musicData={product} key={product.handle} />
+        ))
+    );
 };
 
 export default Band;

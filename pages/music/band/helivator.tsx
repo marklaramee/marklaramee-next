@@ -3,7 +3,7 @@ import Band from '@/components/Band/Band';
 const HelivatorPage = () => {
     console.log('mldebug heere we go');
     return (
-        <div> helivator
+        <div>
             <Band handle={'helivator'}></Band>
         </div>
         
