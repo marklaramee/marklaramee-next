@@ -23,19 +23,6 @@ const Song = ({musicData}: SongProps) => {
                         <h1 className={styles.albumTitle}>{musicData.title}</h1>
                         <h2 className={styles.artist}>{musicData.artist}</h2>
                     </div>
-                    {/* {musicData.label && 
-                        <div className={styles.labelContainer}>
-                            <div className={styles.announcement}>Out now on </div>
-                            <a className={styles.labelLink} target='_blank' href={musicData.label.link}>
-                                <img 
-                                    className={styles.labelIconLeft} 
-                                    alt={`${musicData.label.name} logo`}
-                                    src={musicData.label.logo}
-                                />
-                                {musicData.label.name}
-                            </a>
-                        </div>
-                    } */}
                     {hasLinks(musicData.stream) &&
                         <div className={styles.linksContainer}>
                             <h3 className={styles.headline}>Stream</h3>
