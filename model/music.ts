@@ -10,13 +10,14 @@ export interface MusicLinks {
     bandcamp?: string; 
     beatport?: string;
     deezer?: string; 
-    pandora?: string; 
-    spotify?: string; 
-    youtube?: string; 
-    soundcloud?: string; 
     facebook?: string; 
-    tiktok?: string; 
     insta?: string; 
+    pandora?: string; 
+    soundcloud?: string; 
+    spotify?: string; 
+    tiktok?: string; 
+    youtube?: string; 
+    youtubeMusic?: string;
 }
 
 export interface RecordLabel {
@@ -26,14 +27,19 @@ export interface RecordLabel {
 }
 
 export interface MusicData {
-    cover: string;
-    title: string;
     artist: string;
-    song?: SongData;
-    stream: MusicLinks | null;
     buy: MusicLinks | null;
-    socials: MusicLinks | null;
+    cover: string;
     genre: string;
     handle: string;
     label?: RecordLabel;
+    socials: MusicLinks | null;
+    song?: SongData;
+    stream: MusicLinks | null;
+    title: string;  
+}
+
+export interface BandData {
+    handle: string;
+    music: MusicData[];
 }

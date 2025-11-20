@@ -22,16 +22,14 @@ const Music = () => {
                     <div className={styles.musicContainer}>
                         <div className={styles.musicGroup}>
                             <a 
-                                href='https://open.spotify.com/artist/7jl58koqWoQwoOLNI7yY24?si=syjXp7iXSj-NPR4f02Vk9g' 
+                                href='/music/band/helivator' 
                                 key={'helivator'} 
                                 className={styles.songLink}
-                                target='_blank'
                             >Helivator</a>
                             <a 
-                                href='https://open.spotify.com/artist/2Jx8LfapKixC8qS5Rh8ikI?si=DgPjOxNnQ-6l3mtYMp0j4Q' 
+                                href='/music/band/ct9' 
                                 key={'ct9'} 
                                 className={styles.songLink}
-                                target='_blank'
                             >Cutthroats 9</a>
                         </div>
                     </div>

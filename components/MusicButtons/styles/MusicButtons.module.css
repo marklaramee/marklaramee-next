@@ -29,6 +29,9 @@
   padding: 0 0 0 6px;
   width: 160px;
 }
+.musicButton.lottaText {
+  gap: 2px;
+}
 .musicButton .buttonImage {
   display: block;
   height: 32px;
@@ -42,8 +45,8 @@
   fill: white;
   max-height: 30px;
   max-width: 30px;
-  stroke: black; /* Red stroke (outline) */
-  stroke-width: 1px; /* Stroke thickness */
+  stroke: black;
+  stroke-width: 1px;
 }
 .musicButton .buttonTitle {
   color: white;
@@ -71,6 +74,4 @@
   .musicButton {
     margin-bottom: 14px;
   }
-}
-
-/*# sourceMappingURL=MusicButtons.module.css.map */
+}/*# sourceMappingURL=MusicButtons.module.css.map */
