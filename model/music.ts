@@ -38,3 +38,8 @@ export interface MusicData {
     stream: MusicLinks | null;
     title: string;  
 }
+
+export interface BandData {
+    handle: string;
+    music: MusicData[];
+}

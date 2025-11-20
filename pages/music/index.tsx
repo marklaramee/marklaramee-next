@@ -22,7 +22,7 @@ const Music = () => {
                     <div className={styles.musicContainer}>
                         <div className={styles.musicGroup}>
                             <a 
-                                href='/band/helivator' 
+                                href='/music/band/helivator' 
                                 key={'helivator'} 
                                 className={styles.songLink}
                                 target='_blank'

@@ -1,6 +1,5 @@
 import { MusicData, MusicLinks, SongData, RecordLabel } from "@/model/music";
 
-
 // LABELS
 const earlyNightRecords: RecordLabel = {
     name: 'Early Night Records',

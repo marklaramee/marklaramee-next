@@ -1,10 +1,13 @@
+import Band from '@/components/Band/Band';
 
-
-const helivatorPage = () => {
+const HelivatorPage = () => {
+    console.log('mldebug heere we go');
     return (
-        <div>
-            Helivator Band Page
+        <div> helivator
+            <Band handle={'helivator'}></Band>
         </div>
+        
     );
+
 };
-export default helivatorPage;
+export default HelivatorPage;
