@@ -25,13 +25,11 @@ const Music = () => {
                                 href='/music/band/helivator' 
                                 key={'helivator'} 
                                 className={styles.songLink}
-                                target='_blank'
                             >Helivator</a>
                             <a 
                                 href='/music/band/ct9' 
                                 key={'ct9'} 
                                 className={styles.songLink}
-                                target='_blank'
                             >Cutthroats 9</a>
                         </div>
                     </div>
