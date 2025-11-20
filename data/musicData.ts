@@ -1,5 +1,7 @@
 import { MusicData, MusicLinks, SongData, RecordLabel } from "@/model/music";
 
+
+// LABELS
 const earlyNightRecords: RecordLabel = {
     name: 'Early Night Records',
     link: 'https://www.instagram.com/earlynightrecords/',
@@ -18,10 +20,13 @@ const deepTech: RecordLabel = {
     logo: '/music/deep-tech-logo.webp',
 }
 
+
+// Steppin Back
 const steppinStream: MusicLinks = {
     deezer: 'https://www.deezer.com/us/album/428806997',
     pandora: 'https://www.pandora.com/artist/mark-laramee/steppin-back-feat-susy-borlido/ALv5n9fP6PJKXdJ',
     spotify: 'https://open.spotify.com/track/1KbGcZorYv8w6RoT4KxG1B?si=2b7ee73a6f3f4b21',
+    youtubeMusic: 'https://music.youtube.com/watch?v=a44a23ADqE8&si=EZ0yMPYzKS5VKwpj',
 }
 const steppinBuy: MusicLinks = {
     amazon: 'https://music.amazon.fr/albums/B0C21LDN27',
@@ -45,6 +50,7 @@ export const steppinBackData: MusicData = {
     handle: 'steppinBack',
 }
 
+// Drop The Sky 
 const dtsFile: SongData = {
     seconds: 370,
     file: '/music/DropTheSky-MarkLaramee.mp3',
@@ -53,6 +59,7 @@ const dtsStream: MusicLinks = {
     deezer: 'https://deezer.page.link/kJVnnVGdeJNoXxB6A',
     pandora: 'https://www.pandora.com/artist/mark-laramee/drop-the-sky/AL5ZPZldZZzZdPk',
     spotify: 'https://open.spotify.com/track/60INkHhievAsIZhqTnei6M?si=6836f40c6a284ef9',
+    youtubeMusic: 'https://music.youtube.com/watch?v=6Z9PvD1sb_g&si=UUCTwBYp-yNCNzrf',
 }
 
 const dtsBuy: MusicLinks = {
@@ -74,12 +81,14 @@ export const dtsData: MusicData = {
     socials: null,
 }
 
+// Get Freaky
 const freakyStream: MusicLinks = {
     deezer: 'https://deezer.page.link/AFh9SQ4PdRZ467bf8',
     pandora: 'https://www.pandora.com/artist/mark-laramee-and-donald-glaude/get-freaky-remixes/get-freaky-mark-laramee-remix/TRXzZPJZ3dd53Z4',
+    soundcloud: 'https://soundcloud.com/earlynightrecords/donald-glaude-get-freaky-mark-laramee-remix',
     spotify: 'https://open.spotify.com/track/03o74eEqYWkN4nRa9VilAQ?si=1a713eb496124fef',
     youtube: 'https://www.youtube.com/watch?v=JWLM_XJQdsM',
-    soundcloud: 'https://soundcloud.com/earlynightrecords/donald-glaude-get-freaky-mark-laramee-remix',
+    youtubeMusic: 'https://music.youtube.com/watch?v=RCi-dpta0Hs&si=K1uBa3ARb0Z9NJ9W',
 }
 
 const freakyBuy: MusicLinks = {
@@ -106,12 +115,14 @@ export const freakyData: MusicData = {
     label: earlyNightRecords,
 }
 
+// Impossible Waves
 const wavesStream: MusicLinks = {
     deezer: 'https://www.deezer.com/us/album/644926731',
     pandora: 'https://www.pandora.com/artist/mark-laramee/impossible-waves/ALXkdPbhxZ3vPt4',
+    soundcloud: 'https://soundcloud.com/earlynightrecords/mark-laramee-impossible-waves-jet-extended-version',
     spotify: 'https://open.spotify.com/track/4LzoAENSUguWOFAjqJDMfu?si=83eb429d57d74468',
     youtube: 'https://www.youtube.com/watch?v=xwAL5NMzI-Q',
-    soundcloud: 'https://soundcloud.com/earlynightrecords/mark-laramee-impossible-waves-jet-extended-version',
+    youtubeMusic: 'https://music.youtube.com/watch?v=DXMqLvD20GU&si=mKYxg5nReOSlU_Ye',
 }
 
 const wavesBuy: MusicLinks = {
@@ -138,6 +149,7 @@ export const wavesData: MusicData = {
     label: earlyNightRecords,
 }
 
+// GITMB
 const gitmbStream: MusicLinks = {
     soundcloud: 'https://soundcloud.com/lams/gitmb-mark-laramee-smashlc',
 }
@@ -153,12 +165,15 @@ export const gitmbData: MusicData = {
     socials: null,
 }
 
+
+// Come Get Your Energy
 const energyStream: MusicLinks = {
     deezer: 'https://deezer.page.link/uKcpHLknaddwRTsu5',
     pandora: 'https://www.pandora.com/artist/mark-laramee-and-honey-5/come-get-your-energy/ALVdvgP4j9txKt4',
+    soundcloud: 'https://soundcloud.com/phunkjunkmusicgroup/comegetyourenergy',
     spotify: 'https://open.spotify.com/track/70VsV19HD91S3blHJd2CAP?si=ffb3d644acb14302',
     youtube: 'https://youtu.be/kOFftCKzWDQ',
-    // soundcloud: '',
+    youtubeMusic: 'https://music.youtube.com/watch?v=75iAhDQvkHg&si=vGIYjI6S1WRHK8_W',
 }
 
 const energyBuy: MusicLinks = {
@@ -185,6 +200,8 @@ export const energyData: MusicData = {
     label: phunkJunk,
 }
 
+
+// Midnight Animal
 const animalBuy: MusicLinks = {
     // amazon: 'https://music.amazon.com/albums/B0DPLFPJC6',
     // apple: 'https://music.apple.com/us/album/come-get-your-energy-single/1783364058',
@@ -217,6 +234,7 @@ export const animalData: MusicData = {
     label: deepTech,
 }
 
+// FINAL
 export const songsData: MusicData[] = [
     animalData,
     energyData,
