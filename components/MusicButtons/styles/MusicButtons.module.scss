@@ -20,6 +20,10 @@
     padding: 0 0 0 6px;
     width: 160px;
 
+    &.lottaText {
+        gap: 2px;
+    }
+
     .buttonImage {
         display: block;
         height: 32px;
