@@ -141,8 +141,6 @@ export const helivatorBand: BandData = {
 };
 
 
-
-// mansruin-logo
 /************
  * CT9
  */
