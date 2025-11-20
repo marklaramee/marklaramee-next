@@ -172,7 +172,7 @@ export const selfData: MusicData = {
 }
 
 
-// angeer Management
+// anger Management
 const angerStream: MusicLinks = {
     deezer: 'https://link.deezer.com/s/31F4ewx8p2KiNacx10dCp',
     pandora: 'https://www.pandora.com/artist/the-cutthroats-9/anger-management/ALxj6Jx4Vnq477J?part=ug-desktop&corr=119890750040180177',
