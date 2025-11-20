@@ -12,6 +12,18 @@ const snailsPaceRecords: RecordLabel = {
     logo: '',
 }
 
+const ruinRecords: RecordLabel = {
+    name: 'Man\'s Ruin Records',
+    link: 'https://www.discogs.com/label/34161-Mans-Ruin-Records',
+    logo: '/images/music/mansruin-logo.jpg',
+}
+
+const reptileRecords: RecordLabel = {
+    name: 'Reptilian Records',
+    link: 'https://www.reptilianrecords.com/',
+    logo: '/images/music/reptile-logo.png',
+}
+
 
 // Gasoline T-Shirt
 const gasStream: MusicLinks = {
@@ -128,6 +140,79 @@ export const helivatorBand: BandData = {
     music: helivatorData,
 };
 
+
+
+// mansruin-logo
+/************
+ * CT9
+ */
+
+// Self titled
+const selfStream: MusicLinks = {
+    deezer: 'https://www.deezer.com/us/album/175853392',
+    pandora: 'https://www.pandora.com/artist/the-cutthroats-9/cutthroats-9/ALVZgpdJ7p2cZbq?part=ug-desktop&corr=119890750040180177',
+    spotify: 'https://open.spotify.com/album/3p2V37OSdSb1wk8lQJkT4D?si=gLa2NY4vTdGLTzBUYrH9Ow',
+    youtubeMusic: 'https://music.youtube.com/playlist?list=OLAK5uy_mE0-SE52JUhjdX5T_ei3cnSSnd-Vqwsn8&si=9kpVCm_lkhFlgeXE',
+}
+
+const selfBuy: MusicLinks = {
+    bandcamp: '',
+    amazon: 'https://music.amazon.com/albums/B08K3X3JKX?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_C5140vZKbWOjT3H5M2zqdfZzN',
+    apple: '',
+}
+
+export const selfData: MusicData = {
+    artist: 'Cutthroats 9',
+    buy: selfBuy,
+    cover: '/music/ct9Cover.webp',
+    genre: 'Rock',
+    handle: 'starrySkies',
+    label: ruinRecords,
+    socials: null,
+    stream: selfStream,
+    title: 'Cutthroats 9',
+}
+
+
+// angeer Management
+const angerStream: MusicLinks = {
+    deezer: 'https://link.deezer.com/s/31F4ewx8p2KiNacx10dCp',
+    pandora: 'https://www.pandora.com/artist/the-cutthroats-9/anger-management/ALxj6Jx4Vnq477J?part=ug-desktop&corr=119890750040180177',
+    spotify: 'https://open.spotify.com/album/5sJQNJhShpBFHylSyzh6Ar?si=rxSOleHMSIGTSd3RaHe_8g',
+    youtubeMusic: 'https://music.youtube.com/playlist?list=OLAK5uy_laaHqKBA35v3NDnIa_7PgQNcS3f66Nruw&si=5_3Ycaz98W3RqBoH',
+}
+
+const angerBuy: MusicLinks = {
+    bandcamp: '',
+    amazon: 'https://music.amazon.com/albums/B08JRYVHKG?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_epcYCqSXURM38SiRviqnoQ4d3',
+    apple: 'https://music.apple.com/gb/album/anger-mangement-ep/1532970476',
+}
+
+export const angerData: MusicData = {
+    artist: 'Cutthroats 9',
+    buy: angerBuy,
+    cover: '/music/angerCover.webp',
+    genre: 'Rock',
+    handle: 'angerManagement',
+    label: reptileRecords,
+    socials: null,
+    stream: angerStream,
+    title: 'Anger Management',
+}
+
+
+export const ct9Data: MusicData[] = [
+    selfData,
+    angerData,
+];
+
+export const ct9Band: BandData = {
+    handle: 'ct9',
+    music: ct9Data,
+};
+
+
 export const bandsData: BandData[] = [
     helivatorBand,
+    ct9Band,
 ];

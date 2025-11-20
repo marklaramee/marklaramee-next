@@ -7,7 +7,7 @@ interface SongProps {
 }
 
 const Band = ({handle}: SongProps) => {
-    console.log('mldebug heere BAND');
+    console.log('mldebug heere BAND', handle);
     const bandData = bandsData.find(datum => datum.handle == handle);
 
     if (!bandData) {
