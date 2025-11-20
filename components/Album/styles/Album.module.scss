@@ -7,6 +7,7 @@
   align-items: flex-start;
   display: flex;
   justify-content: center;
+  padding-bottom: 86px;
 }
 
 .container {
@@ -94,7 +95,6 @@
   }
 }
 
-
 .labelLink {
   align-items: center;;
   display: flex;
@@ -107,8 +107,6 @@
     max-width: 30px;;
   }
 }
-
-
 
 @media only screen and (max-width: 767px) {
   .albumCover {

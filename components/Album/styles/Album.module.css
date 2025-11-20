@@ -16,6 +16,7 @@
   align-items: flex-start;
   display: flex;
   justify-content: center;
+  padding-bottom: 86px;
 }
 
 .container {
