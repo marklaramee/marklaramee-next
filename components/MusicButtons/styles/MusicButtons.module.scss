@@ -72,8 +72,9 @@
     .musicButton {
         margin-bottom: 14px;
 
-        &.lottaText {
-            gap: 2px;
-        }
+        // TODO: set this explicitly if parent font size did not fix it
+        // &.lottaText {
+        //     font-size: 14px;
+        // }
     }
 }
