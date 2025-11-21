@@ -154,7 +154,7 @@ const gitmbStream: MusicLinks = {
 }
 
 export const gitmbData: MusicData = {
-    cover: '/music/GITMB-cover.png',
+    cover: '/music/gitmb-street-cover.jpg',
     title: 'GITMB',
     artist: 'Mark Laramee / SmashLC',
     stream: gitmbStream,
