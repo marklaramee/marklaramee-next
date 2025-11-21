@@ -202,8 +202,8 @@ export const energyData: MusicData = {
 
 // Midnight Animal
 const animalBuy: MusicLinks = {
-    // amazon: 'https://music.amazon.com/albums/B0DPLFPJC6',
-    // apple: 'https://music.apple.com/us/album/come-get-your-energy-single/1783364058',
+    amazon: 'https://music.amazon.com/albums/B0FZMJCV85?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_L0akuWXhOiagJKZ8ZHTgVFevU',
+    apple: 'https://music.apple.com/gb/song/midnight-animal-extended/1850772857',
     beatport: 'https://www.beatport.com/release/midnight-animal/5559910',
 }
 
@@ -214,11 +214,12 @@ const animalSocials: MusicLinks = {
 }
 
 const animalStream: MusicLinks = {
-    // deezer: 'https://deezer.page.link/uKcpHLknaddwRTsu5',
-    // pandora: 'https://www.pandora.com/artist/mark-laramee-and-honey-5/come-get-your-energy/ALVdvgP4j9txKt4',
-    // spotify: 'https://open.spotify.com/track/70VsV19HD91S3blHJd2CAP?si=ffb3d644acb14302',
-    // youtube: 'https://youtu.be/kOFftCKzWDQ',
-    // // soundcloud: '',
+    deezer: 'https://www.deezer.com/us/album/850394982',
+    pandora: 'https://www.pandora.com/artist/mark-laramee-and-skandar-us/midnight-animal/ALmZfc46q2v9jzV',
+    spotify: 'https://open.spotify.com/album/6JMYbZmboDL9LlaNALowbt',
+    youtube: 'https://music.youtube.com/watch?v=RQJ5oltfNZM',
+    youtubeMusic: 'https://music.youtube.com/playlist?list=OLAK5uy_mBT9EIJ-ktgyEmTVhtLz8jRL6SLiYoUAo',
+    soundcloud: 'https://soundcloud.com/lams/midnight-animal-mark-laramee-x',
 }
 
 export const animalData: MusicData = {

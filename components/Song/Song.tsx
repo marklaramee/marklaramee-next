@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import classnames from 'classnames';
 import styles from './styles/Song.module.scss'
 import { songsData } from '@/data/musicData';
 import MusicButtons from '../MusicButtons/MusicButtons';
@@ -19,7 +20,7 @@ const Song = ({handle}: SongProps) => {
         <div className={styles.songOuter}>
             <div className={styles.container}>
                 <img src={songData.cover} alt={`${songData.title} cover art`} className={styles.albumCover} />
-                <div className={styles.content}>
+                <div className={classnames(styles.content, styles.mobileTopContent)}>
                     <div>
                         <h1 className={styles.albumTitle}>{songData.title}</h1>
                         <h2 className={styles.artist}>{songData.artist}</h2>
@@ -37,6 +38,8 @@ const Song = ({handle}: SongProps) => {
                             </a>
                         </div>
                     }
+                </div>
+                <div className={classnames(styles.content, styles.mobileLinkContent)}>
                     {hasLinks(songData.stream) &&
                         <div className={styles.linksContainer}>
                             <h3 className={styles.headline}>Stream</h3>
