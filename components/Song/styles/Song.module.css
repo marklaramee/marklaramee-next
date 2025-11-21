@@ -140,4 +140,12 @@
   .mobileLinkContent {
     padding-left: 20px;
   }
+  .mobileTopContent {
+    padding: 0 20px;
+    text-align: center;
+  }
+  .mobileTopContent .labelLink {
+    justify-content: center;
+    padding-bottom: 24px;
+  }
 }/*# sourceMappingURL=Song.module.css.map */

@@ -140,5 +140,15 @@
   .mobileLinkContent {
     padding-left: 20px;
   }
+
+  .mobileTopContent {
+    padding: 0 20px;
+    text-align: center;
+
+    .labelLink {
+      justify-content: center;
+      padding-bottom: 24px;
+    }
+  }
 }
 

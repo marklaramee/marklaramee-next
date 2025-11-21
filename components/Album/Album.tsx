@@ -19,7 +19,7 @@ const Song = ({musicData}: SongProps) => {
         <div className={styles.songOuter}>
             <div className={styles.container}>
                 <img src={musicData.cover} alt={`${musicData.title} cover art`} className={styles.albumCover} />
-                <div className={styles.content}>
+                <div className={classnames(styles.content, styles.mobileTopContent)}>
                     <div>
                         <h1 className={styles.albumTitle}>{musicData.title}</h1>
                         <h2 className={styles.artist}>{musicData.artist}</h2>
