@@ -116,6 +116,7 @@
   .container {
     align-items: center;
     flex-direction: column;
+    margin: 0;
   }
 
   .linksContainer {
@@ -130,6 +131,24 @@
   .artist {
     line-height: 42px;
     padding-bottom: 24px;
+  }
+
+  .content {
+    padding: 0 0 0 38px;
+  }
+
+  .mobileLinkContent {
+    padding-left: 20px;
+  }
+
+  .mobileTopContent {
+    padding: 0 20px;
+    text-align: center;
+
+    .labelLink {
+      justify-content: center;
+      padding-bottom: 24px;
+    }
   }
 }
 
