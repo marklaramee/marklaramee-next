@@ -157,4 +157,16 @@
     font-size: 20px;
     gap: 8px;
   }
+  .mobileLinkContent {
+    padding: 0;
+  }
+  .mobileLinkContent .linksContainer {
+    text-align: center;
+  }
+  .mobileLinkContent .linksContainer > div:first-of-type {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }/*# sourceMappingURL=Song.module.css.map */
