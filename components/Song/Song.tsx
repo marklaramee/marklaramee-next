@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import classnames from 'classnames';
 import styles from './styles/Song.module.scss'
 import { songsData } from '@/data/musicData';
 import MusicButtons from '../MusicButtons/MusicButtons';
@@ -37,6 +38,8 @@ const Song = ({handle}: SongProps) => {
                             </a>
                         </div>
                     }
+                </div>
+                <div className={classnames(styles.content, styles.mobileLinkContent)}>
                     {hasLinks(songData.stream) &&
                         <div className={styles.linksContainer}>
                             <h3 className={styles.headline}>Stream</h3>
