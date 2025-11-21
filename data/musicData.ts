@@ -219,7 +219,7 @@ const animalStream: MusicLinks = {
     spotify: 'https://open.spotify.com/album/6JMYbZmboDL9LlaNALowbt',
     youtube: 'https://music.youtube.com/watch?v=RQJ5oltfNZM',
     youtubeMusic: 'https://music.youtube.com/playlist?list=OLAK5uy_mBT9EIJ-ktgyEmTVhtLz8jRL6SLiYoUAo',
-    // // soundcloud: '',
+    soundcloud: 'https://soundcloud.com/lams/midnight-animal-mark-laramee-x',
 }
 
 export const animalData: MusicData = {
