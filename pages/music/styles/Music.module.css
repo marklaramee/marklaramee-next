@@ -56,4 +56,19 @@
   .musicInner {
     padding: 24px 24px 24px 46px;
   }
+}
+@media only screen and (max-width: 412px) {
+  .musicInner {
+    padding: 24px;
+    text-align: center;
+  }
+  .musicContainer {
+    justify-content: center;
+  }
+  .musicList.socialBar > div:first-of-type {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }/*# sourceMappingURL=Music.module.css.map */
