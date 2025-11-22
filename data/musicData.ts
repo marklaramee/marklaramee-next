@@ -62,7 +62,6 @@ const dtsStream: MusicLinks = {
 }
 
 const dtsBuy: MusicLinks = {
-    beatport: 'https://www.beatport.com/artist/mark-laramee/1187913/tracks',
     bandcamp: 'https://marklaramee.bandcamp.com/track/drop-the-sky',
     amazon: 'https://www.amazon.com/Drop-Sky-Mark-Laramee/dp/B0CVSK3PCX',
     apple: 'https://music.apple.com/us/album/drop-the-sky-single/1731694856',
@@ -154,7 +153,7 @@ const gitmbStream: MusicLinks = {
 }
 
 export const gitmbData: MusicData = {
-    cover: '/music/GITMB-cover.png',
+    cover: '/music/gitmb-street-cover.jpg',
     title: 'GITMB',
     artist: 'Mark Laramee / SmashLC',
     stream: gitmbStream,
