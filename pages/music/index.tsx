@@ -14,6 +14,12 @@ const Music = () => {
                     <h1 className={classnames(styles.headline, styles.musicTitle)}>EDM and Electronica</h1>
                     <div className={styles.musicContainer}>
                         <TrackList songs={songsData}></TrackList>
+                        <a 
+                            href='https://soundcloud.com/lams/sets/tales-from-the-vishnu-schist' 
+                            key={'vishnu'} 
+                            className={styles.songLink}
+                            target='_blank'
+                        >Tales from the Vishnu Schist</a>
                     </div>
                 </div>
 
