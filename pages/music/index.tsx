@@ -16,7 +16,7 @@ const Music = () => {
                         <TrackList songs={songsData}></TrackList>
                         <a 
                             href='https://soundcloud.com/lams/sets/tales-from-the-vishnu-schist' 
-                            key={'vishni'} 
+                            key={'vishnu'} 
                             className={styles.songLink}
                             target='_blank'
                         >Tales from the Vishnu Schist</a>
