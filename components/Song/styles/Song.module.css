@@ -19,13 +19,9 @@
 }
 
 .container {
-  align-items: center;
   color: white;
-  display: flex;
-  flex-direction: column;
   margin: 0 0 0 20px;
   max-width: 1100px;
-  justify-content: flex-start;
   padding: 24px;
   width: 100%;
 }
@@ -80,9 +76,10 @@
 }
 
 .albumCover {
+  float: left;
   max-height: 500px;
   max-width: 500px;
-  margin-bottom: 24px;
+  margin: 24px 48px 48px 0;
 }
 
 .tempLinks {
@@ -115,11 +112,32 @@
   max-width: 30px;
 }
 
+.mobileTopContent {
+  padding-top: 24px;
+}
+
+.mobileLinkContent {
+  clear: both;
+  padding-left: 0;
+}
+
 @media only screen and (max-width: 767px) {
   .albumCover {
+    float: none;
     height: 80%;
+    margin: 0;
     width: 80%;
-    margin-bottom: 0;
+  }
+  .container {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 20px;
+    max-width: 1100px;
+    justify-content: flex-start;
+    padding: 24px;
+    width: 100%;
   }
   .container {
     align-items: center;
