@@ -33,9 +33,12 @@ const TopNavigation = ({isOpen, navLinkClick}: props) => {
                 {/* <div className={styles.navLevel1}>
                     <Link href="/travel">Travel</Link>
                 </div> */}
-                {/* <div className={styles.navLevel1}>
-                    <Link href="/contact" onClick={navLinkClick}>Contact</Link>
-                </div>*/}
+                <div className={styles.navLevel1}>
+                    <Link 
+                        target='_blank'
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdZepdrMH7g8EG80GMUuduPMBe7Zhw5cCajtf3voNcGbI2IQQ/viewform?usp=dialog" 
+                    >Contact</Link>
+                </div>
             </nav> 
         </div>
     );
