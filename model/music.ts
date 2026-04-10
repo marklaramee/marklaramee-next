@@ -16,6 +16,7 @@ export interface MusicLinks {
     soundcloud?: string; 
     spotify?: string; 
     tiktok?: string; 
+    traxSource?: string;
     youtube?: string; 
     youtubeMusic?: string;
 }

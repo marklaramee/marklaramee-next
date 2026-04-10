@@ -178,6 +178,7 @@ const energyBuy: MusicLinks = {
     amazon: 'https://music.amazon.com/albums/B0DPLFPJC6',
     apple: 'https://music.apple.com/us/album/come-get-your-energy-single/1783364058',
     beatport: 'https://www.beatport.com/release/come-get-your-energy/4847696',
+    traxSource: 'https://www.traxsource.com/track/13026429/come-get-your-energy-original-mix',
 }
 
 const energySocials: MusicLinks = {
@@ -204,6 +205,7 @@ const animalBuy: MusicLinks = {
     amazon: 'https://music.amazon.com/albums/B0FZMJCV85?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_L0akuWXhOiagJKZ8ZHTgVFevU',
     apple: 'https://music.apple.com/gb/song/midnight-animal-extended/1850772857',
     beatport: 'https://www.beatport.com/release/midnight-animal/5559910',
+    traxSource: 'https://www.traxsource.com/title/2656187/midnight-animal',
 }
 
 const animalSocials: MusicLinks = {
@@ -233,8 +235,44 @@ export const animalData: MusicData = {
     label: deepTech,
 }
 
+// Orbit Decay
+const orbitBuy: MusicLinks = {
+    amazon: 'https://www.amazon.com/music/player/albums/B0GSXV6GVJ',
+    apple: 'https://music.apple.com/us/album/orbit-decay-single/1885984942',
+    beatport: 'https://www.beatport.com/release/orbit-decay/6471704',
+    traxSource: 'https://www.traxsource.com/title/2749646/orbit-decay',
+}
+
+const orbitSocials: MusicLinks = {
+    // facebook: 'https://www.facebook.com/reel/1982227682246304',
+    // insta: 'https://www.instagram.com/p/DEqAj6PyeRO/',
+    // tiktok: 'https://www.tiktok.com/@mark.laramee.musi/video/7458362145646923039',
+}
+
+const orbitStream: MusicLinks = {
+    deezer: 'https://www.deezer.com/en/album/942086291',
+    pandora: 'https://www.pandora.com/artist/mark-laramee/orbit-decay/AL3nKdzjlk3X929',
+    spotify: 'https://open.spotify.com/album/7eq5DKwtQpKvnT1x7B2EbD',
+    // youtube: 'https://music.youtube.com/watch?v=RQJ5oltfNZM',
+    youtubeMusic: 'https://music.youtube.com/watch?v=AkwATqPbdI8',
+    // soundcloud: 'https://soundcloud.com/lams/midnight-animal-mark-laramee-x',
+}
+
+export const orbitData: MusicData = {
+    cover: '/music/orbit-decay-cover-x900.png',
+    title: 'Orbit Decay',
+    artist: 'Mark Laramee',
+    stream: orbitStream,
+    buy: orbitBuy,
+    genre: 'Bass House',
+    handle: 'orbitDecay',
+    socials: orbitSocials,
+    label: phunkJunk,
+}
+
 // FINAL
 export const songsData: MusicData[] = [
+    orbitData,
     animalData,
     energyData,
     wavesData,
