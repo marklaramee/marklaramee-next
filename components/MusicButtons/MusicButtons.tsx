@@ -126,9 +126,17 @@ const MusicButtons = ({links}: ButtonProps) => {
             {links.tiktok &&
                 <a href={links.tiktok} className={styles.musicButton} target='_blank'> 
                     <span className={styles.buttonImage}>  
-                        <img src='/images/icons/tiktok2.webp' alt='tiktok' /> 
+                        <img src='/images/icons/tiktok2.webp' alt='tiktok site logo' /> 
                     </span> 
                     <span className={styles.buttonTitle}> TikTok </span> 
+                </a>   
+            } 
+            {links.traxSource &&
+                <a href={links.traxSource} className={styles.musicButton} target='_blank'> 
+                    <span className={styles.buttonImage}>  
+                        <img src='/images/icons/traxSource-logo.png' alt='traxSource site logo' /> 
+                    </span> 
+                    <span className={styles.buttonTitle}> Traxsource </span> 
                 </a>   
             } 
             {links.youtube && 
