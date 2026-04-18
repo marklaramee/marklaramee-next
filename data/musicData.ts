@@ -244,18 +244,18 @@ const orbitBuy: MusicLinks = {
 }
 
 const orbitSocials: MusicLinks = {
-    // facebook: 'https://www.facebook.com/reel/1982227682246304',
-    // insta: 'https://www.instagram.com/p/DEqAj6PyeRO/',
-    // tiktok: 'https://www.tiktok.com/@mark.laramee.musi/video/7458362145646923039',
+    facebook: 'https://www.facebook.com/photo?fbid=10167131730017678&set=a.10150399411252678',
+    insta: 'https://www.instagram.com/reels/DXQahnSyhn_/',
+    tiktok: 'https://www.tiktok.com/@mark.laramee.musi/video/7629920243216928030',
 }
 
 const orbitStream: MusicLinks = {
     deezer: 'https://www.deezer.com/en/album/942086291',
     pandora: 'https://www.pandora.com/artist/mark-laramee/orbit-decay/AL3nKdzjlk3X929',
     spotify: 'https://open.spotify.com/album/7eq5DKwtQpKvnT1x7B2EbD',
-    // youtube: 'https://music.youtube.com/watch?v=RQJ5oltfNZM',
+    youtube: 'https://youtu.be/ZfunJOxpe3U',
     youtubeMusic: 'https://music.youtube.com/watch?v=AkwATqPbdI8',
-    // soundcloud: 'https://soundcloud.com/lams/midnight-animal-mark-laramee-x',
+    soundcloud: 'https://soundcloud.com/lams/orbit-decay',
 }
 
 export const orbitData: MusicData = {
