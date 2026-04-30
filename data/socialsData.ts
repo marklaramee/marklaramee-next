@@ -8,4 +8,5 @@ export const mySocials: MusicLinks = {
     tiktok: 'https://www.tiktok.com/@mark.laramee.musi',
     beatport: 'https://www.beatport.com/artist/mark-laramee/1187913',
     bandcamp: 'https://marklaramee.bandcamp.com/',
+    youtube: 'https://www.youtube.com/playlist?list=PLBjMNKzwTcEGY0NjVCFGHyryBxHVbSeVW',
 }
