@@ -28,15 +28,23 @@ const Music = () => {
                     <div className={styles.musicContainer}>
                         <div className={styles.musicGroup}>
                             <a 
+                                href='/music/band/ct9' 
+                                key={'ct9'} 
+                                className={styles.songLink}
+                            >Cutthroats 9</a>
+                            <a 
                                 href='/music/band/helivator' 
                                 key={'helivator'} 
                                 className={styles.songLink}
                             >Helivator</a>
                             <a 
-                                href='/music/band/ct9' 
-                                key={'ct9'} 
+                                href='https://soundcloud.com/mark-laramee' 
+                                key={'del'} 
                                 className={styles.songLink}
-                            >Cutthroats 9</a>
+                                target='_blank'
+                            >
+                                Deliscia
+                            </a>
                         </div>
                     </div>
                 </div>
