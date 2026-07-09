@@ -270,8 +270,47 @@ export const orbitData: MusicData = {
     label: phunkJunk,
 }
 
+// dezidoro
+// Impossible Waves
+const deziStream: MusicLinks = {
+    deezer: 'https://www.deezer.com/us/album/644926731',
+    pandora: 'https://www.pandora.com/artist/mark-laramee/impossible-waves/ALXkdPbhxZ3vPt4',
+    soundcloud: 'https://soundcloud.com/earlynightrecords/mark-laramee-impossible-waves-jet-extended-version',
+    spotify: 'https://open.spotify.com/track/4LzoAENSUguWOFAjqJDMfu?si=83eb429d57d74468',
+    youtube: 'https://www.youtube.com/watch?v=xwAL5NMzI-Q',
+    youtubeMusic: 'https://music.youtube.com/watch?v=DXMqLvD20GU&si=mKYxg5nReOSlU_Ye',
+}
+
+const deziBuy: MusicLinks = {
+    amazon: '#',
+    apple: '#',
+    beatport: '#',
+    traxSource: '#',
+}
+
+const deziSocials: MusicLinks = {
+    facebook: '#',
+    insta: '#',
+    tiktok: 'h#',
+}
+
+export const deziData: MusicData = {
+    cover: '/music/',
+    title: 'Dezidoro',
+    artist: 'Mark Laramee',
+    stream: deziStream,
+    buy: deziBuy,
+    socials: deziSocials,
+    genre: 'Bass House',
+    handle: 'dezidoro',
+    label: earlyNightRecords,
+}
+
+
+
 // FINAL
 export const songsData: MusicData[] = [
+    deziData,
     orbitData,
     animalData,
     energyData,
