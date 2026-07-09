@@ -295,7 +295,7 @@ const deziSocials: MusicLinks = {
 }
 
 export const deziData: MusicData = {
-    cover: '/music/',
+    cover: '/music/dezidoro-900.png',
     title: 'Dezidoro',
     artist: 'Mark Laramee',
     stream: deziStream,
