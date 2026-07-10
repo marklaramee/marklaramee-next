@@ -271,27 +271,26 @@ export const orbitData: MusicData = {
 }
 
 // dezidoro
-// Impossible Waves
 const deziStream: MusicLinks = {
-    deezer: 'https://www.deezer.com/us/album/644926731',
-    pandora: 'https://www.pandora.com/artist/mark-laramee/impossible-waves/ALXkdPbhxZ3vPt4',
-    soundcloud: 'https://soundcloud.com/earlynightrecords/mark-laramee-impossible-waves-jet-extended-version',
-    spotify: 'https://open.spotify.com/track/4LzoAENSUguWOFAjqJDMfu?si=83eb429d57d74468',
-    youtube: 'https://www.youtube.com/watch?v=xwAL5NMzI-Q',
-    youtubeMusic: 'https://music.youtube.com/watch?v=DXMqLvD20GU&si=mKYxg5nReOSlU_Ye',
+   // deezer: 'https://www.deezer.com/us/album/644926731',
+    // pandora: 'https://www.pandora.com/artist/mark-laramee/impossible-waves/ALXkdPbhxZ3vPt4',
+   // TODO:  soundcloud: 'https://soundcloud.com/earlynightrecords/mark-laramee-impossible-waves-jet-extended-version',
+    spotify: 'https://open.spotify.com/album/2g8kB5feR6XYAnxBvPY9d8?si=bTQaYkFvRRabCrizV6Qb7g',
+    // TODO: youtube: 'https://www.youtube.com/watch?v=xwAL5NMzI-Q',
+    youtubeMusic: 'https://www.youtube.com/playlist?list=OLAK5uy_nHNI1YQNpJ-rYbieLyBMqPnt59swTvm_Q',
 }
 
 const deziBuy: MusicLinks = {
-    amazon: '#',
-    apple: '#',
-    beatport: '#',
-    traxSource: '#',
+    amazon: 'https://music.amazon.com/albums/B0H4MMM25V',
+    apple: 'https://music.apple.com/us/album/dezidoro-single/6778407154',
+    beatport: 'https://www.beatport.com/release/dezidoro/7043781',
+    traxSource: 'https://www.traxsource.com/title/2812048/dezidoro',
 }
 
 const deziSocials: MusicLinks = {
-    facebook: '#',
-    insta: '#',
-    tiktok: 'h#',
+    // facebook: '#',
+    // insta: '#',
+    // tiktok: 'h#',
 }
 
 export const deziData: MusicData = {
