@@ -274,7 +274,7 @@ export const orbitData: MusicData = {
 const deziStream: MusicLinks = {
     deezer: 'https://www.deezer.com/en/album/1002106751',
     pandora: 'https://www.pandora.com/artist/mark-laramee/dezidoro/ALVqZ3cKk2l42Pc',
-   // TODO:  soundcloud: 'https://soundcloud.com/earlynightrecords/mark-laramee-impossible-waves-jet-extended-version',
+    soundcloud: 'https://soundcloud.com/lams/sets/dezidoro',
     spotify: 'https://open.spotify.com/album/2g8kB5feR6XYAnxBvPY9d8?si=bTQaYkFvRRabCrizV6Qb7g',
     youtube: 'https://youtu.be/LERIFcMk1NQ',
     youtubeMusic: 'https://www.youtube.com/playlist?list=OLAK5uy_nHNI1YQNpJ-rYbieLyBMqPnt59swTvm_Q',
@@ -288,7 +288,7 @@ const deziBuy: MusicLinks = {
 }
 
 const deziSocials: MusicLinks = {
-    // facebook: '#',
+    facebook: 'https://www.facebook.com/photo/?fbid=10167635738682678&set=a.10150399411252678',
     // insta: '#',
     tiktok: 'https://www.tiktok.com/@mark.laramee.musi/video/7660899249734864158',
 }
