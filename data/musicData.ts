@@ -277,7 +277,7 @@ const deziStream: MusicLinks = {
     soundcloud: 'https://soundcloud.com/lams/sets/dezidoro',
     spotify: 'https://open.spotify.com/album/2g8kB5feR6XYAnxBvPY9d8?si=bTQaYkFvRRabCrizV6Qb7g',
     youtube: 'https://youtu.be/LERIFcMk1NQ',
-    youtubeMusic: 'https://www.youtube.com/playlist?list=OLAK5uy_nHNI1YQNpJ-rYbieLyBMqPnt59swTvm_Q',
+    youtubeMusic: 'https://music.youtube.com/playlist?list=OLAK5uy_nDrU2Q2cIcHWm4ciT7wx25R45qLjMRk00',
 }
 
 const deziBuy: MusicLinks = {
@@ -289,7 +289,7 @@ const deziBuy: MusicLinks = {
 
 const deziSocials: MusicLinks = {
     facebook: 'https://www.facebook.com/photo/?fbid=10167635738682678&set=a.10150399411252678',
-    // insta: '#',
+    insta: 'https://www.instagram.com/p/Dasp6SMlNLu/?hl=en',
     tiktok: 'https://www.tiktok.com/@mark.laramee.musi/video/7660899249734864158',
 }
 
