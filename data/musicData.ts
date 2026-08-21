@@ -339,20 +339,21 @@ const hwgBuy: MusicLinks = {
 }
 
 export const hwgData: MusicData = {
-    cover: 'Here-We-Go-Cover-Art-900-900.jpg',
+    cover: '/music/Here-We-Go-Cover-Art-900-900.jpg',
     title: 'Here We Go',
     artist: 'Mark Laramee',
     stream: hwgStream,
     buy: hwgBuy,
     socials: hwgSocials,
     genre: 'Bass House',
-    handle: 'hwg',
+    handle: 'hereWeGo',
     label: creatures,
 }
 
 
 // FINAL
 export const songsData: MusicData[] = [
+    hwgData,
     deziData,
     orbitData,
     animalData,
