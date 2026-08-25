@@ -334,7 +334,9 @@ const hwgStream: MusicLinks = {
 const hwgBuy: MusicLinks = {
     amazon: 'https://music.amazon.de/albums/B0HBQV2C91',
     apple: 'https://music.apple.com/us/album/here-we-go-single/6795102496',
+    bandcamp: 'https://marklaramee.bandcamp.com/album/here-we-go',
     beatport: '',
+    mirlo: 'https://mirlo.space/mark-laramee/release/here-we-go',
     traxSource: '',
 }
 
