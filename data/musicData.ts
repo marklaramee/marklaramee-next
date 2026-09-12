@@ -22,7 +22,7 @@ const deepTech: RecordLabel = {
 const creatures: RecordLabel = {
     name: 'Weirdland Creatures',
     link: '',
-    logo: '',
+    logo: '/music/WEIRDLAND_CREATURES_logo.png',
 }
 
 
@@ -323,8 +323,8 @@ const hwgSocials: MusicLinks = {
 
 const hwgStream: MusicLinks = {
     deezer: 'https://www.deezer.com/us/album/1039126452',
-    pandora: '', // TBD restricted in EU
-    soundcloud: '',
+    // pandora: '', // TBD restricted in EU
+    soundcloud: 'https://soundcloud.com/lams/mark-laramee-here-we-go',
     spotify: 'https://open.spotify.com/album/7vTsnBFVGwWlJAi3XA2b6',
     tidal: 'https://tidal.com/album/546760031',
     youtube: '',
@@ -335,9 +335,9 @@ const hwgBuy: MusicLinks = {
     amazon: 'https://music.amazon.de/albums/B0HBQV2C91',
     apple: 'https://music.apple.com/us/album/here-we-go-single/6795102496',
     bandcamp: 'https://marklaramee.bandcamp.com/album/here-we-go',
-    beatport: '',
+    beatport: 'https://www.beatport.com/release/here-we-go/7448931',
     mirlo: 'https://mirlo.space/mark-laramee/release/here-we-go',
-    traxSource: '',
+    // traxSource: '',
 }
 
 export const hwgData: MusicData = {
