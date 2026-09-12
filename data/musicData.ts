@@ -313,9 +313,9 @@ export const deziData: MusicData = {
 
 // Here We Go
 const hwgSocials: MusicLinks = {
-    facebook: '',
-    insta: '',
-    tiktok: '',
+    facebook: 'https://www.facebook.com/reel/1621771986229582',
+    insta: 'https://www.instagram.com/p/DdKzJJyCG0u/',
+    tiktok: 'https://www.tiktok.com/@mark.laramee.musi/video/7684449927262506271',
 }
 
 const hwgStream: MusicLinks = {
