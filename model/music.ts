@@ -12,9 +12,11 @@ export interface MusicLinks {
     deezer?: string; 
     facebook?: string; 
     insta?: string; 
+    mirlo?: string;
     pandora?: string; 
     soundcloud?: string; 
     spotify?: string; 
+    tidal?: string;
     tiktok?: string; 
     traxSource?: string;
     youtube?: string; 

@@ -19,6 +19,12 @@ const deepTech: RecordLabel = {
     logo: '/music/deep-tech-logo.webp',
 }
 
+const creatures: RecordLabel = {
+    name: 'Weirdland Creatures',
+    link: '',
+    logo: '/music/WEIRDLAND_CREATURES_logo.png',
+}
+
 
 // Steppin Back
 const steppinStream: MusicLinks = {
@@ -305,10 +311,48 @@ export const deziData: MusicData = {
     label: earlyNightRecords,
 }
 
+// Here We Go
+const hwgSocials: MusicLinks = {
+    facebook: '',
+    insta: '',
+    tiktok: '',
+}
+
+const hwgStream: MusicLinks = {
+    deezer: 'https://www.deezer.com/us/album/1039126452',
+    // pandora: '', // TBD restricted in EU
+    soundcloud: 'https://soundcloud.com/lams/mark-laramee-here-we-go',
+    spotify: 'https://open.spotify.com/album/7vTsnBFVGwWlJAi3XA2b6Z',
+    tidal: 'https://tidal.com/album/546760031',
+    youtube: 'https://www.youtube.com/watch?v=fARW9k_e1kY',
+    youtubeMusic: 'https://music.youtube.com/playlist?list=OLAK5uy_mbk_-XEUmpFZOazD9DYeQNiLWfWpwpZfU',
+}
+
+const hwgBuy: MusicLinks = {
+    amazon: 'https://music.amazon.de/albums/B0HBQV2C91',
+    apple: 'https://music.apple.com/us/album/here-we-go-single/6795102496',
+    bandcamp: 'https://marklaramee.bandcamp.com/album/here-we-go',
+    beatport: 'https://www.beatport.com/release/here-we-go/7448931',
+    mirlo: 'https://mirlo.space/mark-laramee/release/here-we-go',
+    // traxSource: '',
+}
+
+export const hwgData: MusicData = {
+    cover: '/music/Here-We-Go-Cover-Art-900-900.jpg',
+    title: 'Here We Go',
+    artist: 'Mark Laramee',
+    stream: hwgStream,
+    buy: hwgBuy,
+    socials: hwgSocials,
+    genre: 'Bass House',
+    handle: 'hereWeGo',
+    label: creatures,
+}
 
 
 // FINAL
 export const songsData: MusicData[] = [
+    hwgData,
     deziData,
     orbitData,
     animalData,
