@@ -311,23 +311,20 @@ export const deziData: MusicData = {
     label: earlyNightRecords,
 }
 
+// Here We Go
 const hwgSocials: MusicLinks = {
     facebook: '',
     insta: '',
     tiktok: '',
 }
 
-
-// Here We Go
-
-
 const hwgStream: MusicLinks = {
     deezer: 'https://www.deezer.com/us/album/1039126452',
     // pandora: '', // TBD restricted in EU
     soundcloud: 'https://soundcloud.com/lams/mark-laramee-here-we-go',
-    spotify: 'https://open.spotify.com/album/7vTsnBFVGwWlJAi3XA2b6',
+    spotify: 'https://open.spotify.com/album/7vTsnBFVGwWlJAi3XA2b6Z',
     tidal: 'https://tidal.com/album/546760031',
-    youtube: '',
+    youtube: 'https://www.youtube.com/watch?v=fARW9k_e1kY',
     youtubeMusic: 'https://music.youtube.com/playlist?list=OLAK5uy_mbk_-XEUmpFZOazD9DYeQNiLWfWpwpZfU',
 }
 
